@@ -1,13 +1,15 @@
 import '../styles/globals.css'
 import {AppProps} from "next/app";
-import {Navbar} from "../components/navbar";
+import {Navbar} from "../components/globals/navbar";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <div>
       <Navbar />
-      <Component {...pageProps} />
-    </>
+      <div className="context">
+        <Component {...pageProps} />
+      </div>
+    </div>
   );
 }
 
