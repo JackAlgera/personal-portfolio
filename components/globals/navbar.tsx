@@ -1,18 +1,19 @@
 import Link from "next/link";
-import React, {useState} from "react";
+import React from "react";
 import {useRouter} from "next/router";
 import {Watcher} from "./watcher";
+import {WatcherState} from "../models/watcher.model";
 
-export const Navbar = () => {
-  const [watcherActivated, setWatcherActivated] = useState(false);
-
+export const Navbar = (watcherState: WatcherState) => {
   const router = useRouter();
   const { locale: activeLocale, pathname, query, asPath } = router;
 
   const generateNavLink = (title: string, href: string) => {
     return (
       <Link href={href}>
-        <a onMouseEnter={() => setWatcherActivated(true)} onMouseLeave={() => setWatcherActivated(false)}>{title}</a>
+        <a onMouseEnter={() => watcherState.setWatcherActivated(true)}
+           onMouseLeave={() => watcherState.setWatcherActivated(false)}
+        >{title}</a>
       </Link>
     );
   }
@@ -23,7 +24,7 @@ export const Navbar = () => {
         {generateNavLink("Home", "/")}
         {generateNavLink("Experience", "/experience")}
       </div>
-      <Watcher activated={watcherActivated}/>
+      <Watcher watcherActivated={watcherState.watcherActivated} setWatcherActivated={watcherState.setWatcherActivated}/>
       <div className="nav-pos">
         {generateNavLink("Contact Me", "/contact-me")}
         {generateNavLink("Projects", "/projects")}

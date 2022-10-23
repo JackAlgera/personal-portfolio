@@ -1,10 +1,7 @@
 import {useEffect, useState} from "react";
+import {WatcherState} from "../models/watcher.model";
 
-interface WatcherProps {
-  activated: boolean;
-}
-
-export const Watcher = (props: WatcherProps) => {
+export const Watcher = (watcherState: WatcherState) => {
   const [watcherContainer, setWatcherContainer] = useState<HTMLDivElement|null>(null);
   const [theta, setTheta] = useState(0);
 
@@ -41,7 +38,7 @@ export const Watcher = (props: WatcherProps) => {
 
   return (
     <div ref={(element) => setWatcherContainer(element)}
-         className={`watcher-container ${props.activated ? "" : "stop"}`}>
+         className={`watcher-container ${watcherState.watcherActivated ? "" : "stop"}`}>
       <div className="dot spinner"/>
       <div className="dot spinner"/>
       <div className="dot spinner"/>

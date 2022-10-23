@@ -1,12 +1,22 @@
 import {ExperienceTab} from "../components/experience/experience-tab";
 import {useState} from "react";
 import {EXPERIENCE_TABS, ExperienceTabEntity} from "../components/models/tabs.model";
+import {WatcherState} from "../components/models/watcher.model";
 
-export default function Experience() {
+export default function Experience(watcherState: WatcherState) {
   const [tab, setTab] = useState<ExperienceTabEntity>(EXPERIENCE_TABS.get('blablacar'));
 
   const changeTab = (tab: string) => {
     setTab(EXPERIENCE_TABS.get(tab));
+  }
+
+  const generateButton = (company: string, key: string) => {
+    return (
+      <button onClick={() => changeTab(key)}
+              onMouseEnter={() => watcherState.setWatcherActivated(true)}
+              onMouseLeave={() => watcherState.setWatcherActivated(false)}
+      >{company}</button>
+    );
   }
 
   return (
@@ -14,11 +24,11 @@ export default function Experience() {
       <h2 className="numbered-heading">Experience</h2>
       <div className="inner experience">
         <div className="horizontal-tab-list">
-          <button onClick={() => changeTab('blablacar')}>BlaBlaCar</button>
-          <button onClick={() => changeTab('zalando')}>Zalando</button>
-          <button onClick={() => changeTab('airbus')}>Airbus</button>
-          <button onClick={() => changeTab('amazon')}>Amazon</button>
-          <button onClick={() => changeTab('femto-st')}>Femto-ST</button>
+          {generateButton('BlaBlaCar', 'blablacar')}
+          {generateButton('Zalando', 'zalando')}
+          {generateButton('Airbus', 'airbus')}
+          {generateButton('Amazon', 'amazon')}
+          {generateButton('Femto-ST', 'femto-st')}
         </div>
         <ExperienceTab tab={tab}/>
       </div>

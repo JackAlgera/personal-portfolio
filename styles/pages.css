@@ -1,0 +1,155 @@
+/* Navbar */
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  border-bottom: 1px solid var(--color-1);
+}
+.nav a {
+  color: var(--color-2);
+}
+
+.nav-pos {
+  display: flex;
+  width: 40%;
+  gap: 10px;
+}
+.nav-pos:nth-child(1) {
+  justify-content: right;
+}
+.nav-pos:nth-child(2) {
+  justify-content: left;
+}
+
+.context {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 100px 0 100px;
+}
+
+/* Pages */
+
+span.color-1 {
+  color: var(--color-1);
+}
+span.color-2 {
+  color: var(--color-2);
+}
+span.color-3,
+p.color-3{
+  color: var(--color-3);
+}
+.tech-title-container {
+  display: flex;
+  flex-direction: row;
+}
+.tech-title-container > p:nth-child(1),
+.tech-title-container > p:nth-child(3) {
+  color: var(--color-1);
+}
+.tech-title-container > p:nth-child(2) {
+  color: var(--color-2);
+}
+
+.numbered-heading {
+  margin: 10px 0 16px 0;
+}
+.numbered-heading::before {
+  position: relative;
+  bottom: 2px;
+  counter-increment: section 1;
+  content: "0" counter(section) ".";
+  margin-right: 10px;
+  color: var(--color-1);
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+.numbered-heading::after {
+  /*content: "";*/
+  /*display: block;*/
+  /*position: relative;*/
+  /*top: -2px;*/
+  /*left: 12px;*/
+  /*width: 200px;*/
+  /*height: 0.5px;*/
+  /*margin-left: 20px;*/
+  /*background-color: var(--color-1);*/
+}
+
+.inner {
+  display: flex;
+}
+.experience {
+  gap: 16px;
+}
+
+.horizontal-tab-list {
+  display: flex;
+  flex-direction: column;
+}
+.experience-tab {
+  border-left: solid 1px var(--color-1);
+  padding-left: 10px;
+  width: 850px;
+}
+
+/* Watcher CSS */
+
+.watcher-container {
+  position: relative;
+  width: var(--watcher-width);
+  height: var(--watcher-width);
+}
+
+.dot {
+  position: absolute;
+  top: calc(var(--watcher-width)/4 - 1px);
+  left: calc(var(--watcher-width)/4 - 1px);
+  width: calc(var(--watcher-width)/2 - 2px);
+  height: calc(var(--watcher-width)/2 - 2px);
+  border: 2px solid var(--color-1);
+  border-radius: 50%;
+  box-shadow: 0 calc(-2 * var(--watcher-width)/3) 0 -4px var(--color-1);
+}
+
+.watcher {
+  box-shadow: 0 calc(-2 * var(--watcher-width)/3) 0 -2px var(--color-1);
+  transition: box-shadow 0.2s linear;
+}
+
+.spinner {
+  animation: rotate var(--animation-duration) infinite linear;
+  transition: all 0.2s linear;
+}
+
+.watcher-container.stop .spinner {
+  box-shadow: 0 0 0 -5px var(--color-1);
+}
+
+.watcher-container:not(.stop) .watcher {
+  box-shadow: 0 0 0 -5px var(--color-1);
+}
+
+.watcher-container .spinner:nth-child(1) {
+  animation-delay: calc(var(--animation-duration)/5);
+}
+.watcher-container .spinner:nth-child(2) {
+  animation-delay: calc(2 * var(--animation-duration)/5);
+}
+.watcher-container .spinner:nth-child(3) {
+  animation-delay: calc(3 * var(--animation-duration)/5);
+}
+.watcher-container .spinner:nth-child(4) {
+  animation-delay: calc(4 * var(--animation-duration)/5);
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
