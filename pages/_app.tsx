@@ -1,4 +1,5 @@
-import '../styles/globals.css'
+import '../styles/globals.css';
+import '../styles/pages.css';
 import {AppProps} from "next/app";
 import {Navbar} from "../components/globals/navbar";
 
