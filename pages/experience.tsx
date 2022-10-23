@@ -3,7 +3,7 @@ import {useState} from "react";
 import {EXPERIENCE_TABS, ExperienceTabEntity} from "../components/models/tabs.model";
 
 export default function Experience() {
-  const [tab, setTab] = useState<ExperienceTabEntity>(EXPERIENCE_TABS.get('femto-st'));
+  const [tab, setTab] = useState<ExperienceTabEntity>(EXPERIENCE_TABS.get('blablacar'));
 
   const changeTab = (tab: string) => {
     setTab(EXPERIENCE_TABS.get(tab));

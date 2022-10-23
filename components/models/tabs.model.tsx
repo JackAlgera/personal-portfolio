@@ -14,7 +14,7 @@ export const EXPERIENCE_TABS: Map<string, ExperienceTabEntity> = new Map<string,
       company: "BlaBlaCar",
       location: "Paris, France",
       position: "Backend Software Engineer",
-      description: `Splitting a monolith (PHP/Symfony) into microservices (Java/Spring for the backend, React/TypeScript for the frontend).\n
+      description: `Splitting a monolith (PHP and Symfony) into microservices (Java/Spring for the backend, React/TypeScript for the frontend).\n
         One of BlaBlaCar’s philosophies is "You build it, you own it,  you run it!", I've worked on automating and improving my team’s global observability and alerting via Terraform, and implementing generic CI/CI pipelines and Helm charts for the team.\n
         I'm also the team's Scrum master, starting only a couple of weeks after I joined the company in August.`,
       from: "Aug. 2021",
