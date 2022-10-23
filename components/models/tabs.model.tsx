@@ -37,7 +37,7 @@ export const EXPERIENCE_TABS: Map<string, ExperienceTabEntity> = new Map<string,
   [
     'airbus',
     {
-      company: "Airbus Helicopters",
+      company: "Airbus",
       location: "Marignane, France",
       position: "Fullstack Software Engineer Intern",
       description: `Migrated an existing Airbus internal service to a Spring(backend) and React(frontend) based stack, which led to better overall app performance, latency and less bugs.\n
@@ -61,7 +61,7 @@ export const EXPERIENCE_TABS: Map<string, ExperienceTabEntity> = new Map<string,
   [
     'femto-st',
     {
-      company: "FEMTO-ST",
+      company: "Femto-ST",
       location: "Besançon, France",
       position: "Robotics Research Intern",
       description: `Modelling and planning of a soft continuous robot with 3 fingers on a millimetric scale for ear surgery.\n

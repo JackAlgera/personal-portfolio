@@ -15,6 +15,8 @@ export default function Experience(watcherState: WatcherState) {
       <button onClick={() => changeTab(key)}
               onMouseEnter={() => watcherState.setWatcherActivated(true)}
               onMouseLeave={() => watcherState.setWatcherActivated(false)}
+              className={tab.company === company ? 'activated' : ''}
+              key={company}
       >{company}</button>
     );
   }
@@ -24,11 +26,9 @@ export default function Experience(watcherState: WatcherState) {
       <h2 className="numbered-heading">Experience</h2>
       <div className="inner experience">
         <div className="horizontal-tab-list">
-          {generateButton('BlaBlaCar', 'blablacar')}
-          {generateButton('Zalando', 'zalando')}
-          {generateButton('Airbus', 'airbus')}
-          {generateButton('Amazon', 'amazon')}
-          {generateButton('Femto-ST', 'femto-st')}
+          { Array.from(EXPERIENCE_TABS.keys())
+            .map(company => generateButton(EXPERIENCE_TABS.get(company).company, company))
+          }
         </div>
         <ExperienceTab tab={tab}/>
       </div>
