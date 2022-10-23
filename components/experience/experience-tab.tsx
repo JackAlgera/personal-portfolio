@@ -29,7 +29,7 @@ export const ExperienceTab = (props: ExperienceTabProps) => {
   }
 
   useEffect(() => {
-    setLines(extractLines(props.tab.description, 40));
+    setLines(extractLines(props.tab.description, 50));
   }, [props.tab.description]);
 
 
@@ -37,6 +37,7 @@ export const ExperienceTab = (props: ExperienceTabProps) => {
     <div className="experience-tab">
       <pre>
         <p><span className={"color-1"}>{"<Job "}</span><span className={"color-2"}>{"company=\""}</span><span className={"color-1"}>{props.tab.company}</span><span className={"color-2"}>{"\""}</span></p>
+        <p><span className={"color-2"}>{"     position=\""}</span><span className={"color-1"}>{props.tab.position}</span><span className={"color-2"}>{"\""}</span></p>
         <p><span className={"color-2"}>{"     location=\""}</span><span className={"color-1"}>{props.tab.location}</span><span className={"color-2"}>{"\""}</span></p>
         <p>
           <span className={"color-2"}>{"     from=\""}</span><span className={"color-1"}>{props.tab.from}</span><span className={"color-2"}>{"\""}</span>
