@@ -30,7 +30,10 @@ export default function Experience(watcherState: WatcherState) {
             .map(company => generateButton(EXPERIENCE_TABS.get(company).company, company))
           }
         </div>
-        <ExperienceTab tab={tab}/>
+        <ExperienceTab watcherActivated={watcherState.watcherActivated}
+                       setWatcherActivated={watcherState.setWatcherActivated}
+                       tab={tab}
+        />
       </div>
     </section>
   );
