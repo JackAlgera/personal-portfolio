@@ -3,6 +3,7 @@ import React from "react";
 import {useRouter} from "next/router";
 import {Watcher} from "./watcher";
 import {WatcherState} from "../models/watcher.model";
+import styles from "./navbar.module.scss";
 
 export const Navbar = (watcherState: WatcherState) => {
   const router = useRouter();
@@ -19,13 +20,13 @@ export const Navbar = (watcherState: WatcherState) => {
   }
 
   return (
-    <div className="nav">
-      <div className="nav-pos">
+    <div className={styles.nav}>
+      <div className={styles.navPos}>
         {generateNavLink("Home", "/")}
         {generateNavLink("Experience", "/experience")}
       </div>
       <Watcher watcherActivated={watcherState.watcherActivated} setWatcherActivated={watcherState.setWatcherActivated}/>
-      <div className="nav-pos">
+      <div className={styles.navPos}>
         {generateNavLink("Contact Me", "/contact-me")}
         {generateNavLink("Projects", "/projects")}
       </div>

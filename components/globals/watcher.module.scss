@@ -1,0 +1,55 @@
+@mixin dot {
+  position: absolute;
+  top: calc(var(--watcher-width)/4 - 1px);
+  left: calc(var(--watcher-width)/4 - 1px);
+  width: calc(var(--watcher-width)/2 - 2px);
+  height: calc(var(--watcher-width)/2 - 2px);
+  border: 2px solid var(--color-1);
+  border-radius: 50%;
+  box-shadow: 0 calc(-2 * var(--watcher-width)/3) 0 -4px var(--color-1);
+}
+
+.watcherContainer {
+  position: relative;
+  width: var(--watcher-width);
+  height: var(--watcher-width);
+
+  &.stop .spinner {
+    box-shadow: 0 0 0 -5px var(--color-1);
+  }
+
+  &:not(.stop) .watcher {
+    box-shadow: 0 0 0 -5px var(--color-1);
+  }
+
+  .spinner:nth-child(1) {
+    animation-delay: calc(var(--animation-duration)/5);
+  }
+  .spinner:nth-child(2) {
+    animation-delay: calc(2 * var(--animation-duration)/5);
+  }
+  .spinner:nth-child(3) {
+    animation-delay: calc(3 * var(--animation-duration)/5);
+  }
+  .spinner:nth-child(4) {
+    animation-delay: calc(4 * var(--animation-duration)/5);
+  }
+}
+
+.watcher {
+  @include dot;
+  box-shadow: 0 calc(-2 * var(--watcher-width)/3) 0 -2px var(--color-1);
+  transition: box-shadow 0.2s linear;
+}
+
+.spinner {
+  @include dot;
+  animation: rotate var(--animation-duration) infinite linear;
+  transition: all 0.2s linear;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}

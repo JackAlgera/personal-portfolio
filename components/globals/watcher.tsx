@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import {WatcherState} from "../models/watcher.model";
+import styles from "./watcher.module.scss";
 
 export const Watcher = (watcherState: WatcherState) => {
   const [watcherContainer, setWatcherContainer] = useState<HTMLDivElement|null>(null);
@@ -14,7 +15,6 @@ export const Watcher = (watcherState: WatcherState) => {
   }
 
   useEffect(() => {
-
     const handleWindowMouseMove = event => {
       if (watcherContainer) {
         const mouseX = event.x;
@@ -38,13 +38,13 @@ export const Watcher = (watcherState: WatcherState) => {
 
   return (
     <div ref={(element) => setWatcherContainer(element)}
-         className={`watcher-container ${watcherState.watcherActivated ? "" : "stop"}`}>
-      <div className="dot spinner"/>
-      <div className="dot spinner"/>
-      <div className="dot spinner"/>
-      <div className="dot spinner"/>
-      <div className="dot spinner"/>
-      <div style={{transform: `rotate(${theta}deg)`}} className="dot watcher"/>
+         className={`${styles.watcherContainer} ${watcherState.watcherActivated ? "" : styles.stop}`}>
+      <div className={styles.spinner}/>
+      <div className={styles.spinner}/>
+      <div className={styles.spinner}/>
+      <div className={styles.spinner}/>
+      <div className={styles.spinner}/>
+      <div style={{transform: `rotate(${theta}deg)`}} className={styles.watcher}/>
     </div>
   );
 }

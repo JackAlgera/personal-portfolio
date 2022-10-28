@@ -1,4 +1,5 @@
 import {useEffect, useState} from "react";
+import styles from "./code-text.module.css";
 
 interface CodeTextProps {
   text: string;
@@ -28,7 +29,7 @@ export const CodeText = (props: CodeTextProps) => {
 
 
   return (
-    <span className={`${props.color} ${(typing ? 'typewriter' : '')}`}>
+    <span className={`${props.color} ${(typing ? styles.typewriter : '')}`}>
       {displayedText}
     </span>
   );

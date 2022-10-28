@@ -1,0 +1,28 @@
+.color1 {
+  color: var(--color-1);
+}
+.color2 {
+  color: var(--color-2);
+}
+.color3 {
+  color: var(--color-3);
+}
+
+#experienceTabTextArea {
+  counter-reset: line 0;
+}
+#experienceTabTextArea p {
+  counter-increment: line;
+}
+#experienceTabTextArea p::before {
+  color: var(--color-3);
+  font-size: 0.75rem;
+  position: relative;
+  bottom: 2.5px;
+}
+#experienceTabTextArea p:nth-child(-n+9)::before {
+  content: counter(line) '     ';
+}
+#experienceTabTextArea p:nth-child(n+10)::before {
+  content: counter(line) '    ';
+}

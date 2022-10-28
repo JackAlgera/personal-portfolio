@@ -1,0 +1,25 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  border-bottom: 1px solid var(--color-1);
+
+  a {
+    color: var(--color-2);
+  }
+}
+
+.navPos {
+  display: flex;
+  width: 40%;
+  gap: 10px;
+
+  &:nth-child(1) {
+    justify-content: right;
+  }
+  &:nth-child(2) {
+    justify-content: left;
+  }
+}

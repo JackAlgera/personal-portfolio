@@ -1,29 +1,3 @@
-/* Navbar */
-
-.nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  padding: 10px;
-  border-bottom: 1px solid var(--color-1);
-}
-.nav a {
-  color: var(--color-2);
-}
-
-.nav-pos {
-  display: flex;
-  width: 40%;
-  gap: 10px;
-}
-.nav-pos:nth-child(1) {
-  justify-content: right;
-}
-.nav-pos:nth-child(2) {
-  justify-content: left;
-}
-
 .context {
   display: flex;
   flex-direction: column;
@@ -31,27 +5,6 @@
   margin: 0 100px 0 100px;
 }
 
-/* Pages */
-
-.typewriter {
-  border-right: .15em solid var(--color-1);
-  animation: blink-cursor 0.75s step-end infinite;
-}
-@keyframes blink-cursor {
-  from, to { border-color: transparent }
-  50% { border-color: var(--color-3) }
-}
-
-span.color-1 {
-  color: var(--color-1);
-}
-span.color-2 {
-  color: var(--color-2);
-}
-span.color-3,
-p.color-3{
-  color: var(--color-3);
-}
 p a {
   text-decoration: underline;
 }
@@ -111,60 +64,4 @@ p a:hover {
   border-left: solid 1px var(--color-1);
   padding-left: 10px;
   width: 850px;
-}
-
-/* Watcher CSS */
-
-.watcher-container {
-  position: relative;
-  width: var(--watcher-width);
-  height: var(--watcher-width);
-}
-
-.dot {
-  position: absolute;
-  top: calc(var(--watcher-width)/4 - 1px);
-  left: calc(var(--watcher-width)/4 - 1px);
-  width: calc(var(--watcher-width)/2 - 2px);
-  height: calc(var(--watcher-width)/2 - 2px);
-  border: 2px solid var(--color-1);
-  border-radius: 50%;
-  box-shadow: 0 calc(-2 * var(--watcher-width)/3) 0 -4px var(--color-1);
-}
-
-.watcher {
-  box-shadow: 0 calc(-2 * var(--watcher-width)/3) 0 -2px var(--color-1);
-  transition: box-shadow 0.2s linear;
-}
-
-.spinner {
-  animation: rotate var(--animation-duration) infinite linear;
-  transition: all 0.2s linear;
-}
-
-.watcher-container.stop .spinner {
-  box-shadow: 0 0 0 -5px var(--color-1);
-}
-
-.watcher-container:not(.stop) .watcher {
-  box-shadow: 0 0 0 -5px var(--color-1);
-}
-
-.watcher-container .spinner:nth-child(1) {
-  animation-delay: calc(var(--animation-duration)/5);
-}
-.watcher-container .spinner:nth-child(2) {
-  animation-delay: calc(2 * var(--animation-duration)/5);
-}
-.watcher-container .spinner:nth-child(3) {
-  animation-delay: calc(3 * var(--animation-duration)/5);
-}
-.watcher-container .spinner:nth-child(4) {
-  animation-delay: calc(4 * var(--animation-duration)/5);
-}
-
-@keyframes rotate {
-  to {
-    transform: rotate(360deg);
-  }
 }
