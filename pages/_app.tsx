@@ -14,7 +14,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       <div className="context">
         <Component {...pageProps} watcherActivated={watcherActivated} setWatcherActivated={setWatcherActivated} />
       </div>
-      <SocialBar />
+      <SocialBar watcherActivated={watcherActivated} setWatcherActivated={setWatcherActivated} />
     </div>
   );
 }

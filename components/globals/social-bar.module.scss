@@ -14,11 +14,6 @@ $barHeight: 60px;
     padding: 0;
   }
 
-  a > svg:hover {
-    color: var(--color-3);
-    cursor: pointer;
-  }
-
   a > svg {
     width: $svgSize;
     height: $svgSize;
@@ -30,6 +25,14 @@ $barHeight: 60px;
     font-size: 13px;
     writing-mode: vertical-rl;
     text-orientation: mixed;
+    transition: all ease 0.2s;
+  }
+
+  a > svg:hover,
+  a > p:hover {
+    color: var(--color-3);
+    cursor: pointer;
+    transform: translateX(8%);
   }
 
   &:nth-child(3) {
