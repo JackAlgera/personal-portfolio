@@ -4,6 +4,9 @@ import {WatcherState} from "../models/watcher.model";
 import {CodeText} from "../utils/code-text";
 import styles from "./experience-tab.module.scss";
 
+const PARAGRAPH_TYPEWRITER_LETTER_DELAY = 35;
+const MAIN_TYPEWRITER_LETTER_DELAY = 100;
+
 interface ExperienceTabProps {
   tab: ExperienceTabEntity;
 }
@@ -50,32 +53,38 @@ export const ExperienceTab = (props: ExperienceTabProps & WatcherState) => {
              onMouseLeave={() => props.setWatcherActivated(false)}
              className={styles.color1}
              href={props.tab.url}
-          ><CodeText stopTyping={true} color={styles.color1} text={props.tab.company} /></a>
+          ><CodeText typeDelay={MAIN_TYPEWRITER_LETTER_DELAY} stopTyping={true} color={styles.color1} text={props.tab.company} /></a>
           <span className={styles.color2}>{"\""}</span>
         </p>
         <p>
           <span className={styles.color2}>{"     position=\""}</span>
-          <CodeText stopTyping={true} color={styles.color1} text={props.tab.position} />
+          <CodeText typeDelay={MAIN_TYPEWRITER_LETTER_DELAY} stopTyping={true} color={styles.color1} text={props.tab.position} />
           <span className={styles.color2}>{"\""}</span>
         </p>
         <p>
           <span className={styles.color2}>{"     location=\""}</span>
-          <CodeText stopTyping={true} color={styles.color1} text={props.tab.location} />
+          <CodeText typeDelay={MAIN_TYPEWRITER_LETTER_DELAY} stopTyping={true} color={styles.color1} text={props.tab.location} />
           <span className={styles.color2}>{"\""}</span>
         </p>
         <p>
           <span className={styles.color2}>{"     from=\""}</span>
-          <CodeText stopTyping={true} color={styles.color1} text={props.tab.from} />
+          <CodeText typeDelay={MAIN_TYPEWRITER_LETTER_DELAY} stopTyping={true} color={styles.color1} text={props.tab.from} />
           <span className={styles.color2}>{"\""}</span>
 
           <span className={styles.color2}>{" to=\""}</span>
-          <CodeText stopTyping={true} color={styles.color1} text={props.tab.to} />
+          <CodeText typeDelay={MAIN_TYPEWRITER_LETTER_DELAY} stopTyping={true} color={styles.color1} text={props.tab.to} />
           <span className={styles.color2}>{"\""}</span>
           <span className={styles.color1}>{">"}</span>
         </p>
         <p/>
         {lines && lines.map((line, index) => (
-          <p className={styles.color3} key={'tab-' + index}><CodeText stopTyping={index !== lines.length - 1} color={styles.color3} text={line.trim()} /></p>
+          <p className={styles.color3} key={'tab-' + index}>
+            <CodeText
+              typeDelay={PARAGRAPH_TYPEWRITER_LETTER_DELAY}
+              stopTyping={index !== lines.length - 1}
+              color={styles.color3}
+              text={line.trim()} />
+          </p>
         ))}
         <p/>
         <p><span className={styles.color1}>{"</Job>"}</span></p>

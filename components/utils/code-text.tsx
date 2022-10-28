@@ -5,6 +5,7 @@ interface CodeTextProps {
   text: string;
   color: string;
   stopTyping: boolean;
+  typeDelay: number;
 }
 
 export const CodeText = (props: CodeTextProps) => {
@@ -20,7 +21,7 @@ export const CodeText = (props: CodeTextProps) => {
       } else if (props.stopTyping) {
         setTyping(false);
       }
-    }, Math.random() * 140 + 20);
+    }, Math.random() * props.typeDelay + 20);
 
     return () => {
       clearTimeout(timeout);
