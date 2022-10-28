@@ -1,6 +1,7 @@
 import {ExperienceTabEntity} from "../models/tabs.model";
 import {useEffect, useState} from "react";
 import {WatcherState} from "../models/watcher.model";
+import {CodeText} from "../utils/code-text";
 
 interface ExperienceTabProps {
   tab: ExperienceTabEntity;
@@ -42,41 +43,41 @@ export const ExperienceTab = (props: ExperienceTabProps & WatcherState) => {
     <div className="experience-tab">
       <pre>
         <p>
-          <span className={"color-1"}>{"<Job "}</span>
-          <span className={"color-2"}>{"company=\""}</span>
+          <span className="color-1">{"<Job "}</span>
+          <span className="color-2">{"company=\""}</span>
           <a onMouseEnter={() => props.setWatcherActivated(true)}
              onMouseLeave={() => props.setWatcherActivated(false)}
-             className={"color-1"}
+             className="color-1"
              href={props.tab.url}
-          >{props.tab.company}</a>
-          <span className={"color-2"}>{"\""}</span>
+          ><CodeText stopTyping={true} color={"color-1"} text={props.tab.company} /></a>
+          <span className="color-2">{"\""}</span>
         </p>
         <p>
-          <span className={"color-2"}>{"     position=\""}</span>
-          <span className={"color-1"}>{props.tab.position}</span>
-          <span className={"color-2"}>{"\""}</span>
+          <span className="color-2">{"     position=\""}</span>
+          <CodeText stopTyping={true} color={"color-1"} text={props.tab.position} />
+          <span className="color-2">{"\""}</span>
         </p>
         <p>
-          <span className={"color-2"}>{"     location=\""}</span>
-          <span className={"color-1"}>{props.tab.location}</span>
-          <span className={"color-2"}>{"\""}</span>
+          <span className="color-2">{"     location=\""}</span>
+          <CodeText stopTyping={true} color={"color-1"} text={props.tab.location} />
+          <span className="color-2">{"\""}</span>
         </p>
         <p>
-          <span className={"color-2"}>{"     from=\""}</span>
-          <span className={"color-1"}>{props.tab.from}</span>
-          <span className={"color-2"}>{"\""}</span>
+          <span className="color-2">{"     from=\""}</span>
+          <CodeText stopTyping={true} color={"color-1"} text={props.tab.from} />
+          <span className="color-2">{"\""}</span>
 
-          <span className={"color-2"}>{" to=\""}</span>
-          <span className={"color-1"}>{props.tab.to}</span>
-          <span className={"color-2"}>{"\""}</span>
-          <span className={"color-1"}>{">"}</span>
+          <span className="color-2">{" to=\""}</span>
+          <CodeText stopTyping={true} color={"color-1"} text={props.tab.to} />
+          <span className="color-2">{"\""}</span>
+          <span className="color-1">{">"}</span>
         </p>
         <p/>
         {lines && lines.map((line, index) => (
-          <p className="color-3" key={'tab-' + index}>{line.trim()}</p>
+          <p className="color-3" key={'tab-' + index}><CodeText stopTyping={index !== lines.length - 1} color={"color-3"} text={line.trim()} /></p>
         ))}
         <p/>
-        <p><span className={"color-1"}>{"</Job>"}</span></p>
+        <p><span className="color-1">{"</Job>"}</span></p>
       </pre>
     </div>
   );

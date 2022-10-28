@@ -5,9 +5,11 @@ import {WatcherState} from "../components/models/watcher.model";
 
 export default function Experience(watcherState: WatcherState) {
   const [tab, setTab] = useState<ExperienceTabEntity>(EXPERIENCE_TABS.get('blablacar'));
+  const [key, setKey] = useState(Math.random());
 
   const changeTab = (tab: string) => {
     setTab(EXPERIENCE_TABS.get(tab));
+    setKey(Math.random());
   }
 
   const generateButton = (company: string, key: string) => {
@@ -33,6 +35,7 @@ export default function Experience(watcherState: WatcherState) {
         <ExperienceTab watcherActivated={watcherState.watcherActivated}
                        setWatcherActivated={watcherState.setWatcherActivated}
                        tab={tab}
+                       key={key}
         />
       </div>
     </section>
