@@ -65,14 +65,14 @@ export const ExperienceTab = (props: ExperienceTabProps & WatcherState) => {
           <span className={"color-2"}>{" to=\""}</span>
           <span className={"color-1"}>{props.tab.to}</span>
           <span className={"color-2"}>{"\""}</span>
-          <span className={"color-1"}>{" />"}</span>
+          <span className={"color-1"}>{">"}</span>
         </p>
         <p/>
         {lines && lines.map((line, index) => (
           <p className="color-3" key={'tab-' + index}>{line.trim()}</p>
         ))}
         <p/>
-        <p><span className={"color-1"}>{"<Job />"}</span></p>
+        <p><span className={"color-1"}>{"</Job>"}</span></p>
       </pre>
     </div>
   );
