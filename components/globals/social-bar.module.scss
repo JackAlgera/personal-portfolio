@@ -1,0 +1,71 @@
+$svgSize: 24px;
+$barCircleSize: 6px;
+$barHeight: 60px;
+
+.verticalBar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 20px;
+  gap: 32px;
+
+  a {
+    border: unset;
+    padding: 0;
+  }
+
+  a > svg:hover {
+    color: var(--color-3);
+    cursor: pointer;
+  }
+
+  a > svg {
+    width: $svgSize;
+    height: $svgSize;
+    color: var(--color-1);
+    transition: all ease 0.2s;
+  }
+
+  a > p {
+    font-size: 13px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+  &:nth-child(3) {
+    left: 20px;
+  }
+  &:nth-child(4) {
+    right: 20px;
+  }
+}
+
+@mixin circle {
+  content: '';
+  width: $barCircleSize;
+  height: $barCircleSize;
+  position: absolute;
+  border-radius: 50%;
+  display: block;
+  background-color: var(--color-1);
+}
+
+.bar {
+  content: "";
+  width: 1px;
+  height: $barHeight;
+  margin: 0 auto;
+  background-color: var(--color-1);
+  position: relative;
+
+  &:nth-child(1):before {
+    @include circle;
+    transform: translate(-50%, -100%);
+  }
+  &:nth-child(3):after,
+  &:nth-child(5):after{
+    @include circle;
+    transform: translate(-50%, 100%);
+    bottom: 0;
+  }
+}

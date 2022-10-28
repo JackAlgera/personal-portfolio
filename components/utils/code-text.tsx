@@ -25,7 +25,7 @@ export const CodeText = (props: CodeTextProps) => {
     return () => {
       clearTimeout(timeout);
     };
-  }, [offset, props.text]);
+  }, [offset, props.text, props.stopTyping, props.color]);
 
 
   return (
