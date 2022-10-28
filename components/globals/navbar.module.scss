@@ -1,25 +1,49 @@
+$hoverDistance: 4px;
+
 .nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
   padding: 10px;
   border-bottom: 1px solid var(--color-1);
 
   a {
     color: var(--color-2);
+    transition: all ease 0.3s;
+
+    &:hover {
+      color: var(--color-1);
+    }
   }
+}
+
+.nav > .navPos > a:nth-child(1):hover {
 }
 
 .navPos {
   display: flex;
   width: 40%;
-  gap: 10px;
+  gap: 30px;
 
   &:nth-child(1) {
     justify-content: right;
+
+    > a:nth-child(1):hover {
+      transform: translateX(-$hoverDistance);
+    }
+    > a:nth-child(2):hover {
+      transform: translateY($hoverDistance);
+    }
   }
-  &:nth-child(2) {
+  &:nth-child(3) {
     justify-content: left;
+
+    > a:nth-child(1):hover {
+      transform: translateY(-$hoverDistance);
+    }
+    > a:nth-child(2):hover {
+      transform: translateX($hoverDistance);
+    }
   }
 }
