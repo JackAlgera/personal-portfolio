@@ -13,24 +13,28 @@ export const ExperienceTab = (props: ExperienceTabProps & WatcherState) => {
     let lines = [];
     description.split('\n')
       .map((line) => {
-        let words = line.split(' ');
-        let newParagrapheLines = [];
-        while (words.length != 0) {
-          let newLine = '';
-          while (words.length != 0 && newLine.length < maxLetters) {
-            newLine = words.pop() + ' ' + newLine;
-          }
-          newParagrapheLines.push(newLine);
-        }
+        let words = line.trim().split(' ');
+        let paragraphLines = [];
+        let newLine = '';
 
-        newParagrapheLines.reverse().map(line => lines.push(line));
+        words.forEach(word => {
+          if (newLine.length + word.length > maxLetters) {
+            paragraphLines.push(newLine);
+            newLine = word;
+          } else {
+            newLine += ' ' + word;
+          }
+        })
+
+        paragraphLines.push(newLine);
+        paragraphLines.map(line => lines.push(line));
       });
 
     return lines;
   }
 
   useEffect(() => {
-    setLines(extractLines(props.tab.description, 50));
+    setLines(extractLines(props.tab.description, 60));
   }, [props.tab.description]);
 
 
