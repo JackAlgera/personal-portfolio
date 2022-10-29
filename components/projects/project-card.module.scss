@@ -16,6 +16,10 @@ $margins: -10px;
     width: 20%;
     font-size: 1.4rem;
   }
+  h2 > span {
+    font-size: 0.9rem;
+    color: var(--color-1);
+  }
   &.rowReverse h2.rotate {
     transform: rotate(90deg);
   }
@@ -59,13 +63,6 @@ $margins: -10px;
     --scale: 1.4;
     --z-index: 3;
   }
-
-  //span {
-  //  filter: blur(8px) brightness(0.5);
-  //}
-  //p {
-  //  color: var(--color-1);
-  //}
 
   div {
     display: flex;
