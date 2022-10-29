@@ -46,9 +46,10 @@ export const ProjectCard = (props: ProjectCardProps) => {
         {props.project.title}<br/>
         <span>{props.project.techStack}</span>
       </h2>
-      <div className={cssStyles}
+      <a className={cssStyles}
            onMouseEnter={() => props.handleMouseEnter()}
            onMouseLeave={() => props.handleMouseLeave()}
+         href={`/projects/${props.project.id}`}
       >
         <div>
           <p className={styles.centerText}>{props.project.shortDescription}</p>
@@ -61,7 +62,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
           loading="eager"
           alt={props.project.title}
         />
-      </div>
+      </a>
     </div>
   );
 }
