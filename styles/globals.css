@@ -85,3 +85,7 @@ button.activated {
   border-color: var(--color-3);
   color: var(--color-3);
 }
+
+img {
+  transition: all 0.3s ease;
+}

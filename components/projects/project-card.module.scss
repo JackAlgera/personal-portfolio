@@ -1,0 +1,66 @@
+$margins: -10px;
+
+.container {
+  display: flex;
+  width: 800px;
+  place-items: center;
+  text-align: center;
+
+  p {
+    margin: 30px;
+    flex-grow: 1;
+  }
+
+  &.rowReverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.card {
+  --scale: 1;
+  --translateX: 0;
+  --translateY: 0;
+  --z-index: 0;
+  margin-bottom: $margins;
+  margin-top: $margins;
+  position: relative;
+  display: grid;
+  width: 450px;
+  height: 250px;
+  transition: all ease 0.5s;
+  transform: scale(var(--scale)) translateX(var(--translateX)) translateY(var(--translateY));
+  z-index: var(--z-index);
+  border-radius: 20px;
+  overflow: hidden;
+
+  p {
+    margin: 0;
+    z-index: 4;
+    color: transparent;
+    align-self: center;
+  }
+
+  * {
+    grid-row: 1;
+    grid-column: 1;
+    transition: all ease 0.6s;
+  }
+
+  &.up {
+    --translateY: -15%;
+  }
+  &.down {
+    --translateY: 15%;
+  }
+  &.select {
+    --scale: 1.4;
+    --z-index: 3;
+  }
+
+  &.select span {
+    filter: blur(8px) brightness(0.5);
+  }
+  &.select p {
+    color: var(--color-1);
+  }
+}
