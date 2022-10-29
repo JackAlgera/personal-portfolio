@@ -3,7 +3,7 @@ import {ProjectCard} from "../components/projects/project-card";
 import {useState} from "react";
 
 export default function Projects() {
-  const [projectCards, setProjectCards] = useState<Project[]>(Array.from(PROJECTS.values()).flatMap(p => Array.from(p.values())));
+  const [projectCards, setProjectCards] = useState<Project[]>(Array.from(PROJECTS.values()));
 
   const handleMouseLeave = () => {
     const newProjectCards: Project[] = [];
