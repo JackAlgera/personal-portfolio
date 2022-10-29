@@ -1,7 +1,7 @@
 import {ExperienceTab} from "../components/experience/experience-tab";
 import {useState} from "react";
-import {EXPERIENCE_TABS, ExperienceTabEntity} from "../components/models/tabs.model";
-import {WatcherState} from "../components/models/watcher.model";
+import {EXPERIENCE_TABS, ExperienceTabEntity} from "../components/_models/tabs.model";
+import {WatcherState} from "../components/_models/watcher.model";
 
 export default function Experience(watcherState: WatcherState) {
   const [tab, setTab] = useState<ExperienceTabEntity>(EXPERIENCE_TABS.get('blablacar'));

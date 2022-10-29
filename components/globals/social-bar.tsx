@@ -1,7 +1,7 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiCodingame } from "react-icons/si";
 import styles from "./social-bar.module.scss";
-import {WatcherState} from "../models/watcher.model";
+import {WatcherState} from "../_models/watcher.model";
 
 export const SocialBar = (watcherState: WatcherState) => {
   const generateLink = (href: string, content) => {

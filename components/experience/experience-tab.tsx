@@ -1,7 +1,7 @@
-import {ExperienceTabEntity} from "../models/tabs.model";
+import {ExperienceTabEntity} from "../_models/tabs.model";
 import {useEffect, useState} from "react";
-import {WatcherState} from "../models/watcher.model";
-import {CodeText} from "../utils/code-text";
+import {WatcherState} from "../_models/watcher.model";
+import {CodeText} from "../_utils/code-text";
 import styles from "./experience-tab.module.scss";
 
 const PARAGRAPH_TYPEWRITER_LETTER_DELAY = 35;

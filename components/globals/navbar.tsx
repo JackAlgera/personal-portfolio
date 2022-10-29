@@ -1,7 +1,7 @@
 import Link from "next/link";
 import {useRouter} from "next/router";
 import {Watcher} from "./watcher";
-import {WatcherState} from "../models/watcher.model";
+import {WatcherState} from "../_models/watcher.model";
 import styles from "./navbar.module.scss";
 
 export const Navbar = (watcherState: WatcherState) => {

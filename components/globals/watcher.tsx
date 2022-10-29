@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {WatcherState} from "../models/watcher.model";
+import {WatcherState} from "../_models/watcher.model";
 import styles from "./watcher.module.scss";
 
 export const Watcher = (watcherState: WatcherState) => {
