@@ -25,6 +25,13 @@ export interface Project {
   image: StaticImageData|null;
   style: ProjectStyleType;
   date: string;
+  sections: Section[];
+}
+
+export interface Section {
+  text: string|null;
+  youtubeVideoId: string|null;
+  image: StaticImageData|null;
 }
 
 export enum ProjectStyleType {
@@ -43,7 +50,16 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       techStack: "C++ / SFML",
       image: path_finding_algorithms,
       date: '2019',
-      style: null
+      style: null,
+      sections: [
+        {
+          text: "Implemented the BFS and DFS algorithms, with a nice visual representation of each.",
+          image: path_finding_algorithms
+        } as Section,
+        {
+          youtubeVideoId: "2-7dpWj4Lg8"
+        } as Section
+      ]
     }
   ],
   [
@@ -55,7 +71,16 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       techStack: "C++ / SFML",
       image: sorting_algorithms,
       date: '2019',
-      style: null
+      style: null,
+      sections: [
+        {
+          text: "Implemented 5 different algorithms (Quick sort, Merge sort, Bucket sort, Radix sort, Bubble sort), with a nice visual representation of each.",
+          image: sorting_algorithms
+        } as Section,
+        {
+          youtubeVideoId: "2-7dpWj4Lg8"
+        } as Section
+      ]
     }
   ],
   [
@@ -67,7 +92,16 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       techStack: "Unity / C#",
       image: oystou,
       date: '2019',
-      style: null
+      style: null,
+      sections: [
+        {
+          text: "\"Oystou\" is a small game I created in one weekend with a team of 3 people during the Global Game Jam 2019, that was held at Epitech in Nantes, France.",
+          image: oystou
+        } as Section,
+        {
+          youtubeVideoId: "2-7dpWj4Lg8"
+        } as Section
+      ]
     }
   ],
   [
@@ -79,7 +113,16 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       techStack: "Unity / C#",
       image: cook_em_up,
       date: '2019',
-      style: null
+      style: null,
+      sections: [
+        {
+          text: "\"Cook Em up\" is an android application where you run a fancy restaurant in Paris, and need to prepare the meals following the recipes, but watch out, time runs out quickly !",
+          image: cook_em_up
+        } as Section,
+        {
+          youtubeVideoId: "2-7dpWj4Lg8"
+        } as Section
+      ]
     }
   ],
   [
@@ -91,7 +134,16 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       techStack: "Unity / C#",
       image: circle_izer,
       date: '2018',
-      style: null
+      style: null,
+      sections: [
+        {
+          text: "A small program I created that takes an image and transforms it into circles that \"Pop\" as the mouse hovers over revealing the image.",
+          image: circle_izer
+        } as Section,
+        {
+          youtubeVideoId: "2-7dpWj4Lg8"
+        } as Section
+      ]
     }
   ],
   [
@@ -103,7 +155,16 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       techStack: "Unity / C#",
       image: arrow_dance,
       date: '2018',
-      style: null
+      style: null,
+      sections: [
+        {
+          text: "ArrowDance is a small android application I created that is closely related to the arcade arrow dancing game from back in the day ! Hit the arrows in the correct order and try beat the high score !",
+          image: arrow_dance
+        } as Section,
+        {
+          youtubeVideoId: "2-7dpWj4Lg8"
+        } as Section
+      ]
     }
   ],
   [
@@ -115,7 +176,16 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       techStack: "Unity / C#",
       image: attack_of_the_squarons,
       date: '2018',
-      style: null
+      style: null,
+      sections: [
+        {
+          text: "\"Attack of the Squarons\" is a small game I created with my brother during a Game Jam organized by BlackThornProd in 2018. It's a small RPG spell-casting game where the player can create his own spells using code !",
+          image: attack_of_the_squarons
+        } as Section,
+        {
+          youtubeVideoId: "2-7dpWj4Lg8"
+        } as Section
+      ]
     }
   ],
   [
@@ -127,7 +197,16 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       techStack: "Unity / C#",
       image: please_the_gods,
       date: '2018',
-      style: null
+      style: null,
+      sections: [
+        {
+          text: "\"Please the Gods\" is a game I created in one weekend with my brother, during the Ludum Dare 43 Game Jam 2018. It's a strategy game where you need to take care of your village while pleasing the Gods to avoid their wrath !",
+          image: please_the_gods
+        } as Section,
+        {
+          youtubeVideoId: "2-7dpWj4Lg8"
+        } as Section
+      ]
     }
   ],
   [
@@ -139,7 +218,16 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       techStack: "Unity / C#",
       image: the_great_tower_ascent,
       date: '2018',
-      style: null
+      style: null,
+      sections: [
+        {
+          text: "Descent down the great tower, collecting coins and diamonds and upgrading your warrior with speed and cool new looks !",
+          image: the_great_tower_ascent
+        } as Section,
+        {
+          youtubeVideoId: "2-7dpWj4Lg8"
+        } as Section
+      ]
     }
   ],
   [
@@ -151,7 +239,16 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       techStack: "Java",
       image: call_of_muty,
       date: '2018',
-      style: null
+      style: null,
+      sections: [
+        {
+          text: "\"Call of Muty\" is an online multiplayer shooting game. Avoid the traps, pick up guns and destroy the opposing players !",
+          image: call_of_muty
+        } as Section,
+        {
+          youtubeVideoId: "2-7dpWj4Lg8"
+        } as Section
+      ]
     }
   ],
   [
@@ -163,7 +260,16 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       techStack: "C++ / SFML",
       image: predators_vs_prey,
       date: '2018',
-      style: null
+      style: null,
+      sections: [
+        {
+          text: "\"Predators and Prey\" is a cellular automaton where the prey (green) try to survive from the predators (red).",
+          image: predators_vs_prey
+        } as Section,
+        {
+          youtubeVideoId: "2-7dpWj4Lg8"
+        } as Section
+      ]
     }
   ],
   [
@@ -175,7 +281,16 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       techStack: "C++ / SFML",
       image: probability_simulator,
       date: '2017',
-      style: null
+      style: null,
+      sections: [
+        {
+          text: "The simulation looks like two sides fighting each other, each trying to gain ground, but the black side has a slightly higher chance of winning, which inevitably brings them victory.",
+          image: probability_simulator
+        } as Section,
+        {
+          youtubeVideoId: "2-7dpWj4Lg8"
+        } as Section
+      ]
     }
   ],
   [
@@ -187,7 +302,16 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       techStack: "C++ / SFML",
       image: particle_system,
       date: '2017',
-      style: null
+      style: null,
+      sections: [
+        {
+          text: "Program that simulates a particle system in a void. Gravity can be changed during the simulation.",
+          image: particle_system
+        } as Section,
+        {
+          youtubeVideoId: "2-7dpWj4Lg8"
+        } as Section
+      ]
     }
   ],
   [
@@ -199,7 +323,16 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       techStack: "C++ / SFML",
       image: trinity_force,
       date: '2017',
-      style: null
+      style: null,
+      sections: [
+        {
+          text: "Creates a triangle, then cuts that triangle into 4 smaller triangles, then cuts that triangle into 4 smaller triangles, then... triangle-ception?",
+          image: trinity_force
+        } as Section,
+        {
+          youtubeVideoId: "2-7dpWj4Lg8"
+        } as Section
+      ]
     }
   ],
   [
@@ -211,7 +344,16 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       techStack: "Java",
       image: word_cloud,
       date: '2017',
-      style: null
+      style: null,
+      sections: [
+        {
+          text: "Program that creates a word cloud from text, where the size of each word depends on how frequently the word appears in the text",
+          image: word_cloud
+        } as Section,
+        {
+          youtubeVideoId: "2-7dpWj4Lg8"
+        } as Section
+      ]
     }
   ],
   [
@@ -223,7 +365,16 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       techStack: "C++ / SFML",
       image: conway_game_of_life,
       date: '2017',
-      style: null
+      style: null,
+      sections: [
+        {
+          text: "Simulates Conway's cellular automaton, called \"Game of Life\"",
+          image: conway_game_of_life
+        } as Section,
+        {
+          youtubeVideoId: "2-7dpWj4Lg8"
+        } as Section
+      ]
     }
   ],
   [
@@ -235,7 +386,16 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       techStack: "C++ / SFML",
       image: newtons_pull,
       date: '2017',
-      style: null
+      style: null,
+      sections: [
+        {
+          text: "This simulates the Newton’s law of universal gravitation. Small satellites or planets (blue circles) are pulled by the bigger planets (yellow circles) as well as other satellites.",
+          image: newtons_pull
+        } as Section,
+        {
+          youtubeVideoId: "2-7dpWj4Lg8"
+        } as Section
+      ]
     }
   ]
 ]);

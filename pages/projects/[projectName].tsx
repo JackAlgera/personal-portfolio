@@ -1,16 +1,48 @@
-import {Project, PROJECTS} from "../../components/_models/project.model";
-import {ProjectCard} from "../../components/projects/project-card";
+import {Project, PROJECTS, Section} from "../../components/_models/project.model";
+import styles from "./[projectName].module.scss";
+import Image from "next/image";
+import YouTube from "react-youtube";
 
 interface ProjectPageProps {
   project: Project;
 }
 
 const ProjectPage = (props: ProjectPageProps) => {
+  const generateSection = (section: Section, index: number) => {
+    return (
+      <section key={index} className={styles.container}>
+        {section.text && section.image ?
+          <>
+            <p>{section.text}</p>
+            <div className={styles.imageContainer}>
+              <Image
+                src={props.project.image.src}
+                layout="fill"
+                objectFit="cover"
+                loading="eager"
+                alt={props.project.title}
+              />
+            </div>
+          </>
+          : section.youtubeVideoId ?
+            <YouTube
+              className={styles.video}
+              videoId={section.youtubeVideoId}
+              opts={{
+                height: '441',
+                width: '784'
+              }}
+            />
+          : null
+        }
+      </section>
+    );
+  }
+
   return (
     <>
-      {props.project ?
-        <ProjectCard project={props.project} handleMouseLeave={() => {}} handleMouseEnter={() => {}} inverse={false} styleClass={null} />
-        : null}
+      <h1 className="numbered-heading">{props.project.title}</h1>
+      {props.project.sections.map((section, index) => generateSection(section, index))}
     </>
   );
 }

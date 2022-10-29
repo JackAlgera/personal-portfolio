@@ -1,0 +1,28 @@
+$border-radius: 20px;
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 800px;
+  place-items: center;
+  text-align: center;
+  justify-content: center;
+
+  p {
+    color: var(--color-2);
+  }
+}
+
+.imageContainer {
+  position: relative;
+  width: 850px;
+  height: 250px;
+  border-radius: $border-radius;
+  overflow: hidden;
+}
+
+.video {
+  margin-top: 20px;
+  border-radius: $border-radius;
+  overflow: hidden;
+}

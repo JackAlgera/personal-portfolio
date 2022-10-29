@@ -31,7 +31,6 @@ export const ProjectCard = (props: ProjectCardProps) => {
         default:
       }
 
-      console.log(`${styles.card} ${cssStyles}`);
       return `${styles.card} ${cssStyles}`;
     }
 
@@ -47,8 +46,8 @@ export const ProjectCard = (props: ProjectCardProps) => {
         <span>{props.project.techStack}</span>
       </h2>
       <a className={cssStyles}
-           onMouseEnter={() => props.handleMouseEnter()}
-           onMouseLeave={() => props.handleMouseLeave()}
+         onMouseEnter={() => props.handleMouseEnter()}
+         onMouseLeave={() => props.handleMouseLeave()}
          href={`/projects/${props.project.id}`}
       >
         <div>
