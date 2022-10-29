@@ -60,11 +60,28 @@ $margins: -10px;
     --z-index: 3;
   }
 
-  &.select span {
-    filter: blur(8px) brightness(0.5);
+  //span {
+  //  filter: blur(8px) brightness(0.5);
+  //}
+  //p {
+  //  color: var(--color-1);
+  //}
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
   }
-  &.select p {
+
+  &.select span {
+    filter: blur(8px) brightness(0.4);
+  }
+  &.select > div > p:nth-child(1) {
     color: var(--color-1);
+  }
+  &.select > div > p:nth-child(2) {
+    color: var(--color-2);
   }
 }
 

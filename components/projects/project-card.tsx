@@ -47,7 +47,10 @@ export const ProjectCard = (props: ProjectCardProps) => {
            onMouseEnter={() => props.handleMouseEnter()}
            onMouseLeave={() => props.handleMouseLeave()}
       >
-        <p className={styles.centerText}>{props.project.shortDescription}</p>
+        <div>
+          <p className={styles.centerText}>{props.project.shortDescription}</p>
+          <p className={styles.centerText}>{props.project.date}</p>
+        </div>
         <Image
           src={props.project.image.src}
           layout="fill"
