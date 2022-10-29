@@ -6,10 +6,21 @@ $margins: -10px;
   place-items: center;
   text-align: center;
 
+  * {
+    transition: all ease 0.5s;
+  }
+
   h2 {
     margin: 20px;
     flex-grow: 1;
     width: 20%;
+    font-size: 1.4rem;
+  }
+  &.rowReverse h2.rotate {
+    transform: rotate(90deg);
+  }
+  h2.rotate {
+    transform: rotate(-90deg);
   }
 
   &.rowReverse {
@@ -28,7 +39,6 @@ $margins: -10px;
   display: grid;
   width: 450px;
   height: 250px;
-  transition: all ease 0.5s;
   transform: scale(var(--scale)) translateX(var(--translateX)) translateY(var(--translateY));
   z-index: var(--z-index);
   border-radius: 20px;
@@ -37,14 +47,13 @@ $margins: -10px;
   * {
     grid-row: 1;
     grid-column: 1;
-    transition: all ease 0.6s;
   }
 
   &.up {
-    --translateY: -15%;
+    --translateY: -20%;
   }
   &.down {
-    --translateY: 15%;
+    --translateY: 20%;
   }
   &.select {
     --scale: 1.4;
