@@ -8,7 +8,10 @@ export const SocialBar = (watcherState: WatcherState) => {
     return (
       <a onMouseEnter={() => watcherState.setWatcherActivated(true)}
          onMouseLeave={() => watcherState.setWatcherActivated(false)}
-         href={href}>{content}</a>
+         href={href}
+         target="_blank"
+         rel="noreferrer"
+      >{content}</a>
     );
   }
 
