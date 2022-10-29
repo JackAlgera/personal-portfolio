@@ -7,8 +7,9 @@ $margins: -10px;
   text-align: center;
 
   h2 {
-    margin: 30px;
+    margin: 20px;
     flex-grow: 1;
+    width: 20%;
   }
 
   &.rowReverse {
@@ -33,13 +34,6 @@ $margins: -10px;
   border-radius: 20px;
   overflow: hidden;
 
-  p {
-    margin: 0;
-    z-index: 4;
-    color: transparent;
-    align-self: center;
-  }
-
   * {
     grid-row: 1;
     grid-column: 1;
@@ -63,4 +57,12 @@ $margins: -10px;
   &.select p {
     color: var(--color-1);
   }
+}
+
+.centerText {
+  margin: 0;
+  z-index: 4;
+  color: transparent;
+  align-self: center;
+  font-size: 14px;
 }

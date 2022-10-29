@@ -1,6 +1,6 @@
 import {Project, PROJECTS, ProjectStyleType} from "../components/_models/project.model";
 import {ProjectCard} from "../components/projects/project-card";
-import project1 from "../public/project1.png";
+import project1 from "../public/path_finding.png";
 import project2 from "../public/project2.png";
 import project3 from "../public/project3.png";
 import project4 from "../public/project4.png";

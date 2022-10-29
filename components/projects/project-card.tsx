@@ -40,7 +40,6 @@ export const ProjectCard = (props: ProjectCardProps) => {
     return () => {};
   }, [props.styleClass]);
 
-
   return (
     <div className={`${styles.container} ${props.inverse ? styles.rowReverse : ''}`}>
       <h2>{props.project.title}</h2>
@@ -48,7 +47,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
            onMouseEnter={() => props.handleMouseEnter()}
            onMouseLeave={() => props.handleMouseLeave()}
       >
-        <p>{props.project.description}</p>
+        <p className={styles.centerText}>{props.project.shortDescription}</p>
         <Image
           src={props.project.image.src}
           layout="fill"
