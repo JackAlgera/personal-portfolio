@@ -26,16 +26,11 @@ p a:hover {
 .numbered-heading {
   margin: 10px 0 16px 0;
 }
-.numbered-heading::before {
-  position: relative;
-  bottom: 2px;
-  counter-increment: section 1;
-  content: "0" counter(section) ".";
+.numbered-heading > span {
   margin-right: 10px;
   color: var(--color-1);
   font-family: var(--font-mono);
-  font-size: 1.25rem;
-  font-weight: 400;
+  font-size: 1.4rem;
 }
 .numbered-heading::after {
   /*content: "";*/

@@ -1,4 +1,4 @@
-import {Project, ProjectStyleType} from "../components/_models/project.model";
+import {Project, PROJECTS, ProjectStyleType} from "../components/_models/project.model";
 import {ProjectCard} from "../components/projects/project-card";
 import project1 from "../public/project1.png";
 import project2 from "../public/project2.png";
@@ -7,12 +7,7 @@ import project4 from "../public/project4.png";
 import {useState} from "react";
 
 export default function Projects() {
-  const [projectCards, setProjectCards] = useState<Project[]>([
-    { title: "Project 01", description: "This project took a while to do, and is really awesome and sick", image: project1, style: ProjectStyleType.SELECT },
-    { title: "Project 02", description: "I'm typing some random texts so that I can test out this rad cool new effect", image: project2, style: ProjectStyleType.UP },
-    { title: "Project 03", description: "Something cool", image: project3, style: ProjectStyleType.DOWN },
-    { title: "Project 04", description: "Something cool", image: project4, style: null },
-  ]);
+  const [projectCards, setProjectCards] = useState<Project[]>(Array.from(PROJECTS.values()).flatMap(p => Array.from(p.values())));
 
   const handleMouseLeave = () => {
     const newProjectCards: Project[] = [];
@@ -46,9 +41,9 @@ export default function Projects() {
 
   return (
     <section>
-      <h2 className="numbered-heading">Projects</h2>
+      <h2 className="numbered-heading"><span>03.</span>Projects</h2>
       <div className="inner experience">
-        <section style={{ marginTop: "20px" }}>
+        <section style={{ marginTop: "50px" }}>
           {projectCards.map((project, index) => (
             <ProjectCard key={project.title}
                          project={project}

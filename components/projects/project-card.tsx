@@ -43,7 +43,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
 
   return (
     <div className={`${styles.container} ${props.inverse ? styles.rowReverse : ''}`}>
-      <p>{props.project.title}</p>
+      <h2>{props.project.title}</h2>
       <div className={cssStyles}
            onMouseEnter={() => props.handleMouseEnter()}
            onMouseLeave={() => props.handleMouseLeave()}
