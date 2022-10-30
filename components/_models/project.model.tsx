@@ -37,7 +37,12 @@ import attack_of_the_squarons_5 from "../../public/attack_of_the_squarons/attack
 import attack_of_the_squarons_6 from "../../public/attack_of_the_squarons/attack_of_the_squarons_6.png";
 import attack_of_the_squarons_7 from "../../public/attack_of_the_squarons/attack_of_the_squarons_7.png";
 import attack_of_the_squarons_8 from "../../public/attack_of_the_squarons/attack_of_the_squarons_8.png";
-
+import please_the_gods_1 from "../../public/please_the_gods/please_the_gods_1.png";
+import please_the_gods_2 from "../../public/please_the_gods/please_the_gods_2.png";
+import please_the_gods_3 from "../../public/please_the_gods/please_the_gods_3.png";
+import the_great_tower_ascent_1 from "../../public/the_great_tower_ascent/the_great_tower_ascent_1.jpeg";
+import the_great_tower_ascent_2 from "../../public/the_great_tower_ascent/the_great_tower_ascent_2.jpeg";
+import the_great_tower_ascent_3 from "../../public/the_great_tower_ascent/the_great_tower_ascent_3.jpeg";
 
 export interface Project {
   id: string;
@@ -377,24 +382,43 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       style: null,
       sections: [
         {
-          text: "\"Please the Gods\" is a game I created in one weekend with my brother, during the Ludum Dare 43 Game Jam 2018. It's a strategy game where you need to take care of your village while pleasing the Gods to avoid their wrath !",
+          text: `"Please the Gods" is a game I created in one weekend with my brother, Pieter Algera, during the Ludum Dare 43 Game Jam 2018. It's a strategy game where you need to take care of your village while pleasing the Gods to avoid their wrath !
+          
+          Check out the game here : https://amusedsandpaper.itch.io/please-the-gods
+          `,
           image: please_the_gods,
           sectionType: SectionType.TLDR
         } as Section,
         {
-          youtubeVideoId: "2-7dpWj4Lg8",
+          youtubeVideoId: "4SZWp3VQiQc",
           sectionType: SectionType.VIDEO
         } as Section,
         {
-          text: `Decided to try my hand at creating some common sorting algorithms ; Quick sort, Merge sort, Bucket sort, Radix sort and Bubble sort.
+          text: `"Please the Gods" is a game I created in one weekend with my brother, Pieter Algera, during the Ludum Dare 43 Game Jam 2018.
           
-          I really like the visual representation, it's based on a video I saw a couple of years back and really shows how each algorithm is tackling the sorting problem.
+          This year’s theme was "Sacrifices must be made". we immediately started the Jam out with a 2-hour brain storming session, using a mind map to lay out all our ideas. We usually start our game jams this way as it pumps us up for an intense weekend of coding and drawing !
           
-          For some of these algorithms (Bubble and Merge) I used recursive programming. I have always found recursive programming incredibly elegant ; being able to create complex algorithms using only a couple lines of code is amazing.
+          We decided to create a strategy / Survival game where you need to gain resources to increase your temple but still need to keep your favour high with the Gods, so that they don't bring their wrath unto you ! The more temples you have, the happier the Gods are, and if they ever tend to become too angry… you can always opt to sacrifice a small portion of your population to keep them happy !
           
-          Although it is not used very often in the industry, I wanted to work on my recursive programming skills nevertheless ! Had loads of fun working on this project.
+          We had a lot of fun creating this game, I implemented an I.A system for the villagers to idly move around and perform activities. We also had the Gods bring forth storms and Death plagues, if ever they weren’t satisfied with the tribe !
+          
+          As per usual, we split the coding between us, while I did the game art and my brother did the game sounds and music.
+          
+          I Decided to timelapse the entire game jam. Sadly the software i was using stopped working a couple of times, so there are some gaps in the timelapse.
+          
+          Enjoy !
           `,
           sectionType: SectionType.TEXT_WITHOUT_IMAGE
+        } as Section,
+        {
+          youtubeVideoId: "LHt26OIH4NM",
+          sectionType: SectionType.VIDEO
+        } as Section,
+        {
+          imageGalleryList: [
+            please_the_gods_1, please_the_gods_2, please_the_gods_3
+          ],
+          sectionType: SectionType.IMAGE_GALLERY
         } as Section,
       ]
     }
@@ -411,24 +435,31 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       style: null,
       sections: [
         {
-          text: "Descent down the great tower, collecting coins and diamonds and upgrading your warrior with speed and cool new looks !",
+          text: `Descent down the great tower, collecting coins and diamonds and upgrading your warrior with speed and cool new looks !
+
+          Check out the application here : https://play.google.com/store/apps/details?id=com.JacksGames.TowerDescent
+          `,
           image: the_great_tower_ascent,
           sectionType: SectionType.TLDR
         } as Section,
         {
-          youtubeVideoId: "2-7dpWj4Lg8",
+          youtubeVideoId: "VY-g1ihdHe0",
           sectionType: SectionType.VIDEO
         } as Section,
         {
-          text: `Decided to try my hand at creating some common sorting algorithms ; Quick sort, Merge sort, Bucket sort, Radix sort and Bubble sort.
+          text: `As the player, the objective of the game is to descent the tower, avoiding the traps hidden within. It’s a side scroller where the screen slowly moves down and the player needs to stay on screen by moving left and right, but falling down too quickly (going of the screen) would cause you to fall to your death !
           
-          I really like the visual representation, it's based on a video I saw a couple of years back and really shows how each algorithm is tackling the sorting problem.
+          You can collect coins and diamonds, that can later be used to unlock new scarfs for your ninja warrior. Bonuses can also be unlocked, like increasing the frequency of objects appearing and starting lower down the tower. You can choose between two different ways of playing the game ; by moving left and right by clicking on buttons or having the player follow your finger on the screen.
           
-          For some of these algorithms (Bubble and Merge) I used recursive programming. I have always found recursive programming incredibly elegant ; being able to create complex algorithms using only a couple lines of code is amazing.
-          
-          Although it is not used very often in the industry, I wanted to work on my recursive programming skills nevertheless ! Had loads of fun working on this project.
+          I created this game as a first try of creating a proper android application. I implemented the ad system provided by unity. It was really fun, and I learned a lot program-wise. I also had a blast trying to create some pixel art for the game.
           `,
           sectionType: SectionType.TEXT_WITHOUT_IMAGE
+        } as Section,
+        {
+          imageGalleryList: [
+            the_great_tower_ascent_1, the_great_tower_ascent_2, the_great_tower_ascent_3
+          ],
+          sectionType: SectionType.IMAGE_GALLERY
         } as Section,
       ]
     }
