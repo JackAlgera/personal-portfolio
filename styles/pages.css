@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   margin: 0 100px 0 100px;
+  padding-top: 40px;
 }
 
 p a {
