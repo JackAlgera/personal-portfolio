@@ -36,6 +36,20 @@ $border-radius: 20px;
   }
 }
 
+.galleryContainer {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  gap: 10px;
+
+  .imageContainer {
+    position: relative;
+    width: unset;
+    height: 400px;
+  }
+}
+
 .imageContainer {
   position: relative;
   width: 40%;

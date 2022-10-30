@@ -18,11 +18,11 @@ const ProjectPage = (props: ProjectPageProps) => {
             <p>{section.text}</p>
             <div className={styles.imageContainer}>
               <Image
-                src={props.project.image.src}
+                src={section.image.src}
                 layout="fill"
                 objectFit="cover"
                 loading="eager"
-                alt={props.project.title}
+                alt="image"
               />
             </div>
           </div>
@@ -44,11 +44,11 @@ const ProjectPage = (props: ProjectPageProps) => {
             </div>
             <div className={styles.imageContainer}>
               <Image
-                src={props.project.image.src}
+                src={section.image.src}
                 layout="fill"
                 objectFit="cover"
                 loading="eager"
-                alt={props.project.title}
+                alt="image"
               />
             </div>
           </div>
@@ -64,6 +64,24 @@ const ProjectPage = (props: ProjectPageProps) => {
               width: '784'
             }}
           />
+        );
+        break;
+      case SectionType.IMAGE_GALLERY:
+        htlmSection = (
+          <div className={styles.galleryContainer}>
+            {
+              section.imageGalleryList && section.imageGalleryList.map((image, index) => (
+                <div key={"gallery-" + index} className={styles.imageContainer}>
+                  <Image
+                    src={image.src}
+                    layout="fill"
+                    objectFit="contain"
+                    loading="eager"
+                    alt="image"
+                  />
+                </div>
+            ))}
+          </div>
         );
         break;
     }

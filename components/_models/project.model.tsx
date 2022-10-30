@@ -16,6 +16,14 @@ import sorting_algorithms from "../../public/sorting_algorithms.png";
 import the_great_tower_ascent from "../../public/the_great_tower_ascent.png";
 import trinity_force from "../../public/trinity_force.png";
 import word_cloud from "../../public/word_cloud.png";
+import cook_em_up_1 from "../../public/cook_em_up/cook_em_up_1.png";
+import cook_em_up_2 from "../../public/cook_em_up/cook_em_up_2.png";
+import cook_em_up_3 from "../../public/cook_em_up/cook_em_up_3.png";
+import cook_em_up_4 from "../../public/cook_em_up/cook_em_up_4.png";
+import cook_em_up_5 from "../../public/cook_em_up/cook_em_up_5.png";
+import cook_em_up_6 from "../../public/cook_em_up/cook_em_up_6.png";
+import cook_em_up_7 from "../../public/cook_em_up/cook_em_up_7.png";
+import cook_em_up_8 from "../../public/cook_em_up/cook_em_up_8.png";
 
 export interface Project {
   id: string;
@@ -33,6 +41,7 @@ export interface Section {
   youtubeVideoId: string|null;
   image: StaticImageData|null;
   rowReverse: boolean|null;
+  imageGalleryList: StaticImageData[]|null;
   sectionType: SectionType;
 }
 
@@ -46,7 +55,8 @@ export enum SectionType {
   TLDR,
   TEXT_WITH_IMAGE,
   VIDEO,
-  TEXT_WITHOUT_IMAGE
+  TEXT_WITHOUT_IMAGE,
+  IMAGE_GALLERY
 }
 
 export const PROJECTS: Map<string, Project> = new Map<string, Project>([
@@ -100,14 +110,34 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       style: null,
       sections: [
         {
-          text: "Implemented 5 different algorithms (Quick sort, Merge sort, Bucket sort, Radix sort, Bubble sort), with a nice visual representation of each.",
+          text: `Implemented 5 different sorting algorithms in C++ :
+          
+          * Quick Sort
+          * Merge Sort
+          * Bucket Sort
+          * Radix Sort
+          * Bubble Sort
+          
+          Used SFML for the visuals
+          `,
           image: sorting_algorithms,
           sectionType: SectionType.TLDR
         } as Section,
         {
-          youtubeVideoId: "2-7dpWj4Lg8",
+          youtubeVideoId: "TLHyIs7TiZk",
           sectionType: SectionType.VIDEO
-        } as Section
+        } as Section,
+        {
+          text: `Decided to try my hand at creating some common sorting algorithms ; Quick sort, Merge sort, Bucket sort, Radix sort and Bubble sort.
+          
+          I really like the visual representation, it's based on a video I saw a couple of years back and really shows how each algorithm is tackling the sorting problem.
+          
+          For some of these algorithms (Bubble and Merge) I used recursive programming. I have always found recursive programming incredibly elegant ; being able to create complex algorithms using only a couple lines of code is amazing.
+          
+          Although it is not used very often in the industry, I wanted to work on my recursive programming skills nevertheless ! Had loads of fun working on this project.
+          `,
+          sectionType: SectionType.TEXT_WITHOUT_IMAGE
+        } as Section,
       ]
     }
   ],
@@ -123,14 +153,31 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       style: null,
       sections: [
         {
-          text: "\"Oystou\" is a small game I created in one weekend with a team of 3 people during the Global Game Jam 2019, that was held at Epitech in Nantes, France.",
+          text: `"Oystou" is a small game I created in one weekend with a team of 2 people during the Global Game Jam 2019, that was held at Epitech at Nantes, France.
+
+          Link to download and play the game :
+          https://globalgamejam.org/2019/games/oystou
+          `,
           image: oystou,
           sectionType: SectionType.TLDR
         } as Section,
         {
-          youtubeVideoId: "2-7dpWj4Lg8",
+          youtubeVideoId: "9_ZoQjgH0kc",
           sectionType: SectionType.VIDEO
-        } as Section
+        } as Section,
+        {
+          text: `"Oystou" is a game I created in one weekend with a team of 2 people during the Global Game Jam 2019. The theme this year was: "What does home mean to you?"
+          
+          When we were thinking of a name for the game, we wanted to come up with something original. In my mother tongue Afrikaans, "Huis toe" means coming/going home, so we decided to create an English / French spelling of the word, and thus the game was named.
+          
+          The story behind our game is that you, the player, has lost everything; your memories, your loved ones and your gems. Home, for us, is a safe haven, where we can find our loved ones, and keep our valuable earthly possessions safe!
+          
+          Explore the world and find the missing pieces. But don't stay away for too long, you might become a little homesick.
+          
+          As per usual, we split the coding between my brother and myself, while I did the game art and my brother did the game sounds and music. we had a third member that had the role of game dev, which really made the whole game creation process smoother !
+          `,
+          sectionType: SectionType.TEXT_WITHOUT_IMAGE
+        } as Section,
       ]
     }
   ],
@@ -146,14 +193,32 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       style: null,
       sections: [
         {
-          text: "\"Cook Em up\" is an android application where you run a fancy restaurant in Paris, and need to prepare the meals following the recipes, but watch out, time runs out quickly !",
+          text: `"Cook Em up" is an android application where you run a fancy restaurant in Paris, and need to prepare the meals following the recipes, but watch out, time runs out quickly !
+          `,
           image: cook_em_up,
           sectionType: SectionType.TLDR
         } as Section,
         {
-          youtubeVideoId: "2-7dpWj4Lg8",
+          youtubeVideoId: "4cXFNXmnGoc",
           sectionType: SectionType.VIDEO
-        } as Section
+        } as Section,
+        {
+          text: `The story goes that you run a very fancy restaurant in Paris, and people from all over the world come to eat there and you need to meet their strange food needs by creating strange new recipes.
+          
+          As the different ingredients appear, you need to quickly choose the correct ones in the correct order, but watch out, mistakes cost you valuable time !
+          
+          This application is meant to be my first real android project that I would someday like to fully develop. It’s still in alpha, but the video gives us an idea of what the game could be later. I created the code and the visuals myself, but there is still a lot left to do !
+          
+          Had a lot of fun creating the different ingredients in PhotoShop, learnt a couple of new tricks.
+          `,
+          sectionType: SectionType.TEXT_WITHOUT_IMAGE
+        } as Section,
+        {
+          imageGalleryList: [
+            cook_em_up_1, cook_em_up_2, cook_em_up_3, cook_em_up_4, cook_em_up_5, cook_em_up_6, cook_em_up_7, cook_em_up_8
+          ],
+          sectionType: SectionType.IMAGE_GALLERY
+        } as Section,
       ]
     }
   ],
@@ -176,7 +241,18 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
         {
           youtubeVideoId: "2-7dpWj4Lg8",
           sectionType: SectionType.VIDEO
-        } as Section
+        } as Section,
+        {
+          text: `Decided to try my hand at creating some common sorting algorithms ; Quick sort, Merge sort, Bucket sort, Radix sort and Bubble sort.
+          
+          I really like the visual representation, it's based on a video I saw a couple of years back and really shows how each algorithm is tackling the sorting problem.
+          
+          For some of these algorithms (Bubble and Merge) I used recursive programming. I have always found recursive programming incredibly elegant ; being able to create complex algorithms using only a couple lines of code is amazing.
+          
+          Although it is not used very often in the industry, I wanted to work on my recursive programming skills nevertheless ! Had loads of fun working on this project.
+          `,
+          sectionType: SectionType.TEXT_WITHOUT_IMAGE
+        } as Section,
       ]
     }
   ],
@@ -199,7 +275,18 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
         {
           youtubeVideoId: "2-7dpWj4Lg8",
           sectionType: SectionType.VIDEO
-        } as Section
+        } as Section,
+        {
+          text: `Decided to try my hand at creating some common sorting algorithms ; Quick sort, Merge sort, Bucket sort, Radix sort and Bubble sort.
+          
+          I really like the visual representation, it's based on a video I saw a couple of years back and really shows how each algorithm is tackling the sorting problem.
+          
+          For some of these algorithms (Bubble and Merge) I used recursive programming. I have always found recursive programming incredibly elegant ; being able to create complex algorithms using only a couple lines of code is amazing.
+          
+          Although it is not used very often in the industry, I wanted to work on my recursive programming skills nevertheless ! Had loads of fun working on this project.
+          `,
+          sectionType: SectionType.TEXT_WITHOUT_IMAGE
+        } as Section,
       ]
     }
   ],
@@ -222,7 +309,18 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
         {
           youtubeVideoId: "2-7dpWj4Lg8",
           sectionType: SectionType.VIDEO
-        } as Section
+        } as Section,
+        {
+          text: `Decided to try my hand at creating some common sorting algorithms ; Quick sort, Merge sort, Bucket sort, Radix sort and Bubble sort.
+          
+          I really like the visual representation, it's based on a video I saw a couple of years back and really shows how each algorithm is tackling the sorting problem.
+          
+          For some of these algorithms (Bubble and Merge) I used recursive programming. I have always found recursive programming incredibly elegant ; being able to create complex algorithms using only a couple lines of code is amazing.
+          
+          Although it is not used very often in the industry, I wanted to work on my recursive programming skills nevertheless ! Had loads of fun working on this project.
+          `,
+          sectionType: SectionType.TEXT_WITHOUT_IMAGE
+        } as Section,
       ]
     }
   ],
@@ -245,7 +343,18 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
         {
           youtubeVideoId: "2-7dpWj4Lg8",
           sectionType: SectionType.VIDEO
-        } as Section
+        } as Section,
+        {
+          text: `Decided to try my hand at creating some common sorting algorithms ; Quick sort, Merge sort, Bucket sort, Radix sort and Bubble sort.
+          
+          I really like the visual representation, it's based on a video I saw a couple of years back and really shows how each algorithm is tackling the sorting problem.
+          
+          For some of these algorithms (Bubble and Merge) I used recursive programming. I have always found recursive programming incredibly elegant ; being able to create complex algorithms using only a couple lines of code is amazing.
+          
+          Although it is not used very often in the industry, I wanted to work on my recursive programming skills nevertheless ! Had loads of fun working on this project.
+          `,
+          sectionType: SectionType.TEXT_WITHOUT_IMAGE
+        } as Section,
       ]
     }
   ],
@@ -268,7 +377,18 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
         {
           youtubeVideoId: "2-7dpWj4Lg8",
           sectionType: SectionType.VIDEO
-        } as Section
+        } as Section,
+        {
+          text: `Decided to try my hand at creating some common sorting algorithms ; Quick sort, Merge sort, Bucket sort, Radix sort and Bubble sort.
+          
+          I really like the visual representation, it's based on a video I saw a couple of years back and really shows how each algorithm is tackling the sorting problem.
+          
+          For some of these algorithms (Bubble and Merge) I used recursive programming. I have always found recursive programming incredibly elegant ; being able to create complex algorithms using only a couple lines of code is amazing.
+          
+          Although it is not used very often in the industry, I wanted to work on my recursive programming skills nevertheless ! Had loads of fun working on this project.
+          `,
+          sectionType: SectionType.TEXT_WITHOUT_IMAGE
+        } as Section,
       ]
     }
   ],
@@ -291,7 +411,18 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
         {
           youtubeVideoId: "2-7dpWj4Lg8",
           sectionType: SectionType.VIDEO
-        } as Section
+        } as Section,
+        {
+          text: `Decided to try my hand at creating some common sorting algorithms ; Quick sort, Merge sort, Bucket sort, Radix sort and Bubble sort.
+          
+          I really like the visual representation, it's based on a video I saw a couple of years back and really shows how each algorithm is tackling the sorting problem.
+          
+          For some of these algorithms (Bubble and Merge) I used recursive programming. I have always found recursive programming incredibly elegant ; being able to create complex algorithms using only a couple lines of code is amazing.
+          
+          Although it is not used very often in the industry, I wanted to work on my recursive programming skills nevertheless ! Had loads of fun working on this project.
+          `,
+          sectionType: SectionType.TEXT_WITHOUT_IMAGE
+        } as Section,
       ]
     }
   ],
@@ -314,7 +445,18 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
         {
           youtubeVideoId: "2-7dpWj4Lg8",
           sectionType: SectionType.VIDEO
-        } as Section
+        } as Section,
+        {
+          text: `Decided to try my hand at creating some common sorting algorithms ; Quick sort, Merge sort, Bucket sort, Radix sort and Bubble sort.
+          
+          I really like the visual representation, it's based on a video I saw a couple of years back and really shows how each algorithm is tackling the sorting problem.
+          
+          For some of these algorithms (Bubble and Merge) I used recursive programming. I have always found recursive programming incredibly elegant ; being able to create complex algorithms using only a couple lines of code is amazing.
+          
+          Although it is not used very often in the industry, I wanted to work on my recursive programming skills nevertheless ! Had loads of fun working on this project.
+          `,
+          sectionType: SectionType.TEXT_WITHOUT_IMAGE
+        } as Section,
       ]
     }
   ],
@@ -337,7 +479,18 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
         {
           youtubeVideoId: "2-7dpWj4Lg8",
           sectionType: SectionType.VIDEO
-        } as Section
+        } as Section,
+        {
+          text: `Decided to try my hand at creating some common sorting algorithms ; Quick sort, Merge sort, Bucket sort, Radix sort and Bubble sort.
+          
+          I really like the visual representation, it's based on a video I saw a couple of years back and really shows how each algorithm is tackling the sorting problem.
+          
+          For some of these algorithms (Bubble and Merge) I used recursive programming. I have always found recursive programming incredibly elegant ; being able to create complex algorithms using only a couple lines of code is amazing.
+          
+          Although it is not used very often in the industry, I wanted to work on my recursive programming skills nevertheless ! Had loads of fun working on this project.
+          `,
+          sectionType: SectionType.TEXT_WITHOUT_IMAGE
+        } as Section,
       ]
     }
   ],
@@ -360,7 +513,18 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
         {
           youtubeVideoId: "2-7dpWj4Lg8",
           sectionType: SectionType.VIDEO
-        } as Section
+        } as Section,
+        {
+          text: `Decided to try my hand at creating some common sorting algorithms ; Quick sort, Merge sort, Bucket sort, Radix sort and Bubble sort.
+          
+          I really like the visual representation, it's based on a video I saw a couple of years back and really shows how each algorithm is tackling the sorting problem.
+          
+          For some of these algorithms (Bubble and Merge) I used recursive programming. I have always found recursive programming incredibly elegant ; being able to create complex algorithms using only a couple lines of code is amazing.
+          
+          Although it is not used very often in the industry, I wanted to work on my recursive programming skills nevertheless ! Had loads of fun working on this project.
+          `,
+          sectionType: SectionType.TEXT_WITHOUT_IMAGE
+        } as Section,
       ]
     }
   ],
@@ -383,7 +547,18 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
         {
           youtubeVideoId: "2-7dpWj4Lg8",
           sectionType: SectionType.VIDEO
-        } as Section
+        } as Section,
+        {
+          text: `Decided to try my hand at creating some common sorting algorithms ; Quick sort, Merge sort, Bucket sort, Radix sort and Bubble sort.
+          
+          I really like the visual representation, it's based on a video I saw a couple of years back and really shows how each algorithm is tackling the sorting problem.
+          
+          For some of these algorithms (Bubble and Merge) I used recursive programming. I have always found recursive programming incredibly elegant ; being able to create complex algorithms using only a couple lines of code is amazing.
+          
+          Although it is not used very often in the industry, I wanted to work on my recursive programming skills nevertheless ! Had loads of fun working on this project.
+          `,
+          sectionType: SectionType.TEXT_WITHOUT_IMAGE
+        } as Section,
       ]
     }
   ],
@@ -406,7 +581,18 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
         {
           youtubeVideoId: "2-7dpWj4Lg8",
           sectionType: SectionType.VIDEO
-        } as Section
+        } as Section,
+        {
+          text: `Decided to try my hand at creating some common sorting algorithms ; Quick sort, Merge sort, Bucket sort, Radix sort and Bubble sort.
+          
+          I really like the visual representation, it's based on a video I saw a couple of years back and really shows how each algorithm is tackling the sorting problem.
+          
+          For some of these algorithms (Bubble and Merge) I used recursive programming. I have always found recursive programming incredibly elegant ; being able to create complex algorithms using only a couple lines of code is amazing.
+          
+          Although it is not used very often in the industry, I wanted to work on my recursive programming skills nevertheless ! Had loads of fun working on this project.
+          `,
+          sectionType: SectionType.TEXT_WITHOUT_IMAGE
+        } as Section,
       ]
     }
   ],
@@ -429,7 +615,18 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
         {
           youtubeVideoId: "2-7dpWj4Lg8",
           sectionType: SectionType.VIDEO
-        } as Section
+        } as Section,
+        {
+          text: `Decided to try my hand at creating some common sorting algorithms ; Quick sort, Merge sort, Bucket sort, Radix sort and Bubble sort.
+          
+          I really like the visual representation, it's based on a video I saw a couple of years back and really shows how each algorithm is tackling the sorting problem.
+          
+          For some of these algorithms (Bubble and Merge) I used recursive programming. I have always found recursive programming incredibly elegant ; being able to create complex algorithms using only a couple lines of code is amazing.
+          
+          Although it is not used very often in the industry, I wanted to work on my recursive programming skills nevertheless ! Had loads of fun working on this project.
+          `,
+          sectionType: SectionType.TEXT_WITHOUT_IMAGE
+        } as Section,
       ]
     }
   ],
@@ -452,7 +649,18 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
         {
           youtubeVideoId: "2-7dpWj4Lg8",
           sectionType: SectionType.VIDEO
-        } as Section
+        } as Section,
+        {
+          text: `Decided to try my hand at creating some common sorting algorithms ; Quick sort, Merge sort, Bucket sort, Radix sort and Bubble sort.
+          
+          I really like the visual representation, it's based on a video I saw a couple of years back and really shows how each algorithm is tackling the sorting problem.
+          
+          For some of these algorithms (Bubble and Merge) I used recursive programming. I have always found recursive programming incredibly elegant ; being able to create complex algorithms using only a couple lines of code is amazing.
+          
+          Although it is not used very often in the industry, I wanted to work on my recursive programming skills nevertheless ! Had loads of fun working on this project.
+          `,
+          sectionType: SectionType.TEXT_WITHOUT_IMAGE
+        } as Section,
       ]
     }
   ]
