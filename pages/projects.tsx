@@ -21,20 +21,15 @@ export default function Projects(watcherState: WatcherState) {
 
     const newProjectCards: Project[] = [];
     projectCards.map((project, projectIndex) => {
-      switch (projectIndex) {
-        case index:
-          newProjectCards.push({...project, style: ProjectStyleType.SELECT})
-          break;
-        case (index - 1):
-          newProjectCards.push({...project, style: ProjectStyleType.UP})
-          break;
-        case (index + 1):
-          newProjectCards.push({...project, style: ProjectStyleType.DOWN})
-          break;
-        default:
-          newProjectCards.push({...project, style: null})
-          break;
+      if (index === projectIndex) {
+        newProjectCards.push({...project, style: ProjectStyleType.SELECT})
+        return;
       }
+      if (index < projectIndex) {
+        newProjectCards.push({...project, style: ProjectStyleType.DOWN});
+        return;
+      }
+      newProjectCards.push({...project, style: ProjectStyleType.UP});
     })
 
     setProjectCards(newProjectCards);
