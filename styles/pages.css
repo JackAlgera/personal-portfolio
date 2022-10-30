@@ -23,9 +23,6 @@ p a:hover {
   color: var(--color-2);
 }
 
-.numbered-heading {
-  margin: 10px 0 16px 0;
-}
 .numbered-heading > span {
   margin-right: 10px;
   color: var(--color-1);

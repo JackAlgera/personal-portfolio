@@ -37,7 +37,7 @@ const ProjectPage = (props: ProjectPageProps) => {
         break;
       case SectionType.TLDR:
         htlmSection = (
-          <div style={{ flexDirection: "column" }} className={styles.container}>
+          <div className={styles.tldrContainer}>
             <h2>TL;DR</h2>
             <div className={`${styles.container} ${section.rowReverse ? styles.rowReverse : ''}`}>
               <p>{section.text}</p>
@@ -95,7 +95,7 @@ const ProjectPage = (props: ProjectPageProps) => {
 
   return (
     <>
-      <h1 style={{ marginTop: "40px" }} className="numbered-heading">{props.project.title}</h1>
+      <h1 className="numbered-heading">{props.project.title}</h1>
       {props.project.sections.map((section, index) => generateSection(section, index))}
     </>
   );

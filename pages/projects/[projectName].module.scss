@@ -5,7 +5,7 @@ $border-radius: 20px;
   flex-direction: row;
   width: 800px;
   justify-content: center;
-  margin-top: 80px;
+  margin-bottom: 80px;
 
   p {
     color: var(--color-3);
@@ -16,10 +16,9 @@ $border-radius: 20px;
   }
 }
 
-.container {
+@mixin container {
   display: flex;
   width: 100%;
-  gap: 40px;
 
   p {
     text-align: justify;
@@ -29,6 +28,17 @@ $border-radius: 20px;
   &.rowReverse {
     flex-direction: row-reverse;
   }
+}
+
+.container {
+  @include container;
+  gap: 40px;
+}
+
+.tldrContainer {
+  @include container;
+  flex-direction: column;
+  gap: 0;
 }
 
 .galleryContainer {
