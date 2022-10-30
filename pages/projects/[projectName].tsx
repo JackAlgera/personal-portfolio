@@ -21,7 +21,7 @@ const ProjectPage = (props: ProjectPageProps) => {
                 src={section.image.src}
                 layout="fill"
                 objectFit="cover"
-                loading="eager"
+                loading="lazy"
                 alt="image"
               />
             </div>
@@ -47,7 +47,7 @@ const ProjectPage = (props: ProjectPageProps) => {
                 src={section.image.src}
                 layout="fill"
                 objectFit="cover"
-                loading="eager"
+                loading="lazy"
                 alt="image"
               />
             </div>
@@ -76,7 +76,7 @@ const ProjectPage = (props: ProjectPageProps) => {
                     src={image.src}
                     layout="fill"
                     objectFit="contain"
-                    loading="eager"
+                    loading="lazy"
                     alt="image"
                   />
                 </div>

@@ -37,7 +37,7 @@ export default function Projects() {
 
   return (
     <section>
-      <h2 className="numbered-heading"><span>03.</span>Projects</h2>
+      <h2 className="numbered-heading"><span>03.</span>Personal Projects</h2>
       <div className="inner experience">
         <section style={{ marginTop: "50px" }}>
           {projectCards.map((project, index) => (

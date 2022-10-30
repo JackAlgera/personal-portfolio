@@ -24,6 +24,12 @@ import cook_em_up_5 from "../../public/cook_em_up/cook_em_up_5.png";
 import cook_em_up_6 from "../../public/cook_em_up/cook_em_up_6.png";
 import cook_em_up_7 from "../../public/cook_em_up/cook_em_up_7.png";
 import cook_em_up_8 from "../../public/cook_em_up/cook_em_up_8.png";
+import arrow_dance_1 from "../../public/arrow_dance/arrow_dance_1.jpeg";
+import arrow_dance_2 from "../../public/arrow_dance/arrow_dance_2.png";
+import arrow_dance_3 from "../../public/arrow_dance/arrow_dance_3.png";
+import arrow_dance_4 from "../../public/arrow_dance/arrow_dance_4.jpeg";
+import arrow_dance_5 from "../../public/arrow_dance/arrow_dance_5.jpeg";
+
 
 export interface Project {
   id: string;
@@ -124,7 +130,7 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
           sectionType: SectionType.TLDR
         } as Section,
         {
-          youtubeVideoId: "TLHyIs7TiZk",
+          youtubeVideoId: "Jl_rBV0iIxI",
           sectionType: SectionType.VIDEO
         } as Section,
         {
@@ -234,24 +240,34 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       style: null,
       sections: [
         {
-          text: "A small program I created that takes an image and transforms it into circles that \"Pop\" as the mouse hovers over revealing the image.",
+          text: `A small program I created that takes an image and transforms it into circles that "Pop" as the mouse hovers over revealing the image.
+          `,
           image: circle_izer,
           sectionType: SectionType.TLDR
         } as Section,
         {
-          youtubeVideoId: "2-7dpWj4Lg8",
+          youtubeVideoId: "25QzFXpsc7s",
           sectionType: SectionType.VIDEO
         } as Section,
         {
-          text: `Decided to try my hand at creating some common sorting algorithms ; Quick sort, Merge sort, Bucket sort, Radix sort and Bubble sort.
-          
-          I really like the visual representation, it's based on a video I saw a couple of years back and really shows how each algorithm is tackling the sorting problem.
-          
-          For some of these algorithms (Bubble and Merge) I used recursive programming. I have always found recursive programming incredibly elegant ; being able to create complex algorithms using only a couple lines of code is amazing.
-          
-          Although it is not used very often in the industry, I wanted to work on my recursive programming skills nevertheless ! Had loads of fun working on this project.
+          text: `The Idea behind the program is that it takes an image and creates a single circle that has the average colour of the entire image. As you hover the mouse over the circle, it "pops" and divides itself into 4 smaller circles. This goes on and on, eventually revealing the image hidden behind !
+
+          This was a fun little project I created after seeing some artwork where people would create giant images using only common objects with different colour shades (like creating the Mona Lisa using only different shades of coffee !).
           `,
           sectionType: SectionType.TEXT_WITHOUT_IMAGE
+        } as Section,
+        {
+          youtubeVideoId: "5c5S-FKz6hI",
+          sectionType: SectionType.VIDEO
+        } as Section,
+        {
+          text: `I made a timelapse of me coding the project (next video). It gives a really interesting perspective of how I encountered problems and found ways to fix them. It's impossible to code anything perfect the first time around, but as long as you keep learning from your mistakes, it's ok to make errors !
+          `,
+          sectionType: SectionType.TEXT_WITHOUT_IMAGE
+        } as Section,
+        {
+          youtubeVideoId: "B5rQJRrXU38",
+          sectionType: SectionType.VIDEO
         } as Section,
       ]
     }
@@ -268,24 +284,32 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       style: null,
       sections: [
         {
-          text: "ArrowDance is a small android application I created that is closely related to the arcade arrow dancing game from back in the day ! Hit the arrows in the correct order and try beat the high score !",
+          text: `ArrowDance is a small android application I created that is closely related to the arcade arrow dancing game from back in the day ! Hit the arrows in the correct order and try beat the high score !
+
+          Link to download and play the game :
+          https://play.google.com/store/apps/details?id=com.JacksGames.ArrowDance&hl=en
+          `,
           image: arrow_dance,
           sectionType: SectionType.TLDR
         } as Section,
         {
-          youtubeVideoId: "2-7dpWj4Lg8",
+          youtubeVideoId: "Zipcdk269YY",
           sectionType: SectionType.VIDEO
         } as Section,
         {
-          text: `Decided to try my hand at creating some common sorting algorithms ; Quick sort, Merge sort, Bucket sort, Radix sort and Bubble sort.
+          text: `Arrow Dance is a small android application I created at the end of 2018 one weekend. I often take the TGV train in France to go visit my parents or my girlfriend, and I tend to read, study, create games and think a lot during these trips. 
           
-          I really like the visual representation, it's based on a video I saw a couple of years back and really shows how each algorithm is tackling the sorting problem.
-          
-          For some of these algorithms (Bubble and Merge) I used recursive programming. I have always found recursive programming incredibly elegant ; being able to create complex algorithms using only a couple lines of code is amazing.
-          
-          Although it is not used very often in the industry, I wanted to work on my recursive programming skills nevertheless ! Had loads of fun working on this project.
+          I got the idea to create this game after seeing a silly video on Facebook called “Things from 2000” and the arcade dancing game where you need to hit the correct arrows as they appear on the screen came on. That’s where I got the idea to create a mobile version.
+
+          Had a great timing creating this application, I wanted to try and create my own music, but I clearly don’t have enough experience to remotely make something that people would want to listen too ! Nevertheless I learned a lot C#-wise and Photoshop-wise.
           `,
           sectionType: SectionType.TEXT_WITHOUT_IMAGE
+        } as Section,
+        {
+          imageGalleryList: [
+            arrow_dance_1, arrow_dance_2, arrow_dance_3, arrow_dance_4, arrow_dance_5
+          ],
+          sectionType: SectionType.IMAGE_GALLERY
         } as Section,
       ]
     }

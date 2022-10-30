@@ -53,6 +53,8 @@ export const ExperienceTab = (props: ExperienceTabProps & WatcherState) => {
              onMouseLeave={() => props.setWatcherActivated(false)}
              className={styles.color1}
              href={props.tab.url}
+             target="_blank"
+             rel="noreferrer"
           ><CodeText typeDelay={MAIN_TYPEWRITER_LETTER_DELAY} stopTyping={true} color={styles.color1} text={props.tab.company} /></a>
           <span className={styles.color2}>{"\""}</span>
         </p>

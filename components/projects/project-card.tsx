@@ -58,7 +58,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
           src={props.project.image.src}
           layout="fill"
           objectFit="cover"
-          loading="eager"
+          loading="lazy"
           alt={props.project.title}
         />
       </a>
