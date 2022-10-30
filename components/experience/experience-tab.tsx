@@ -42,8 +42,6 @@ export const ExperienceTab = (props: ExperienceTabProps & WatcherState) => {
     setLines(extractLines(props.tab.description, 60));
   }, [props.tab.description]);
 
-  // import * as company from './another-file';
-
   return (
     <div className="experience-tab">
       <pre id={styles.experienceTabTextArea}>
@@ -103,7 +101,6 @@ export const ExperienceTab = (props: ExperienceTabProps & WatcherState) => {
         ))}
         <p/>
         <p><span className={styles.color1}>{"</Job>"}</span></p>
-        <p/>
       </pre>
     </div>
   );

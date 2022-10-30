@@ -1,4 +1,4 @@
-$svgSize: 24px;
+$svgSize: 2rem;
 $barCircleSize: 6px;
 $barHeight: 60px;
 
@@ -7,7 +7,7 @@ $barHeight: 60px;
   flex-direction: column;
   position: fixed;
   bottom: 20px;
-  gap: 32px;
+  gap: 42px;
 
   a {
     border: unset;
@@ -22,7 +22,7 @@ $barHeight: 60px;
   }
 
   a > p {
-    font-size: 13px;
+    font-size: $svgSize/2;
     writing-mode: vertical-rl;
     text-orientation: mixed;
     transition: all ease 0.2s;
@@ -50,6 +50,7 @@ $barHeight: 60px;
   position: absolute;
   border-radius: 50%;
   display: block;
+  left: 0.5px;
   background-color: var(--color-1);
 }
 

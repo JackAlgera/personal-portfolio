@@ -1,5 +1,4 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { SiCodingame } from "react-icons/si";
+import { FaGithub, FaLinkedin, FaLaptopCode } from "react-icons/fa";
 import styles from "./social-bar.module.scss";
 import {WatcherState} from "../_models/watcher.model";
 
@@ -21,7 +20,7 @@ export const SocialBar = (watcherState: WatcherState) => {
         <div className={styles.bar}/>
         {generateLink("https://github.com/JackAlgera", <FaGithub />)}
         {generateLink("https://www.linkedin.com/in/jacobus-algera/", <FaLinkedin />)}
-        {generateLink("https://www.codingame.com/profile/d46b2b9844dbd087e3f67033c06dd47a9043511", <SiCodingame />)}
+        {generateLink("https://www.codingame.com/profile/d46b2b9844dbd087e3f67033c06dd47a9043511", <FaLaptopCode />)}
         <div className={styles.bar}/>
       </div>
       <div className={styles.verticalBar}>
