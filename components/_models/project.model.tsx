@@ -43,6 +43,8 @@ import please_the_gods_3 from "../../public/please_the_gods/please_the_gods_3.pn
 import the_great_tower_ascent_1 from "../../public/the_great_tower_ascent/the_great_tower_ascent_1.jpeg";
 import the_great_tower_ascent_2 from "../../public/the_great_tower_ascent/the_great_tower_ascent_2.jpeg";
 import the_great_tower_ascent_3 from "../../public/the_great_tower_ascent/the_great_tower_ascent_3.jpeg";
+import call_of_muty_1 from "../../public/call_of_muty/call_of_muty_1.png";
+import call_of_muty_2 from "../../public/call_of_muty/call_of_muty_2.png";
 
 export interface Project {
   id: string;
@@ -476,25 +478,32 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       style: null,
       sections: [
         {
-          text: "\"Call of Muty\" is an online multiplayer shooting game. Avoid the traps, pick up guns and destroy the opposing players !",
+          text: `"Call of muty" is a school project I created with a team of 5 members using the Scrum method, as me taking on the role of Scrum Master.
+          `,
           image: call_of_muty,
           sectionType: SectionType.TLDR
         } as Section,
         {
-          youtubeVideoId: "2-7dpWj4Lg8",
+          youtubeVideoId: "9k0J1RxUb2k",
           sectionType: SectionType.VIDEO
         } as Section,
         {
-          text: `Decided to try my hand at creating some common sorting algorithms ; Quick sort, Merge sort, Bucket sort, Radix sort and Bubble sort.
+          text: `"Call of muty" is a school project I created with a team of 5 members using the Scrum method, as me taking on the role of Scrum Master. we created the game over 3 months, creating everything from the code, the game sounds and the visuals. The only thing we didn’t have time to create was the tile map.
           
-          I really like the visual representation, it's based on a video I saw a couple of years back and really shows how each algorithm is tackling the sorting problem.
+          We created an online multiplayer top down shooting game. As a player, you can choose between a couple of game modes (like weapons spawning randomly, 1 hp, battle royal etc.), as well as choosing a skin for your character. The game is played when you are the last player left standing.
           
-          For some of these algorithms (Bubble and Merge) I used recursive programming. I have always found recursive programming incredibly elegant ; being able to create complex algorithms using only a couple lines of code is amazing.
+          The game is played with up to 6 players online, via a SQL server. It is of course not the best method of creating an online multiplayer game, but we were just learning how to set up and handle a SQL server. 
           
-          Although it is not used very often in the industry, I wanted to work on my recursive programming skills nevertheless ! Had loads of fun working on this project.
+          As Scrum master, I was tasked with creating the different user stories and assigning them to the other team members. I participated in the coding, creating the game visuals and animations as well as helping the other team members if they ever had trouble with their code.
           `,
           sectionType: SectionType.TEXT_WITHOUT_IMAGE
         } as Section,
+        {
+          imageGalleryList: [
+            call_of_muty_1, call_of_muty_2
+          ],
+          sectionType: SectionType.IMAGE_GALLERY,
+        } as Section
       ]
     }
   ],
@@ -510,22 +519,27 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       style: null,
       sections: [
         {
-          text: "\"Predators and Prey\" is a cellular automaton where the prey (green) try to survive from the predators (red).",
+          text: `"Predators and Prey" is a cellular automaton where the prey (green) try to survive from the predators (red).
+          `,
           image: predators_vs_prey,
           sectionType: SectionType.TLDR
         } as Section,
         {
-          youtubeVideoId: "2-7dpWj4Lg8",
+          youtubeVideoId: "R1WexKiulxI",
           sectionType: SectionType.VIDEO
         } as Section,
         {
-          text: `Decided to try my hand at creating some common sorting algorithms ; Quick sort, Merge sort, Bucket sort, Radix sort and Bubble sort.
+          text: `I created another cellular automaton called “Predators and Prey”. The prey (green cells) try to survive and reproduce while being hunted by the predators (red cells). The rules are as follow :
           
-          I really like the visual representation, it's based on a video I saw a couple of years back and really shows how each algorithm is tackling the sorting problem.
+          1) Each living cell has a certain time alive. As they become older, their colour either greys out (for predators) or becomes brighter (for prey).
           
-          For some of these algorithms (Bubble and Merge) I used recursive programming. I have always found recursive programming incredibly elegant ; being able to create complex algorithms using only a couple lines of code is amazing.
+          2) If a prey cell becomes fully aged (bright green) they reproduce on an empty cell.
           
-          Although it is not used very often in the industry, I wanted to work on my recursive programming skills nevertheless ! Had loads of fun working on this project.
+          3) If a predator cell becomes fully aged (dark red) they die.
+          
+          4) Predators reproduce by eating prey and producing off spring based on the life left of the prey they ate.
+          
+          I created this simulation using the C++ library SFML, which just simplifies the OPENGL commands for creating a visual canvas.
           `,
           sectionType: SectionType.TEXT_WITHOUT_IMAGE
         } as Section,
@@ -544,22 +558,19 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       style: null,
       sections: [
         {
-          text: "The simulation looks like two sides fighting each other, each trying to gain ground, but the black side has a slightly higher chance of winning, which inevitably brings them victory.",
+          text: `The simulation looks like two sides fighting each other, trying to gain ground, but the black side has a slightly higher chance of winning, which inevitably brings them victory.
+          `,
           image: probability_simulator,
           sectionType: SectionType.TLDR
         } as Section,
         {
-          youtubeVideoId: "2-7dpWj4Lg8",
+          youtubeVideoId: "HfpxXPA4KEI",
           sectionType: SectionType.VIDEO
         } as Section,
         {
-          text: `Decided to try my hand at creating some common sorting algorithms ; Quick sort, Merge sort, Bucket sort, Radix sort and Bubble sort.
+          text: `The simulation looks like two sides fighting each other, trying to gain ground, but the black side has a slightly higher chance of winning, which inevitably brings them victory.
           
-          I really like the visual representation, it's based on a video I saw a couple of years back and really shows how each algorithm is tackling the sorting problem.
-          
-          For some of these algorithms (Bubble and Merge) I used recursive programming. I have always found recursive programming incredibly elegant ; being able to create complex algorithms using only a couple lines of code is amazing.
-          
-          Although it is not used very often in the industry, I wanted to work on my recursive programming skills nevertheless ! Had loads of fun working on this project.
+          The simulation works by checking the amount of blue and black tiles around a given tile. The more tiles you own, the higher your chances are of “winning the battle” and gaining more ground. I created this simulation using the C++ library SFML, which just simplifies the OPENGL commands for creating a visual canvas.
           `,
           sectionType: SectionType.TEXT_WITHOUT_IMAGE
         } as Section,
