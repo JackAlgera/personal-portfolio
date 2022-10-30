@@ -249,7 +249,7 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
     {
       id: "circle_izer",
       title: "Circle-izer",
-      shortDescription: "A small program I created that takes an image and transforms it into circles that \"Pop\" as the mouse hovers over revealing the image.",
+      shortDescription: "\"Circle-izer\" is a small program I created that takes an image and transforms it into circles that \"Pop\" as the mouse hovers over revealing the image.",
       techStack: "Unity / C#",
       image: circle_izer,
       date: '2018',
@@ -293,7 +293,7 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
     {
       id: "arrow_dance",
       title: "Arrow Dance",
-      shortDescription: "ArrowDance is a small android application I created that is closely related to the arcade arrow dancing game from back in the day ! Hit the arrows in the correct order and try beat the high score !",
+      shortDescription: "\"Arrow Dance\" is a small android application I created that is closely related to the arcade arrow dancing game from back in the day ! Hit the arrows in the correct order and try beat the high score !",
       techStack: "Unity / C#",
       image: arrow_dance,
       date: '2018',
@@ -431,7 +431,7 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
     {
       id: "the_great_tower_ascent",
       title: "The Great Tower Descent",
-      shortDescription: "Descent down the great tower, collecting coins and diamonds and upgrading your warrior with speed and cool new looks !",
+      shortDescription: "In \"The Great Tower Descent\" you must, well... descent the great tower ! Collecting coins and diamonds and upgrading your warrior with speed and cool new looks !",
       techStack: "Unity / C#",
       image: the_great_tower_ascent,
       date: '2018',
