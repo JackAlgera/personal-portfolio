@@ -77,7 +77,7 @@ const ProjectPage = (props: ProjectPageProps) => {
 
   return (
     <>
-      <h1 style={{ marginTop: "30px" }} className="numbered-heading">{props.project.title}</h1>
+      <h1 style={{ marginTop: "40px" }} className="numbered-heading">{props.project.title}</h1>
       {props.project.sections.map((section, index) => generateSection(section, index))}
     </>
   );

@@ -5,7 +5,7 @@ $border-radius: 20px;
   flex-direction: row;
   width: 800px;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 80px;
 
   p {
     color: var(--color-3);
@@ -20,7 +20,7 @@ $border-radius: 20px;
 .container {
   display: flex;
   width: 100%;
-  gap: 50px;
+  gap: 40px;
 
   p {
     text-align: justify;

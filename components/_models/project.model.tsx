@@ -62,23 +62,22 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       style: null,
       sections: [
         {
-          text: "Was just a quick implementation",
+          text: `Implemented 2 different pathfinding algorithms in C++ :
+          
+          * Breadth First Search (BFS)
+          * Depth First Search (DFS)
+          
+          Used SFML for the visuals
+          `,
           image: path_finding_algorithms,
           sectionType: SectionType.TLDR
-        } as Section,
-        {
-          text: "Implemented the BFS and DFS algorithms, with a nice visual representation of each.",
-          image: path_finding_algorithms,
-          rowReverse: true,
-          sectionType: SectionType.TEXT_WITH_IMAGE
         } as Section,
         {
           youtubeVideoId: "2-7dpWj4Lg8",
           sectionType: SectionType.VIDEO
         } as Section,
         {
-          text: `
-          For this project, I wanted to experiment with pathfinding algorithms and try familiarize myself more with them. Two of the most common algorithms are BFS (Breadth First Search) and DFS (Depth First Search). The most commonly used one in video games is A* (A-Star), which is the most efficient among the 3 I mentioned. But to start things of, I wanted to try implement the first two first, then later add the A* one.
+          text: `For this project, I wanted to experiment with pathfinding algorithms and try familiarize myself more with them. Two of the most common algorithms are BFS (Breadth First Search) and DFS (Depth First Search). The most commonly used one in video games is A* (A-Star), which is the most efficient among the 3 I mentioned. But to start things of, I wanted to try implement the first two first, then later add the A* one.
 
           The simulation shows how each algorithm is working its magic and trying to find a path to the exit (red square in the corner) starting from the initial green square. I used an online maze generator that generated a nice .txt file filled with 0’s and 1’s, where 1 is a wall tile and 0 is a walkable path tile.
 
@@ -102,10 +101,12 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       sections: [
         {
           text: "Implemented 5 different algorithms (Quick sort, Merge sort, Bucket sort, Radix sort, Bubble sort), with a nice visual representation of each.",
-          image: sorting_algorithms
+          image: sorting_algorithms,
+          sectionType: SectionType.TLDR
         } as Section,
         {
-          youtubeVideoId: "2-7dpWj4Lg8"
+          youtubeVideoId: "2-7dpWj4Lg8",
+          sectionType: SectionType.VIDEO
         } as Section
       ]
     }
@@ -123,10 +124,12 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       sections: [
         {
           text: "\"Oystou\" is a small game I created in one weekend with a team of 3 people during the Global Game Jam 2019, that was held at Epitech in Nantes, France.",
-          image: oystou
+          image: oystou,
+          sectionType: SectionType.TLDR
         } as Section,
         {
-          youtubeVideoId: "2-7dpWj4Lg8"
+          youtubeVideoId: "2-7dpWj4Lg8",
+          sectionType: SectionType.VIDEO
         } as Section
       ]
     }
@@ -144,10 +147,12 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       sections: [
         {
           text: "\"Cook Em up\" is an android application where you run a fancy restaurant in Paris, and need to prepare the meals following the recipes, but watch out, time runs out quickly !",
-          image: cook_em_up
+          image: cook_em_up,
+          sectionType: SectionType.TLDR
         } as Section,
         {
-          youtubeVideoId: "2-7dpWj4Lg8"
+          youtubeVideoId: "2-7dpWj4Lg8",
+          sectionType: SectionType.VIDEO
         } as Section
       ]
     }
@@ -165,10 +170,12 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       sections: [
         {
           text: "A small program I created that takes an image and transforms it into circles that \"Pop\" as the mouse hovers over revealing the image.",
-          image: circle_izer
+          image: circle_izer,
+          sectionType: SectionType.TLDR
         } as Section,
         {
-          youtubeVideoId: "2-7dpWj4Lg8"
+          youtubeVideoId: "2-7dpWj4Lg8",
+          sectionType: SectionType.VIDEO
         } as Section
       ]
     }
@@ -186,10 +193,12 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       sections: [
         {
           text: "ArrowDance is a small android application I created that is closely related to the arcade arrow dancing game from back in the day ! Hit the arrows in the correct order and try beat the high score !",
-          image: arrow_dance
+          image: arrow_dance,
+          sectionType: SectionType.TLDR
         } as Section,
         {
-          youtubeVideoId: "2-7dpWj4Lg8"
+          youtubeVideoId: "2-7dpWj4Lg8",
+          sectionType: SectionType.VIDEO
         } as Section
       ]
     }
@@ -207,10 +216,12 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       sections: [
         {
           text: "\"Attack of the Squarons\" is a small game I created with my brother during a Game Jam organized by BlackThornProd in 2018. It's a small RPG spell-casting game where the player can create his own spells using code !",
-          image: attack_of_the_squarons
+          image: attack_of_the_squarons,
+          sectionType: SectionType.TLDR
         } as Section,
         {
-          youtubeVideoId: "2-7dpWj4Lg8"
+          youtubeVideoId: "2-7dpWj4Lg8",
+          sectionType: SectionType.VIDEO
         } as Section
       ]
     }
@@ -228,10 +239,12 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       sections: [
         {
           text: "\"Please the Gods\" is a game I created in one weekend with my brother, during the Ludum Dare 43 Game Jam 2018. It's a strategy game where you need to take care of your village while pleasing the Gods to avoid their wrath !",
-          image: please_the_gods
+          image: please_the_gods,
+          sectionType: SectionType.TLDR
         } as Section,
         {
-          youtubeVideoId: "2-7dpWj4Lg8"
+          youtubeVideoId: "2-7dpWj4Lg8",
+          sectionType: SectionType.VIDEO
         } as Section
       ]
     }
@@ -249,10 +262,12 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       sections: [
         {
           text: "Descent down the great tower, collecting coins and diamonds and upgrading your warrior with speed and cool new looks !",
-          image: the_great_tower_ascent
+          image: the_great_tower_ascent,
+          sectionType: SectionType.TLDR
         } as Section,
         {
-          youtubeVideoId: "2-7dpWj4Lg8"
+          youtubeVideoId: "2-7dpWj4Lg8",
+          sectionType: SectionType.VIDEO
         } as Section
       ]
     }
@@ -270,10 +285,12 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       sections: [
         {
           text: "\"Call of Muty\" is an online multiplayer shooting game. Avoid the traps, pick up guns and destroy the opposing players !",
-          image: call_of_muty
+          image: call_of_muty,
+          sectionType: SectionType.TLDR
         } as Section,
         {
-          youtubeVideoId: "2-7dpWj4Lg8"
+          youtubeVideoId: "2-7dpWj4Lg8",
+          sectionType: SectionType.VIDEO
         } as Section
       ]
     }
@@ -291,10 +308,12 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       sections: [
         {
           text: "\"Predators and Prey\" is a cellular automaton where the prey (green) try to survive from the predators (red).",
-          image: predators_vs_prey
+          image: predators_vs_prey,
+          sectionType: SectionType.TLDR
         } as Section,
         {
-          youtubeVideoId: "2-7dpWj4Lg8"
+          youtubeVideoId: "2-7dpWj4Lg8",
+          sectionType: SectionType.VIDEO
         } as Section
       ]
     }
@@ -312,10 +331,12 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       sections: [
         {
           text: "The simulation looks like two sides fighting each other, each trying to gain ground, but the black side has a slightly higher chance of winning, which inevitably brings them victory.",
-          image: probability_simulator
+          image: probability_simulator,
+          sectionType: SectionType.TLDR
         } as Section,
         {
-          youtubeVideoId: "2-7dpWj4Lg8"
+          youtubeVideoId: "2-7dpWj4Lg8",
+          sectionType: SectionType.VIDEO
         } as Section
       ]
     }
@@ -333,10 +354,12 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       sections: [
         {
           text: "Program that simulates a particle system in a void. Gravity can be changed during the simulation.",
-          image: particle_system
+          image: particle_system,
+          sectionType: SectionType.TLDR
         } as Section,
         {
-          youtubeVideoId: "2-7dpWj4Lg8"
+          youtubeVideoId: "2-7dpWj4Lg8",
+          sectionType: SectionType.VIDEO
         } as Section
       ]
     }
@@ -354,10 +377,12 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       sections: [
         {
           text: "Creates a triangle, then cuts that triangle into 4 smaller triangles, then cuts that triangle into 4 smaller triangles, then... triangle-ception?",
-          image: trinity_force
+          image: trinity_force,
+          sectionType: SectionType.TLDR
         } as Section,
         {
-          youtubeVideoId: "2-7dpWj4Lg8"
+          youtubeVideoId: "2-7dpWj4Lg8",
+          sectionType: SectionType.VIDEO
         } as Section
       ]
     }
@@ -375,10 +400,12 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       sections: [
         {
           text: "Program that creates a word cloud from text, where the size of each word depends on how frequently the word appears in the text",
-          image: word_cloud
+          image: word_cloud,
+          sectionType: SectionType.TLDR
         } as Section,
         {
-          youtubeVideoId: "2-7dpWj4Lg8"
+          youtubeVideoId: "2-7dpWj4Lg8",
+          sectionType: SectionType.VIDEO
         } as Section
       ]
     }
@@ -396,10 +423,12 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       sections: [
         {
           text: "Simulates Conway's cellular automaton, called \"Game of Life\"",
-          image: conway_game_of_life
+          image: conway_game_of_life,
+          sectionType: SectionType.TLDR
         } as Section,
         {
-          youtubeVideoId: "2-7dpWj4Lg8"
+          youtubeVideoId: "2-7dpWj4Lg8",
+          sectionType: SectionType.VIDEO
         } as Section
       ]
     }
@@ -417,10 +446,12 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       sections: [
         {
           text: "This simulates the Newton’s law of universal gravitation. Small satellites or planets (blue circles) are pulled by the bigger planets (yellow circles) as well as other satellites.",
-          image: newtons_pull
+          image: newtons_pull,
+          sectionType: SectionType.TLDR
         } as Section,
         {
-          youtubeVideoId: "2-7dpWj4Lg8"
+          youtubeVideoId: "2-7dpWj4Lg8",
+          sectionType: SectionType.VIDEO
         } as Section
       ]
     }
