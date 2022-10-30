@@ -45,6 +45,7 @@ import the_great_tower_ascent_2 from "../../public/the_great_tower_ascent/the_gr
 import the_great_tower_ascent_3 from "../../public/the_great_tower_ascent/the_great_tower_ascent_3.jpeg";
 import call_of_muty_1 from "../../public/call_of_muty/call_of_muty_1.png";
 import call_of_muty_2 from "../../public/call_of_muty/call_of_muty_2.png";
+import word_cloud_1 from "../../public/word_cloud/word_cloud_1.png";
 
 export interface Project {
   id: string;
@@ -589,22 +590,19 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       style: null,
       sections: [
         {
-          text: "Program that simulates a particle system in a void. Gravity can be changed during the simulation.",
+          text: `Program that simulates a particle system in a void. Gravity can be changed during the simulation.
+          `,
           image: particle_system,
           sectionType: SectionType.TLDR
         } as Section,
         {
-          youtubeVideoId: "2-7dpWj4Lg8",
+          youtubeVideoId: "WVwZZb3UXdM",
           sectionType: SectionType.VIDEO
         } as Section,
         {
-          text: `Decided to try my hand at creating some common sorting algorithms ; Quick sort, Merge sort, Bucket sort, Radix sort and Bubble sort.
+          text: `I created this simulation using the C++ library SFML, which just simplifies the OPENGL commands for creating a visual canvas. I had a lot of fun creating the particles and applying different forces on them. Each particle has its own mass, position, speed and acceleration.
           
-          I really like the visual representation, it's based on a video I saw a couple of years back and really shows how each algorithm is tackling the sorting problem.
-          
-          For some of these algorithms (Bubble and Merge) I used recursive programming. I have always found recursive programming incredibly elegant ; being able to create complex algorithms using only a couple lines of code is amazing.
-          
-          Although it is not used very often in the industry, I wanted to work on my recursive programming skills nevertheless ! Had loads of fun working on this project.
+          By clicking with the mouse, you can create an explosion of particles that shoot out in different angles. Learned a lot during this project, especially list-wise and handling a lot of data at the same time.
           `,
           sectionType: SectionType.TEXT_WITHOUT_IMAGE
         } as Section,
@@ -623,22 +621,13 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       style: null,
       sections: [
         {
-          text: "Creates a triangle, then cuts that triangle into 4 smaller triangles, then cuts that triangle into 4 smaller triangles, then... triangle-ception?",
+          text: `Creates a triangle, then cuts that triangle into 4 smaller triangles, then cuts that triangle into 4 smaller triangles, then... triangle-ception?
+          `,
           image: trinity_force,
           sectionType: SectionType.TLDR
         } as Section,
         {
-          youtubeVideoId: "2-7dpWj4Lg8",
-          sectionType: SectionType.VIDEO
-        } as Section,
-        {
-          text: `Decided to try my hand at creating some common sorting algorithms ; Quick sort, Merge sort, Bucket sort, Radix sort and Bubble sort.
-          
-          I really like the visual representation, it's based on a video I saw a couple of years back and really shows how each algorithm is tackling the sorting problem.
-          
-          For some of these algorithms (Bubble and Merge) I used recursive programming. I have always found recursive programming incredibly elegant ; being able to create complex algorithms using only a couple lines of code is amazing.
-          
-          Although it is not used very often in the industry, I wanted to work on my recursive programming skills nevertheless ! Had loads of fun working on this project.
+          text: `Although it is not used very often in the industry, I wanted to work on my recursive programming skills nevertheless ! Had loads of fun working on this project.
           `,
           sectionType: SectionType.TEXT_WITHOUT_IMAGE
         } as Section,
@@ -657,24 +646,23 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       style: null,
       sections: [
         {
-          text: "Program that creates a word cloud from text, where the size of each word depends on how frequently the word appears in the text",
+          text: `Program that creates a word cloud from text, where the size of each word depends on how frequently the word appears in the text
+          `,
           image: word_cloud,
           sectionType: SectionType.TLDR
         } as Section,
         {
-          youtubeVideoId: "2-7dpWj4Lg8",
-          sectionType: SectionType.VIDEO
-        } as Section,
-        {
-          text: `Decided to try my hand at creating some common sorting algorithms ; Quick sort, Merge sort, Bucket sort, Radix sort and Bubble sort.
-          
-          I really like the visual representation, it's based on a video I saw a couple of years back and really shows how each algorithm is tackling the sorting problem.
-          
-          For some of these algorithms (Bubble and Merge) I used recursive programming. I have always found recursive programming incredibly elegant ; being able to create complex algorithms using only a couple lines of code is amazing.
-          
-          Although it is not used very often in the industry, I wanted to work on my recursive programming skills nevertheless ! Had loads of fun working on this project.
+          text: `This was a school project that I created with a friend. We were tasked with creating a word cloud, given a certain text. The more frequently a word appears in the text, the bigger it appears in the word cloud.
           `,
           sectionType: SectionType.TEXT_WITHOUT_IMAGE
+        } as Section,
+        {
+          text: `We added a few extra functions to our program that allows us to choose random colors or one main color.
+          We had a lot of fun creating this project. We used a text from WW2 in the example photos.
+          `,
+          image: word_cloud_1,
+          sectionType: SectionType.TEXT_WITH_IMAGE,
+          rowReverse: true
         } as Section,
       ]
     }
@@ -691,22 +679,27 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       style: null,
       sections: [
         {
-          text: "Simulates Conway's cellular automaton, called \"Game of Life\"",
+          text: `Simulates Conway's cellular automaton, called "Game of Life"
+          `,
           image: conway_game_of_life,
           sectionType: SectionType.TLDR
         } as Section,
         {
-          youtubeVideoId: "2-7dpWj4Lg8",
+          youtubeVideoId: "tXSnXxI3Is8",
           sectionType: SectionType.VIDEO
         } as Section,
         {
-          text: `Decided to try my hand at creating some common sorting algorithms ; Quick sort, Merge sort, Bucket sort, Radix sort and Bubble sort.
+          text: `I have always been fascinated with cellular automaton simulations, so naturally I’d end up creating Conway’s game of life. It works by checking the number of cells around each cell, depending on how many living cells there are (black cells), the cell can either die (go white), reproduce (go black) or stay unchanged. The rules are as follow :
           
-          I really like the visual representation, it's based on a video I saw a couple of years back and really shows how each algorithm is tackling the sorting problem.
+          1) Any live cell with fewer than two live neighbors dies, as if by underpopulation.
           
-          For some of these algorithms (Bubble and Merge) I used recursive programming. I have always found recursive programming incredibly elegant ; being able to create complex algorithms using only a couple lines of code is amazing.
+          2) Any live cell with two or three live neighbors lives on to the next generation.
           
-          Although it is not used very often in the industry, I wanted to work on my recursive programming skills nevertheless ! Had loads of fun working on this project.
+          3) Any live cell with more than three live neighbors dies, as if by overpopulation.
+          
+          4) Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.
+          
+          I created this simulation using the C++ library SFML, which just simplifies the OPENGL commands for creating a visual canvas.
           `,
           sectionType: SectionType.TEXT_WITHOUT_IMAGE
         } as Section,
@@ -725,25 +718,15 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       style: null,
       sections: [
         {
-          text: "This simulates the Newton’s law of universal gravitation. Small satellites or planets (blue circles) are pulled by the bigger planets (yellow circles) as well as other satellites.",
+          text: `This simulates the Newton’s law of universal gravitation. Small satellites or planets (blue circles) are pulled by the bigger planets (yellow circles) as well as other satellites.
+          `,
           image: newtons_pull,
           sectionType: SectionType.TLDR
         } as Section,
         {
-          youtubeVideoId: "2-7dpWj4Lg8",
+          youtubeVideoId: "hgpBKOLH4_M",
           sectionType: SectionType.VIDEO
-        } as Section,
-        {
-          text: `Decided to try my hand at creating some common sorting algorithms ; Quick sort, Merge sort, Bucket sort, Radix sort and Bubble sort.
-          
-          I really like the visual representation, it's based on a video I saw a couple of years back and really shows how each algorithm is tackling the sorting problem.
-          
-          For some of these algorithms (Bubble and Merge) I used recursive programming. I have always found recursive programming incredibly elegant ; being able to create complex algorithms using only a couple lines of code is amazing.
-          
-          Although it is not used very often in the industry, I wanted to work on my recursive programming skills nevertheless ! Had loads of fun working on this project.
-          `,
-          sectionType: SectionType.TEXT_WITHOUT_IMAGE
-        } as Section,
+        } as Section
       ]
     }
   ]
