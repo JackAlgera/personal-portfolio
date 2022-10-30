@@ -29,6 +29,14 @@ import arrow_dance_2 from "../../public/arrow_dance/arrow_dance_2.png";
 import arrow_dance_3 from "../../public/arrow_dance/arrow_dance_3.png";
 import arrow_dance_4 from "../../public/arrow_dance/arrow_dance_4.jpeg";
 import arrow_dance_5 from "../../public/arrow_dance/arrow_dance_5.jpeg";
+import attack_of_the_squarons_1 from "../../public/attack_of_the_squarons/attack_of_the_squarons_1.png";
+import attack_of_the_squarons_2 from "../../public/attack_of_the_squarons/attack_of_the_squarons_2.png";
+import attack_of_the_squarons_3 from "../../public/attack_of_the_squarons/attack_of_the_squarons_3.png";
+import attack_of_the_squarons_4 from "../../public/attack_of_the_squarons/attack_of_the_squarons_4.png";
+import attack_of_the_squarons_5 from "../../public/attack_of_the_squarons/attack_of_the_squarons_5.png";
+import attack_of_the_squarons_6 from "../../public/attack_of_the_squarons/attack_of_the_squarons_6.png";
+import attack_of_the_squarons_7 from "../../public/attack_of_the_squarons/attack_of_the_squarons_7.png";
+import attack_of_the_squarons_8 from "../../public/attack_of_the_squarons/attack_of_the_squarons_8.png";
 
 
 export interface Project {
@@ -326,24 +334,33 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       style: null,
       sections: [
         {
-          text: "\"Attack of the Squarons\" is a small game I created with my brother during a Game Jam organized by BlackThornProd in 2018. It's a small RPG spell-casting game where the player can create his own spells using code !",
+          text: `"Attack of the Squarons" is a small game I created with my brother during the last Game Jam organized by BlackThornProd (13/10/18 to 20/10/18). It's a small RPG spell-casting game where the player can create his own spells using code !
+
+          Link to download and play the game : https://amusedsandpaper.itch.io/attack-of-the-squaronsv2
+          `,
           image: attack_of_the_squarons,
           sectionType: SectionType.TLDR
         } as Section,
         {
-          youtubeVideoId: "2-7dpWj4Lg8",
+          youtubeVideoId: "xrpvk2m3lwY",
           sectionType: SectionType.VIDEO
         } as Section,
         {
-          text: `Decided to try my hand at creating some common sorting algorithms ; Quick sort, Merge sort, Bucket sort, Radix sort and Bubble sort.
+          text: `Me and my brother participated in the Black Thorn Prod Game Jam (13/10/18 to 03/11/18) and created the game "Attack of the Squarons" in one week. Sadly the player animations stopped working right at the end of the jam !!
           
-          I really like the visual representation, it's based on a video I saw a couple of years back and really shows how each algorithm is tackling the sorting problem.
+          The game jam’s theme was “Game Development”, so we decided to create a game where the player would be able to “code” his own spells, using different functions that we created. He could then preview what he had made, using various shapes and spell effects, to create some nice-looking magic !
           
-          For some of these algorithms (Bubble and Merge) I used recursive programming. I have always found recursive programming incredibly elegant ; being able to create complex algorithms using only a couple lines of code is amazing.
+          The background story of the game was that the current king, a square dude, orders you, a young square mage knight, to go kill the alleged evil Trianglons. Through-out the game, the player realises that the current king is the evil one that has been lying to his people from the very start and the Trianglons are actually a civilized and kind people.
           
-          Although it is not used very often in the industry, I wanted to work on my recursive programming skills nevertheless ! Had loads of fun working on this project.
+          As per usual, we split the coding between us, while I did the game art and my brother did the game sounds and music.
           `,
           sectionType: SectionType.TEXT_WITHOUT_IMAGE
+        } as Section,
+        {
+          imageGalleryList: [
+            attack_of_the_squarons_1, attack_of_the_squarons_2, attack_of_the_squarons_3, attack_of_the_squarons_4, attack_of_the_squarons_5, attack_of_the_squarons_6, attack_of_the_squarons_7, attack_of_the_squarons_8
+          ],
+          sectionType: SectionType.IMAGE_GALLERY
         } as Section,
       ]
     }

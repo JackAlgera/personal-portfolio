@@ -37,19 +37,19 @@ const ProjectPage = (props: ProjectPageProps) => {
         break;
       case SectionType.TLDR:
         htlmSection = (
-          <div className={`${styles.container} ${section.rowReverse ? styles.rowReverse : ''}`}>
-            <div className={styles.tldrTextContainer}>
-              <h2>TL;DR</h2>
+          <div style={{ flexDirection: "column" }} className={styles.container}>
+            <h2>TL;DR</h2>
+            <div className={`${styles.container} ${section.rowReverse ? styles.rowReverse : ''}`}>
               <p>{section.text}</p>
-            </div>
-            <div className={styles.imageContainer}>
-              <Image
-                src={section.image.src}
-                layout="fill"
-                objectFit="cover"
-                loading="lazy"
-                alt="image"
-              />
+              <div className={styles.imageContainer}>
+                <Image
+                  src={section.image.src}
+                  layout="fill"
+                  objectFit="cover"
+                  loading="lazy"
+                  alt="image"
+                />
+              </div>
             </div>
           </div>
         );

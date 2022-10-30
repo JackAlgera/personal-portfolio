@@ -13,7 +13,6 @@ $border-radius: 20px;
 
   h2 {
     color: var(--color-1);
-    margin-bottom: 20px;
   }
 }
 
@@ -25,10 +24,6 @@ $border-radius: 20px;
   p {
     text-align: justify;
     white-space: pre-line;
-  }
-
-  > .tldrTextContainer {
-    flex-grow: 1;
   }
 
   &.rowReverse {
