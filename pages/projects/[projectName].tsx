@@ -1,4 +1,4 @@
-import {Project, PROJECTS, Section, SectionType} from "../../components/_models/project.model";
+import {Project, PROJECTS, ProjectStyleType, Section, SectionType} from "../../components/_models/project.model";
 import styles from "./[projectName].module.scss";
 import Image from "next/image";
 import YouTube from "react-youtube";
@@ -95,7 +95,11 @@ const ProjectPage = (props: ProjectPageProps) => {
 
   return (
     <>
-      <h1 className="numbered-heading">{props.project.title}</h1>
+      <h1 className={styles.title}>
+        {props.project.title}<br/>
+        <span>{props.project.date}</span>
+        <span>{props.project.techStack}</span>
+      </h1>
       {props.project.sections.map((section, index) => generateSection(section, index))}
     </>
   );

@@ -68,3 +68,26 @@ $border-radius: 20px;
   border-radius: $border-radius;
   overflow: hidden;
 }
+
+.title {
+  text-align: center;
+
+  > span:nth-child(2) {
+    font-size: 0.9rem;
+    color: var(--color-1);
+  }
+  > span:nth-child(2):after {
+    content: "";
+    position: relative;
+    width: 20px;
+    height: 1.5px;
+    top: -5px;
+    margin: 8px;
+    background-color: var(--color-3);
+    display: inline-grid;
+  }
+  > span:nth-child(3) {
+    font-size: 0.9rem;
+    color: var(--color-1);
+  }
+}

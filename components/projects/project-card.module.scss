@@ -15,10 +15,25 @@ $margins: -10px;
     flex-grow: 1;
     width: 20%;
     font-size: 1.4rem;
-  }
-  h2 > span {
-    font-size: 0.9rem;
-    color: var(--color-1);
+
+    > span:nth-child(2) {
+      font-size: 0.9rem;
+      color: var(--color-1);
+    }
+    > span:nth-child(2):after {
+      content: "";
+      position: relative;
+      width: 20px;
+      height: 1.5px;
+      top: -5px;
+      margin: 8px;
+      background-color: var(--color-3);
+      display: inline-grid;
+    }
+    > span:nth-child(3) {
+      font-size: 0.9rem;
+      color: var(--color-1);
+    }
   }
   &.rowReverse h2.rotate {
     transform: rotate(90deg);
@@ -88,4 +103,8 @@ $margins: -10px;
   color: transparent;
   align-self: center;
   font-size: 14px;
+}
+
+.test {
+
 }

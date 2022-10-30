@@ -43,6 +43,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
     <div className={`${styles.container} ${props.inverse ? styles.rowReverse : ''}`}>
       <h2 className={props.styleClass === ProjectStyleType.SELECT ? styles.rotate : ''}>
         {props.project.title}<br/>
+        <span>{props.project.date}</span>
         <span>{props.project.techStack}</span>
       </h2>
       <a className={cssStyles}
