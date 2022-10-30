@@ -42,10 +42,23 @@ export const ExperienceTab = (props: ExperienceTabProps & WatcherState) => {
     setLines(extractLines(props.tab.description, 60));
   }, [props.tab.description]);
 
+  // import * as company from './another-file';
 
   return (
     <div className="experience-tab">
       <pre id={styles.experienceTabTextArea}>
+        <p>
+          <span className={styles.color2}>import </span>
+          <span className={styles.color1}>* </span>
+          <span className={styles.color2}>as </span>
+          <span className={styles.color3}>experience</span>
+          <span className={styles.color2}> from </span>
+          <span className={styles.color2}>{"\""}</span>
+          <span className={styles.color3}>jack/experience</span>
+          <span className={styles.color2}>{"\""}</span>
+          <span className={styles.color2}>;</span>
+        </p>
+        <p/>
         <p>
           <span className={styles.color1}>{"<Job "}</span>
           <span className={styles.color2}>{"company=\""}</span>
@@ -90,6 +103,7 @@ export const ExperienceTab = (props: ExperienceTabProps & WatcherState) => {
         ))}
         <p/>
         <p><span className={styles.color1}>{"</Job>"}</span></p>
+        <p/>
       </pre>
     </div>
   );

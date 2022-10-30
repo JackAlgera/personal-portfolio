@@ -38,7 +38,8 @@ figure,
 blockquote,
 dl,
 dd,
-a {
+a,
+pre {
   margin: 0;
   padding: 0;
 }
