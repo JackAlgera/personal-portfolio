@@ -32,12 +32,21 @@ export interface Section {
   text: string|null;
   youtubeVideoId: string|null;
   image: StaticImageData|null;
+  rowReverse: boolean|null;
+  sectionType: SectionType;
 }
 
 export enum ProjectStyleType {
   UP,
   DOWN,
   SELECT,
+}
+
+export enum SectionType {
+  TLDR,
+  TEXT_WITH_IMAGE,
+  VIDEO,
+  TEXT_WITHOUT_IMAGE
 }
 
 export const PROJECTS: Map<string, Project> = new Map<string, Project>([
@@ -53,12 +62,30 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       style: null,
       sections: [
         {
-          text: "Implemented the BFS and DFS algorithms, with a nice visual representation of each.",
-          image: path_finding_algorithms
+          text: "Was just a quick implementation",
+          image: path_finding_algorithms,
+          sectionType: SectionType.TLDR
         } as Section,
         {
-          youtubeVideoId: "2-7dpWj4Lg8"
-        } as Section
+          text: "Implemented the BFS and DFS algorithms, with a nice visual representation of each.",
+          image: path_finding_algorithms,
+          rowReverse: true,
+          sectionType: SectionType.TEXT_WITH_IMAGE
+        } as Section,
+        {
+          youtubeVideoId: "2-7dpWj4Lg8",
+          sectionType: SectionType.VIDEO
+        } as Section,
+        {
+          text: `
+          For this project, I wanted to experiment with pathfinding algorithms and try familiarize myself more with them. Two of the most common algorithms are BFS (Breadth First Search) and DFS (Depth First Search). The most commonly used one in video games is A* (A-Star), which is the most efficient among the 3 I mentioned. But to start things of, I wanted to try implement the first two first, then later add the A* one.
+
+          The simulation shows how each algorithm is working its magic and trying to find a path to the exit (red square in the corner) starting from the initial green square. I used an online maze generator that generated a nice .txt file filled with 0’s and 1’s, where 1 is a wall tile and 0 is a walkable path tile.
+
+          I really like the visual effect we get from this project, gives us a nice insight of how the computer is “thinking” and trying to find the exit to a, rather, complicated maze !
+          `,
+          sectionType: SectionType.TEXT_WITHOUT_IMAGE
+        } as Section,
       ]
     }
   ],

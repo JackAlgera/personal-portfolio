@@ -1,28 +1,51 @@
 $border-radius: 20px;
 
-.container {
+.sectionContainer {
   display: flex;
   flex-direction: row;
   width: 800px;
-  place-items: center;
-  text-align: center;
   justify-content: center;
+  margin-top: 50px;
 
   p {
-    color: var(--color-2);
+    color: var(--color-3);
+  }
+
+  h2 {
+    color: var(--color-1);
+    margin-bottom: 20px;
+  }
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  gap: 50px;
+
+  p {
+    text-align: justify;
+    white-space: pre-line;
+  }
+
+  > .tldrTextContainer {
+    flex-grow: 1;
+  }
+
+  &.rowReverse {
+    flex-direction: row-reverse;
   }
 }
 
 .imageContainer {
   position: relative;
-  width: 850px;
+  width: 40%;
+  min-width: 40%;
   height: 250px;
   border-radius: $border-radius;
   overflow: hidden;
 }
 
 .video {
-  margin-top: 20px;
   border-radius: $border-radius;
   overflow: hidden;
 }
