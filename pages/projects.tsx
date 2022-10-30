@@ -1,11 +1,14 @@
 import {Project, PROJECTS, ProjectStyleType} from "../components/_models/project.model";
 import {ProjectCard} from "../components/projects/project-card";
 import {useState} from "react";
+import {WatcherState} from "../components/_models/watcher.model";
 
-export default function Projects() {
+export default function Projects(watcherState: WatcherState) {
   const [projectCards, setProjectCards] = useState<Project[]>(Array.from(PROJECTS.values()));
 
   const handleMouseLeave = () => {
+    watcherState.setWatcherActivated(false);
+
     const newProjectCards: Project[] = [];
     projectCards.map(project => {
       newProjectCards.push({...project, style: null})
@@ -14,6 +17,8 @@ export default function Projects() {
     setProjectCards(newProjectCards);
   }
   const handleMouseEnter = (index: number) => {
+    watcherState.setWatcherActivated(true);
+
     const newProjectCards: Project[] = [];
     projectCards.map((project, projectIndex) => {
       switch (projectIndex) {
