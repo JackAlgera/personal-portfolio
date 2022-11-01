@@ -2,9 +2,12 @@ import {Project, PROJECTS, ProjectStyleType, Section, SectionType} from "../../c
 import styles from "./[projectName].module.scss";
 import Image from "next/image";
 import YouTube from "react-youtube";
+import {ShowMoreProjects} from "../../components/projects/show-more-projects";
+import {WatcherState} from "../../components/_models/watcher.model";
 
 interface ProjectPageProps {
   project: Project;
+  watcherState: WatcherState;
 }
 
 const ProjectPage = (props: ProjectPageProps) => {
@@ -101,6 +104,7 @@ const ProjectPage = (props: ProjectPageProps) => {
         <span>{props.project.techStack}</span>
       </h1>
       {props.project.sections.map((section, index) => generateSection(section, index))}
+      <ShowMoreProjects />
     </>
   );
 }
@@ -116,7 +120,9 @@ export async function getServerSideProps(context) {
   }
 
   return {
-    props: { project: PROJECTS.get(projectName) } as ProjectPageProps
+    props: {
+      project: PROJECTS.get(projectName)
+    } as ProjectPageProps
   }
 }
 

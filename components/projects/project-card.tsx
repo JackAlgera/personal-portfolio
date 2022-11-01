@@ -51,9 +51,9 @@ export const ProjectCard = (props: ProjectCardProps) => {
          onMouseLeave={() => props.handleMouseLeave()}
          href={`/projects/${props.project.id}`}
       >
-        <div>
-          <p className={styles.centerText}>{props.project.shortDescription}</p>
-          <p className={styles.centerText}>{props.project.date}</p>
+        <div className={styles.centerText}>
+          <p>{props.project.shortDescription}</p>
+          <p>{props.project.date}</p>
         </div>
         <Image
           src={props.project.image.src}

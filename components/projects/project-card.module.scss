@@ -98,13 +98,11 @@ $margins: 1rem/2;
 }
 
 .centerText {
-  margin: 0;
-  z-index: 4;
-  color: transparent;
-  align-self: center;
-  font-size: 14px;
-}
-
-.test {
-
+  p {
+    margin: 0;
+    z-index: 4;
+    color: transparent;
+    align-self: center;
+    font-size: 14px;
+  }
 }

@@ -1,0 +1,44 @@
+.container {
+  display: grid;
+  position: relative;
+  width: 450px;
+  height: 250px;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all ease 0.5s;
+
+  * {
+    transition: all ease 0.5s;
+  }
+
+  &:hover {
+    span {
+      filter: blur(8px) brightness(0.4);
+    }
+
+    .textContainer {
+      p:nth-child(1) {
+        color: var(--color-1);
+      }
+      p:nth-child(2) {
+        color: var(--color-2);
+      }
+    }
+  }
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+
+  p {
+    margin: 0;
+    z-index: 10;
+    color: transparent;
+    align-self: center;
+    font-size: 14px;
+  }
+}
