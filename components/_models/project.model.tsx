@@ -68,9 +68,9 @@ export interface Section {
 }
 
 export enum ProjectStyleType {
-  UP,
-  DOWN,
-  SELECT,
+  UP = "up-animation",
+  DOWN = "down-animation",
+  SELECT = "select-animation",
 }
 
 export enum SectionType {

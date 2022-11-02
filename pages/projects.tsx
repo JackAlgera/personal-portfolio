@@ -39,7 +39,11 @@ export default function Projects(watcherState: WatcherState) {
     <section>
       <h2 className="numbered-heading"><span>03.</span>Personal Projects</h2>
       <div className="inner experience">
-        <section style={{ marginTop: "50px" }}>
+        <section style={{
+          display: "flex",
+          gap: "20px",
+          marginTop: "50px",
+        }}>
           {projectCards.map((project, index) => (
             <ProjectCard key={project.title}
                          project={project}

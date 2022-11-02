@@ -4,11 +4,15 @@ import styles from "./project-image.module.scss";
 
 interface ProjectImageProps {
   project: Project;
+  handleMouseEnter: () => void;
+  handleMouseLeave: () => void;
 }
 
 export const ProjectImage = (props: ProjectImageProps) => {
   return (
     <a className={styles.container}
+       onMouseEnter={() => props.handleMouseEnter()}
+       onMouseLeave={() => props.handleMouseLeave()}
        href={`/projects/${props.project.id}`}
     >
       <div className={styles.textContainer}>

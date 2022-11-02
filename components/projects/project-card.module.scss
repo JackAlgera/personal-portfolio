@@ -5,7 +5,6 @@ $margins: 1rem/2;
   width: 800px;
   place-items: center;
   text-align: center;
-
   * {
     transition: all ease 0.5s;
   }
@@ -45,64 +44,18 @@ $margins: 1rem/2;
   &.rowReverse {
     flex-direction: row-reverse;
   }
-}
 
-.card {
-  --scale: 1;
-  --translateX: 0;
-  --translateY: 0;
-  --z-index: 0;
-  margin-bottom: $margins;
-  margin-top: $margins;
-  position: relative;
-  display: grid;
-  width: 450px;
-  height: 250px;
-  transform: scale(var(--scale)) translateX(var(--translateX)) translateY(var(--translateY));
-  z-index: var(--z-index);
-  border-radius: 20px;
-  overflow: hidden;
+  > div {
+    background-color: transparent;
 
-  * {
-    grid-row: 1;
-    grid-column: 1;
-  }
-
-  &.up {
-    --translateY: -20%;
-  }
-  &.down {
-    --translateY: 20%;
-  }
-  &.select {
-    --scale: 1.4;
-    --z-index: 3;
-  }
-
-  div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  &.select span {
-    filter: blur(8px) brightness(0.4);
-  }
-  &.select > div > p:nth-child(1) {
-    color: var(--color-1);
-  }
-  &.select > div > p:nth-child(2) {
-    color: var(--color-2);
-  }
-}
-
-.centerText {
-  p {
-    margin: 0;
-    z-index: 4;
-    color: transparent;
-    align-self: center;
-    font-size: 14px;
+    &[animation="up-animation"] {
+      transform: translateY(-20%);
+    }
+    &[animation="down-animation"] {
+      transform: translateY(20%);
+    }
+    &[animation="select-animation"] {
+      transform: scale(1.4);
+    }
   }
 }

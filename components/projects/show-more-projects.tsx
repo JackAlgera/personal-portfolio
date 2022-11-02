@@ -16,9 +16,9 @@ export const ShowMoreProjects = () => {
       <h2>Psst, check out these other gucci projects</h2>
       <div className={styles.imagesContainer}>
         {projects.map(project => (
-          <ProjectImage
-            key={project.title}
-            project={project} />
+          <div key={project.title}>
+            <ProjectImage handleMouseEnter={() => {}} handleMouseLeave={() => {}} project={project} />
+          </div>
         ))}
       </div>
     </div>
