@@ -8,6 +8,8 @@ $barHeight: 60px;
   position: fixed;
   bottom: 20px;
   gap: 42px;
+  background-color: unset;
+  z-index: 10;
 
   a {
     border: unset;
