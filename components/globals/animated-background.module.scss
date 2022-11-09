@@ -1,0 +1,39 @@
+$width: 50px;
+$totalBlocks: 10;
+
+.container {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+  z-index: 2;
+
+  .block {
+    position: absolute;
+    background-color: unset;
+    border: solid var(--color-2-transparent);
+    border-radius: 5px;
+    bottom: -100%;
+    z-index: 1000;
+  }
+
+  @for $i from 1 through $totalBlocks {
+    .block:nth-child(#{$i}) {
+      left: percentage(random(100)/100);
+      animation:
+              translate calc(random(42) + 25)+s infinite random(30)+s linear,
+              rotate calc(random(65) + 10)+s infinite linear;
+    }
+  }
+}
+
+@keyframes translate {
+  0% { bottom: -30%; }
+  100% { bottom: 130%; }
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0) }
+  100% { transform: rotate(900deg) }
+}
