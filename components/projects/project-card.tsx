@@ -18,7 +18,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
         <span>{props.project.date}</span>
         <span>{props.project.techStack}</span>
       </h2>
-      <div animation={props.project.style}>
+      <div data-animation={props.project.style}>
         <ProjectImage
           project={props.project}
           handleMouseEnter={props.handleMouseEnter}

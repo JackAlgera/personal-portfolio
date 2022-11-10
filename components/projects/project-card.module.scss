@@ -48,13 +48,13 @@ $margins: 1rem/2;
   > div {
     background-color: transparent;
 
-    &[animation="up-animation"] {
+    &[data-animation="up-animation"] {
       transform: translateY(-20%);
     }
-    &[animation="down-animation"] {
+    &[data-animation="down-animation"] {
       transform: translateY(20%);
     }
-    &[animation="select-animation"] {
+    &[data-animation="select-animation"] {
       transform: scale(1.4);
     }
   }
