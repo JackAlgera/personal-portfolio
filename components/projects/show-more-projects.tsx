@@ -1,29 +1,19 @@
-import {useEffect, useState} from "react";
-import {Project, PROJECTS} from "../_models/project.model";
-import styles from "./show-more-projects.module.scss";
+import {Project} from "../_models/project.model";
 import {ProjectImage} from "./project-image";
+import styles from "./show-more-projects.module.scss";
 
-const MORE_PROJECTS_SENTENCES = [
-  'Hey you, yes you, check out these other projects !',
-  'Projects, projects and more projects !'
-];
+interface ShowMoreProjectsProps {
+  moreProjectsSentence: string;
+  moreProjects: Project[];
+}
 
-export const ShowMoreProjects = () => {
-  const [sentence, setSentence] = useState('');
-  const [projects, setProjects] = useState<Project[]>([]);
-
-  useEffect(() => {
-    let randomProjects = Array.from(PROJECTS.values()).sort(() => 0.5 - Math.random()).slice(0, 2);
-    setProjects(randomProjects);
-    setSentence(MORE_PROJECTS_SENTENCES[Math.floor(Math.random() * MORE_PROJECTS_SENTENCES.length)]);
-  }, []);
-
+export const ShowMoreProjects = (props: ShowMoreProjectsProps) => {
   return (
     <section>
       <div className={styles.container}>
-        <h2>{sentence}</h2>
+        <h2>{props.moreProjectsSentence}</h2>
         <div className={styles.imagesContainer}>
-          {projects.map(project => (
+          {props.moreProjects.map(project => (
             <div key={project.title}>
               <ProjectImage handleMouseEnter={() => {}} handleMouseLeave={() => {}} project={project} />
             </div>

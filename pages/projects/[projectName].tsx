@@ -1,9 +1,18 @@
-import {Project, PROJECTS, ProjectStyleType, Section, SectionType} from "../../components/_models/project.model";
+import {Project, PROJECTS, Section, SectionType} from "../../components/_models/project.model";
 import styles from "./[projectName].module.scss";
 import Image from "next/image";
 import YouTube from "react-youtube";
 import {ShowMoreProjects} from "../../components/projects/show-more-projects";
 import {WatcherState} from "../../components/_models/watcher.model";
+import {useEffect, useState} from "react";
+
+const MORE_PROJECTS_SENTENCES = [
+  'Hey you, yes you, check out my other projects !',
+  'Projects, projects and more projects !',
+  'Wantz sum more projects ?',
+  'Look what other cool stuff I found that you might like !',
+  '[Insert random projects pun here]'
+];
 
 interface ProjectPageProps {
   project: Project;
@@ -11,6 +20,18 @@ interface ProjectPageProps {
 }
 
 const ProjectPage = (props: ProjectPageProps) => {
+  const [moreProjectsSentence, setMoreProjectsSentence] = useState('');
+  const [moreProjects, setMoreProjects] = useState<Project[]>([]);
+
+  useEffect(() => {
+    setMoreProjectsSentence(MORE_PROJECTS_SENTENCES[Math.floor(Math.random() * MORE_PROJECTS_SENTENCES.length)]);
+    setMoreProjects(Array.from(PROJECTS.values())
+      .filter((project) => project.id != props.project.id)
+      .sort(() => 0.5 - Math.random())
+      .slice(0, 2))
+  }, [props.project]);
+
+
   const generateSection = (section: Section, index: number) => {
     let htlmSection = (<></>);
 
@@ -104,7 +125,7 @@ const ProjectPage = (props: ProjectPageProps) => {
         <span>{props.project.techStack}</span>
       </h1>
       {props.project.sections.map((section, index) => generateSection(section, index))}
-      <ShowMoreProjects />
+      <ShowMoreProjects moreProjectsSentence={moreProjectsSentence} moreProjects={moreProjects}/>
     </>
   );
 }
