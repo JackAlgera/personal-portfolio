@@ -19,15 +19,17 @@ export const ShowMoreProjects = () => {
   }, []);
 
   return (
-    <div className={styles.container}>
-      <h2>{sentence}</h2>
-      <div className={styles.imagesContainer}>
-        {projects.map(project => (
-          <div key={project.title}>
-            <ProjectImage handleMouseEnter={() => {}} handleMouseLeave={() => {}} project={project} />
-          </div>
-        ))}
+    <section>
+      <div className={styles.container}>
+        <h2>{sentence}</h2>
+        <div className={styles.imagesContainer}>
+          {projects.map(project => (
+            <div key={project.title}>
+              <ProjectImage handleMouseEnter={() => {}} handleMouseLeave={() => {}} project={project} />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
