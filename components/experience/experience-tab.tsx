@@ -62,7 +62,7 @@ export const ExperienceTab = (props: ExperienceTabProps & WatcherState) => {
           <span className={styles.color2}>{"company=\""}</span>
           <a onMouseEnter={() => props.setWatcherActivated(true)}
              onMouseLeave={() => props.setWatcherActivated(false)}
-             className={styles.color1}
+             className={styles.companyLink}
              href={props.tab.url}
              target="_blank"
              rel="noreferrer"
