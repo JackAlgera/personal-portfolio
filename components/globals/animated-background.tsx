@@ -3,7 +3,7 @@ import styles from './animated-background.module.scss';
 const MAX_BLOCK_SIZE = 120;
 const MIN_BLOCK_SIZE = 20;
 
-const blockSizes: number[] = Array.from(Array(10)).map(_ => {
+const blockSizes: number[] = Array.from(Array(40)).map(_ => {
   return Math.floor(Math.random()*(MAX_BLOCK_SIZE - MIN_BLOCK_SIZE) + MIN_BLOCK_SIZE)
 });
 

@@ -1,8 +1,9 @@
 $width: 50px;
-$totalBlocks: 10;
+$totalSlowBlocks: 20;
+$totalFastBlocks: 20;
 
 .container {
-  position: absolute;
+  position: fixed;
   left: 0;
   width: 100%;
   height: 100%;
@@ -14,15 +15,25 @@ $totalBlocks: 10;
     background-color: unset;
     border: solid var(--color-2-transparent);
     border-radius: 5px;
-    bottom: -100%;
+    bottom: -200px;
     z-index: 1000;
   }
 
-  @for $i from 1 through $totalBlocks {
+  // Slow blocks
+  @for $i from 1 through $totalSlowBlocks {
     .block:nth-child(#{$i}) {
-      left: percentage(random(100)/100);
+      left: percentage((random(100/$totalSlowBlocks) + ($i - 1) * (100/$totalSlowBlocks))/100);
       animation:
-              translate calc(random(42) + 25)+s infinite random(30)+s linear,
+              translate calc(random(50) + 7)+s infinite random(15)+s linear,
+              rotate calc(random(65) + 10)+s infinite linear;
+    }
+  }
+  // Fast blocks
+  @for $i from 1 through $totalFastBlocks {
+    .block:nth-child(#{$i + $totalSlowBlocks}) {
+      left: percentage((random(100/$totalFastBlocks) + ($i - 1) * (100/$totalFastBlocks))/100);
+      animation:
+              translate calc(random(30) + 7)+s infinite random(30)+s linear,
               rotate calc(random(65) + 10)+s infinite linear;
     }
   }
