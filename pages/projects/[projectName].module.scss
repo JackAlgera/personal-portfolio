@@ -71,6 +71,7 @@ $border-radius: 20px;
 
 .title {
   text-align: center;
+  z-index: 5;
 
   > span:nth-child(2) {
     font-size: 0.9rem;
