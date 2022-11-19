@@ -34,7 +34,23 @@ $barHeight: 60px;
   a > p:hover {
     color: var(--color-3);
     cursor: pointer;
-    transform: translateX(8%);
+    transform: scale(125%);
+    animation: pulse 0.3s linear ;
+    border-radius: 1px;
+  }
+  a > p:hover {
+    transform: scale(115%);
+  }
+
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 var(--color-2-transparent);
+      background-color: var(--color-2-transparent);
+    }
+    100% {
+      box-shadow: 0 0 0 15px transparent;
+      background-color: unset;
+    }
   }
 
   &:nth-child(3) {
