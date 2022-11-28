@@ -6,12 +6,15 @@
   border-radius: 20px;
   overflow: hidden;
   transition: all ease 0.5s;
+  box-shadow: 0 0 1px var(--color-1);
 
   * {
     transition: all ease 0.5s;
   }
 
   &:hover {
+    box-shadow: unset;
+
     span {
       filter: blur(8px) brightness(0.4);
       transform: scale(1.3);

@@ -63,6 +63,7 @@ $border-radius: 20px;
   border-radius: $border-radius;
   overflow: hidden;
   transition: all ease 0.3s;
+  box-shadow: 0 0 1px var(--color-1);
 
   &:hover {
     transform: scale(1.05);
