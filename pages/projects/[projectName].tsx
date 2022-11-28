@@ -99,7 +99,9 @@ const ProjectPage = (watcherState: WatcherState) => {
           <div className={styles.galleryContainer}>
             {
               section.imageGalleryList && section.imageGalleryList.map((image, index) => (
-                <div key={"gallery-" + index} className={styles.imageContainer}>
+                <div key={"gallery-" + index}
+                     style={{boxShadow: "unset"}}
+                     className={styles.imageContainer}>
                   <Image
                     src={image.src}
                     layout="fill"
