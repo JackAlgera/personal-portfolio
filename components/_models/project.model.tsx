@@ -46,6 +46,8 @@ import the_great_tower_ascent_3 from "../../public/the_great_tower_ascent/the_gr
 import call_of_muty_1 from "../../public/call_of_muty/call_of_muty_1.png";
 import call_of_muty_2 from "../../public/call_of_muty/call_of_muty_2.png";
 import word_cloud_1 from "../../public/word_cloud/word_cloud_1.png";
+import personal_portfolio from "../../public/personal_portfolio.jpg";
+import personal_wedding_site from "../../public/personal_wedding_site.jpg";
 
 export interface Project {
   id: string;
@@ -83,11 +85,86 @@ export enum SectionType {
 
 export const PROJECTS: Map<string, Project> = new Map<string, Project>([
   [
+    "personal_portfolio",
+    {
+      id: "personal_portfolio",
+      title: "Personal Portfolio",
+      shortDescription: "Created a portfolio where I showcase my work",
+      techStack: "Typescript/React/NextJs",
+      image: personal_portfolio,
+      date: '2022',
+      style: null,
+      sections: [
+        {
+          text: `Created a personal portfolio where I showcase my personal projects.
+          
+          Everything was done in Typescript/React with the Next.js framework, and deployed on Vercel.
+          
+          https://www.jackalgera.me/
+          `,
+          image: personal_portfolio,
+          sectionType: SectionType.TLDR
+        } as Section,
+        {
+          text: `A while back, I used to have a personal portfolio hosted on Adobe Portfolio. Of course this was possible with a monthly paid subscription that allowed me to use PhotoShop as well.
+          Since then I don't have the subscription anymore, but I still felt like I needed to have something where I can showcase my work. 
+          
+          And of course, instead of using a different free portfolio service online, I told myself, as any typical developer would: "I could easily develop it myself".
+          
+          I decided to use Typescript/React to code the UI, as I'm really trying to understand Frontend frameworks some more. And to continue with the mainstream frameworks, I decided to use Next Js for this project as well.
+          
+          I designed and implemented everything from scratch.
+          
+          I managed to learn quite a bit regarding HTML and CSS/SCSS, especially with regards to animations and making things look smooth and nicely polished. 
+          `,
+          sectionType: SectionType.TEXT_WITHOUT_IMAGE
+        } as Section,
+      ]
+    }
+  ],
+  [
+    "personal_wedding_site",
+    {
+      id: "personal_wedding_site",
+      title: "Personal Wedding Site",
+      shortDescription: "Created my personal wedding website !",
+      techStack: "Typescript/React/NextJs",
+      image: personal_wedding_site,
+      date: '2022',
+      style: null,
+      sections: [
+        {
+          text: `Created the website that was used for my wedding !
+          
+          Everything was done in Typescript/React with the Next.js framework, and deployed on Vercel. 
+          It has an API layer that's plugged into a, sorry for this...Google Sheet dAtABasE...
+          `,
+          image: personal_wedding_site,
+          sectionType: SectionType.TLDR
+        } as Section,
+        {
+          text: `When brainstorming with my fiancée on how we would like our website to look like, I told myself, as any typical developer would: "I could easily develop it myself".
+          
+          I decided to use Typescript/React to code the UI, as I'm really trying to understand Frontend frameworks some more. And to continue with the mainstream frameworks, I decided to use Next Js for this project as well.
+          The NextJs was actually backed up by the fact that it has built in backend capabilities ; I was able to plug in my API layer over a, and again sorry for this...Google Sheet dAtABasE...
+          
+          The Google sheet was used to track guest RSVPs, and of course, to simplify things for everybody involved, a GSheet was the best way to go.  
+          
+          We designed and created mock-ups for the website, and I implemented everything from scratch.
+          
+          This project allowed me to get a really good grip of frontend-related patterns and frameworks.
+          `,
+          sectionType: SectionType.TEXT_WITHOUT_IMAGE
+        } as Section,
+      ]
+    }
+  ],
+  [
     "path_finding_algorithms",
     {
       id: "path_finding_algorithms",
       title: "Path Finding Algorithms",
-      shortDescription: "Implemented the BFS and DFS algorithms, with a nice visual representation of each.",
+      shortDescription: "Implemented the BFS and DFS algorithms, with a nice visual representation of each",
       techStack: "C++/SFML",
       image: path_finding_algorithms,
       date: '2019',
@@ -125,7 +202,7 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
     {
       id: "sorting_algorithms",
       title: "Sorting Algorithms",
-      shortDescription: "Implemented 5 different algorithms (Quick sort, Merge sort, Bucket sort, Radix sort, Bubble sort), with a nice visual representation of each.",
+      shortDescription: "Implemented 5 different algorithms (Quick sort, Merge sort, Bucket sort, Radix sort, Bubble sort), with a nice visual representation of each",
       techStack: "C++/SFML",
       image: sorting_algorithms,
       date: '2019',
@@ -168,7 +245,7 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
     {
       id: "global_game_jam_2019",
       title: "Global Game Jam 2019",
-      shortDescription: "\"Oystou\" is a small game I created in one weekend with a team of 3 people during the Global Game Jam 2019, that was held at Epitech in Nantes, France.",
+      shortDescription: "\"Oystou\" is a small game I created in one weekend with a team of 3 people during the Global Game Jam 2019, that was held at Epitech in Nantes, France",
       techStack: "Unity/C#",
       image: oystou,
       date: '2019',
@@ -249,7 +326,7 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
     {
       id: "circle_izer",
       title: "Circle-izer",
-      shortDescription: "\"Circle-izer\" is a small program I created that takes an image and transforms it into circles that \"Pop\" as the mouse hovers over revealing the image.",
+      shortDescription: "\"Circle-izer\" is a small program I created that takes an image and transforms it into circles that \"Pop\" as the mouse hovers over revealing the image",
       techStack: "Unity/C#",
       image: circle_izer,
       date: '2018',
@@ -513,7 +590,7 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
     {
       id: "predators_vs_prey",
       title: "Predators and Prey",
-      shortDescription: "\"Predators and Prey\" is a cellular automaton where the prey (green) try to survive from the predators (red).",
+      shortDescription: "\"Predators and Prey\" is a cellular automaton where the prey (green) try to survive from the predators (red)",
       techStack: "C++/SFML",
       image: predators_vs_prey,
       date: '2018',
@@ -552,7 +629,7 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
     {
       id: "probability_simulator",
       title: "Probability simulator",
-      shortDescription: "The simulation looks like two sides fighting each other, each trying to gain ground, but the black side has a slightly higher chance of winning, which inevitably brings them victory.",
+      shortDescription: "The simulation looks like two sides fighting each other, each trying to gain ground, but the black side has a slightly higher chance of winning, which inevitably brings them victory",
       techStack: "C++/SFML",
       image: probability_simulator,
       date: '2017',
@@ -583,7 +660,7 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
     {
       id: "particle_system",
       title: "Particle system Simulator",
-      shortDescription: "Program that simulates a particle system in a void. Gravity can be changed during the simulation.",
+      shortDescription: "Program that simulates a particle system in a void. Gravity can be changed during the simulation",
       techStack: "C++/SFML",
       image: particle_system,
       date: '2017',
@@ -711,7 +788,7 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
     {
       id: "newtons_pull",
       title: "Newton's pull",
-      shortDescription: "This simulates the Newton’s law of universal gravitation. Small satellites or planets (blue circles) are pulled by the bigger planets (yellow circles) as well as other satellites.",
+      shortDescription: "This simulates the Newton’s law of universal gravitation. Small satellites or planets (blue circles) are pulled by the bigger planets (yellow circles) as well as other satellites",
       techStack: "C++/SFML",
       image: newtons_pull,
       date: '2017',
