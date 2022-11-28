@@ -1,10 +1,12 @@
 import {Project} from "../_models/project.model";
 import {ProjectImage} from "./project-image";
 import styles from "./show-more-projects.module.scss";
+import {WatcherState} from "../_models/watcher.model";
 
 interface ShowMoreProjectsProps {
   moreProjectsSentence: string;
   moreProjects: Project[];
+  watcherState: WatcherState;
 }
 
 export const ShowMoreProjects = (props: ShowMoreProjectsProps) => {
@@ -15,7 +17,10 @@ export const ShowMoreProjects = (props: ShowMoreProjectsProps) => {
         <div className={styles.imagesContainer}>
           {props.moreProjects.map(project => (
             <div key={project.title}>
-              <ProjectImage handleMouseEnter={() => {}} handleMouseLeave={() => {}} project={project} />
+              <ProjectImage
+                handleMouseEnter={() => props.watcherState.setWatcherActivated(true)}
+                handleMouseLeave={() => props.watcherState.setWatcherActivated(false)}
+                project={project} />
             </div>
           ))}
         </div>
