@@ -49,6 +49,7 @@ import word_cloud_1 from "../../public/word_cloud/word_cloud_1.png";
 import personal_portfolio from "../../public/personal_portfolio.jpg";
 import personal_wedding_site from "../../public/personal_wedding_site.jpg";
 import fire_extinguisher_layout_creator from "../../public/fire_extinguisher_layout_creator.jpg";
+import newtification from "../../public/newtification.jpg";
 
 export interface Project {
   id: string;
@@ -154,6 +155,45 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
           We designed and created mock-ups for the website, and I implemented everything from scratch.
           
           This project allowed me to get a really good grip of frontend-related patterns and frameworks.
+          `,
+          sectionType: SectionType.TEXT_WITHOUT_IMAGE
+        } as Section,
+      ]
+    }
+  ],
+  [
+    "newtification",
+    {
+      id: "newtification",
+      title: "Newtification - Android application",
+      shortDescription: "Android app that allows my cat, called Newt, to send us notifications when he wants to go outside.",
+      techStack: "Java/Firebase/Arduino",
+      image: newtification,
+      date: '2021',
+      style: null,
+      sections: [
+        {
+          text: `I have an outside cat, called Newt, that would often bother us and meow non stop in front of our door to go outside.
+          
+          And of course, as any decent engineer, I made an application so we know when the cat wants to go outside. I used Java and the Android Studio framework, plugged on top of Firebase to handle the notifications.
+          `,
+          image: newtification,
+          sectionType: SectionType.TLDR
+        } as Section,
+        {
+          youtubeVideoId: "3_ckHaPXMQ4",
+          sectionType: SectionType.VIDEO
+        } as Section,
+        {
+          text: `So we have a cat, called Newt, that is an outside cat. Which means, often, he would stand in front of the door, and meow until we open it for him.
+          
+          We used to hang this funny angel shaped object on our door, and surprisingly enough, Newt would Meow to get our attention, but also hit the angel slightly.
+          
+          So of course, as any decent engineer, I decided to spend 15h creating an application with a Java web server deployed on an Arduino board that sends us notifactions whenever he hits the angel.
+          
+          The Arduino is running a Jave/Spring based web server, that has a button/trigger that when pressed, sends a HTTP request to Firebase. I then created an application, hosted on Google Play Store, that has two 2 buttons allowing us to plug into Firebase events, which get triggered from the Arduino. And of course, each trigger creates a notification for anyone subscribed.
+          
+          Was a super fun and interesting project, and we got a lot of good laughs out of it, as in the end, it actually worked quite well !
           `,
           sectionType: SectionType.TEXT_WITHOUT_IMAGE
         } as Section,
