@@ -50,6 +50,9 @@ import personal_portfolio from "../../public/personal_portfolio.jpg";
 import personal_wedding_site from "../../public/personal_wedding_site.jpg";
 import fire_extinguisher_layout_creator from "../../public/fire_extinguisher_layout_creator.jpg";
 import newtification from "../../public/newtification.jpg";
+import connected_coffee_machine from "../../public/connected_coffee_machine.jpg";
+import connected_coffee_machine_1 from "../../public/connect_coffee_machine/connected_coffee_machine_1.jpg";
+import connected_coffee_machine_2 from "../../public/connect_coffee_machine/connected_coffee_machine_2.jpg";
 
 export interface Project {
   id: string;
@@ -157,6 +160,49 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
           This project allowed me to get a really good grip of frontend-related patterns and frameworks.
           `,
           sectionType: SectionType.TEXT_WITHOUT_IMAGE
+        } as Section,
+      ]
+    }
+  ],
+  [
+    "connected_coffee_machine",
+    {
+      id: "connected_coffee_machine",
+      title: "Connected Coffee machine",
+      shortDescription: "Android project, where I connect my coffee machine to the internet !",
+      techStack: "Arduino",
+      image: connected_coffee_machine,
+      date: '2022',
+      style: null,
+      sections: [
+        {
+          text: `As any normal human being, I'm lazy, and I prefer spending 10h creating a project that allows me to save 20s when making my morning coffee. 
+          
+          Deployed a web server on an Adruino board, that controls my coffee machine.
+          `,
+          image: connected_coffee_machine,
+          sectionType: SectionType.TLDR
+        } as Section,
+        {
+          youtubeVideoId: "LV6myKYN9r4",
+          sectionType: SectionType.VIDEO
+        } as Section,
+        {
+          text: `I like, as many people do I guess, a good cup of coffee in the morning. We recently got a coffee machine, which makes some gucci coffee !
+          
+          To make coffee using the machine, you need to turn it on, wait 20s, then press another button. When I read this I see "I'm waisting 20s waiting for my coffee machine to be ready to make me coffee". And like anyone would (right ?) I prefer spending 15h creating a project that allows me to make coffee with a press of a button... from my bed.
+          
+          The Arduino is hooked up to the coffee machine with various relays, that when activated acts like a press of the physical button. I preferred using this method instead of clunky robot fingers that press the button for me.
+          
+          On the Arduino, I deployed a web server that exposes a couple of endpoints that allows me to set dates at which I would like the machine to create coffee for me, precise to the minute !
+          `,
+          sectionType: SectionType.TEXT_WITHOUT_IMAGE
+        } as Section,
+        {
+          imageGalleryList: [
+            connected_coffee_machine_1, connected_coffee_machine_2
+          ],
+          sectionType: SectionType.IMAGE_GALLERY
         } as Section,
       ]
     }
