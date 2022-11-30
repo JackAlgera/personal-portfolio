@@ -48,6 +48,7 @@ import call_of_muty_2 from "../../public/call_of_muty/call_of_muty_2.png";
 import word_cloud_1 from "../../public/word_cloud/word_cloud_1.png";
 import personal_portfolio from "../../public/personal_portfolio.jpg";
 import personal_wedding_site from "../../public/personal_wedding_site.jpg";
+import fire_extinguisher_layout_creator from "../../public/fire_extinguisher_layout_creator.jpg";
 
 export interface Project {
   id: string;
@@ -153,6 +154,48 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
           We designed and created mock-ups for the website, and I implemented everything from scratch.
           
           This project allowed me to get a really good grip of frontend-related patterns and frameworks.
+          `,
+          sectionType: SectionType.TEXT_WITHOUT_IMAGE
+        } as Section,
+      ]
+    }
+  ],
+  [
+    "fire_extinguisher_layout_creator",
+    {
+      id: "fire_extinguisher_layout_creator",
+      title: "Fire Extinguisher - Layout Creator",
+      shortDescription: "Confinement project ; a Java stand alone application for a friend's dad to help him with his daily work-related tasks.",
+      techStack: "Java/JavaFx",
+      image: fire_extinguisher_layout_creator,
+      date: '2020',
+      style: null,
+      sections: [
+        {
+          text: `To help out a friend's dad with his daily manual tasks, I created an application to improve his workflow quite a lot !
+          
+          For this project I tried to create a fully stand alone Java application ; no magic Rest APIs, queues or cloud computing, just plain old Java.
+          Everything was done using Java for the business logic and JavaFx for the UI components.
+          `,
+          image: fire_extinguisher_layout_creator,
+          sectionType: SectionType.TLDR
+        } as Section,
+        {
+          youtubeVideoId: "QfghSyqb70Q",
+          sectionType: SectionType.VIDEO
+        } as Section,
+        {
+          text: `COVID-19 forced everyone to stay in theirs homes for a couple of lengthy confinements. In France, the first one lasted for a couple of weeks, and of course I had to find something to keep me busy !   
+          
+          After telling a friend that I needed help brainstorming some ideas of projects I could do during the confinement, he jokingly suggested I create something to help out his dad. When you can have fun creating a new project, and at the same time help someone out, I think there's no better way to spend your confinement ! 
+          
+          Previously, his dad would work on the layout of a building and determine where to place fire extinguisher to follow various norms and security protocols. This was done manually and took ages.
+          
+          The idea is to generate a PDF with various layouts, fire extinguishers and zones mapped out, as well generate an Excel doc that's used in his final report.
+          
+          The project was created with Java for the business logic, and JavaFx for the frontend UI components. I wanted to try create something without using any fancy REST endpoints, Queues or anything cloud-computing related !
+          
+          This project boosted my friend's dad's efficiency tenfold, and after using it for around 2 years, surprisingly enough he has not found any bugs yet (which is super surprising for me, but good to see it worked out well !) 
           `,
           sectionType: SectionType.TEXT_WITHOUT_IMAGE
         } as Section,
