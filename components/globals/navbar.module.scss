@@ -14,15 +14,14 @@ $hoverDistance: 4px;
 
   a {
     color: var(--color-2);
-    transition: all ease 0.3s;
+    transition: all ease 0.2s;
 
     &:hover {
       color: var(--color-1);
+      animation: pulse 0.3s linear ;
+      transform: scale(110%);
     }
   }
-}
-
-.nav > .navPos > a:nth-child(1):hover {
 }
 
 .navPos {
@@ -32,22 +31,19 @@ $hoverDistance: 4px;
 
   &:nth-child(1) {
     justify-content: right;
-
-    > a:nth-child(1):hover {
-      transform: translateX(-$hoverDistance);
-    }
-    > a:nth-child(2):hover {
-      transform: translateY($hoverDistance);
-    }
   }
   &:nth-child(3) {
     justify-content: left;
+  }
+}
 
-    > a:nth-child(1):hover {
-      transform: translateY(-$hoverDistance);
-    }
-    > a:nth-child(2):hover {
-      transform: translateX($hoverDistance);
-    }
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--color-2-transparent);
+    background-color: var(--color-2-transparent);
+  }
+  100% {
+    box-shadow: 0 0 0 10px transparent;
+    background-color: unset;
   }
 }
