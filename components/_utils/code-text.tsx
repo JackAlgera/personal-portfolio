@@ -25,11 +25,14 @@ export const CodeText = (props: CodeTextProps) => {
 
   useEffect(() => {
     const getTypeWriterDelay = () => {
-      if (state == TypeWriterState.WAITING) {
-        return 2000;
+      switch (state) {
+        case TypeWriterState.WAITING:
+          return 2000;
+        case TypeWriterState.DELETING:
+          return 0;
+        case TypeWriterState.WRITING:
+          return props.minTypeDelay ? props.minTypeDelay : 20;
       }
-
-      return props.minTypeDelay ? props.minTypeDelay : 20;
     }
 
     let timeout = setTimeout(() => {

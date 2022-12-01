@@ -5,25 +5,30 @@ import {useState} from "react";
 import {CodeText} from "../components/_utils/code-text";
 
 const THINGS_I_LIKE_TO_DO = [
-  'summon Kubernetes magic',
-  'create web applications',
-  'design complex systems',
-  'compete in CodinGame',
-  'write code',
-  'relax and play video-games',
-  'build Arduino robots',
-  'go boldering',
-  'drink coffee and procrastinate',
-  'learn new frameworks and techs'
+  'conjure Kubernetes magic.',
+  'create web applications.',
+  'design complex systems.',
+  'compete in CodinGame.',
+  'write code.',
+  'relax and play video-games.',
+  'build Arduino robots.',
+  'go boldering.',
+  'drink coffee and procrastinate.',
+  'learn new frameworks and techs.',
+  '[Insert random fun fact].'
 ];
 
 export default function Home() {
-  const [likeToDoText, setLikeToDoText] = useState('write code');
+  const [likeToDoText, setLikeToDoText] = useState('write code.');
 
-  const updateLikToDoText = () => {
-    let val = THINGS_I_LIKE_TO_DO[Math.floor(Math.random() * THINGS_I_LIKE_TO_DO.length)];
+  const getRandomLikeToDoText = () => {
+    return THINGS_I_LIKE_TO_DO[Math.floor(Math.random() * THINGS_I_LIKE_TO_DO.length)];
+  }
+
+  const updateLikeToDoText = () => {
+    let val = getRandomLikeToDoText();
     while (val === likeToDoText) {
-      val = THINGS_I_LIKE_TO_DO[Math.floor(Math.random() * THINGS_I_LIKE_TO_DO.length)];
+      val = getRandomLikeToDoText();
     }
     setLikeToDoText(val);
   }
@@ -37,10 +42,10 @@ export default function Home() {
             text={likeToDoText}
             color={"var(--color-1)"}
             stopTyping={false}
-            typeDelay={100}
-            minTypeDelay={50}
+            typeDelay={90}
+            minTypeDelay={25}
             reverseText={true}
-            reverseTextCallback={() => updateLikToDoText()}
+            reverseTextCallback={() => updateLikeToDoText()}
           /></span>
         </p>
       </pre>
