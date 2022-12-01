@@ -93,10 +93,11 @@ button:hover {
   transform: translateX(7%);
   box-shadow: inset 0 0 0 1.5rem var(--background-color-lighter);
   cursor: pointer;
+  border-color: var(--color-3);
 }
 button.activated {
-  border-color: var(--color-3);
-  color: var(--color-3);
+  border-color: var(--color-1);
+  color: var(--color-1);
 }
 
 img {
