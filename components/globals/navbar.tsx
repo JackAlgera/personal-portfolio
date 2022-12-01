@@ -21,7 +21,7 @@ export const Navbar = (watcherState: WatcherState) => {
   return (
     <div className={styles.nav}>
       <div className={styles.navPos}>
-        {generateNavLink("Home", "/")}
+        {generateNavLink("About Me", "/")}
         {generateNavLink("Experience", "/experience")}
       </div>
       <Watcher watcherActivated={watcherState.watcherActivated} setWatcherActivated={watcherState.setWatcherActivated}/>

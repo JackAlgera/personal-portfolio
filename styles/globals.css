@@ -14,6 +14,9 @@
   /* Watcher */
   --watcher-width: 25px;
   --animation-duration: 2s;
+
+  /* Squares */
+  --border-radius: 5px;
 }
 
 /* Add default background color */
@@ -76,6 +79,7 @@ section {
   display: flex;
   flex-direction: column;
   z-index: 5;
+  max-width: 1000px;
 }
 
 button {
