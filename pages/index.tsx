@@ -34,23 +34,25 @@ export default function Home() {
   }
 
   return (
-    <section>
-      <h2 className="numbered-heading"><span>01.</span>About Me</h2>
-      <pre className={styles.introTextContainer}>
-        <p>Hey! I&apos;m <span style={{color: "var(--color-1)"}}>Jack</span>!</p>
-        <p>And I like to <span style={{color: "var(--color-1)"}}><CodeText
+    <>
+      <section>
+        <div className={styles.introTextContainer}>
+          <p>Hey! I&apos;m <span style={{color: "var(--color-1)"}}>Jack</span>!</p>
+          <p>And I like to <span style={{color: "var(--color-1)"}}><CodeText
             text={likeToDoText}
             color={"var(--color-1)"}
             stopTyping={false}
-            typeDelay={90}
+            typeDelay={50}
             minTypeDelay={25}
             reverseText={true}
             reverseTextCallback={() => updateLikeToDoText()}
           /></span>
-        </p>
-      </pre>
-      <div className="inner">
-        <div className={styles.firstSection}>
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2 className="numbered-heading"><span>01.</span>About Me</h2>
+        <div className={`inner ${styles.secondSection}`}>
           <div className={styles.bioTextContainer}>
             <p>
               Semi-fresh graduate, I’m currently a Backend Software Engineer deploying and maintaining micro-services at BlaBlaCar, with a strong focus on CI/CD and Kubernetes-related topics.
@@ -75,7 +77,7 @@ export default function Home() {
             />
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   )
 }
