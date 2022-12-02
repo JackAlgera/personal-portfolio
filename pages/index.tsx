@@ -3,22 +3,16 @@ import Image from "next/image";
 import me from "../public/me.jpg";
 import {useState} from "react";
 import {CodeText} from "../components/_utils/code-text";
+import {TechStackRow} from "../components/about-me/tech-stack-row";
+import {
+  BACKEND_STACK_ICONS,
+  CI_CD_ICONS,
+  FRONTEND_STACK_ICONS, OTHER_STACK_ICONS,
+  THINGS_I_LIKE_TO_DO
+} from "../components/_models/about_me.model";
+import {WatcherState} from "../components/_models/watcher.model";
 
-const THINGS_I_LIKE_TO_DO = [
-  'conjure Kubernetes magic.',
-  'create web applications.',
-  'design complex systems.',
-  'compete in CodinGame.',
-  'write code.',
-  'relax and play video-games.',
-  'build Arduino robots.',
-  'go boldering.',
-  'drink coffee and procrastinate.',
-  'learn new frameworks and techs.',
-  '[Insert random fun fact].'
-];
-
-export default function Home() {
+export default function Home(watcherState: WatcherState) {
   const [likeToDoText, setLikeToDoText] = useState('write code.');
 
   const getRandomLikeToDoText = () => {
@@ -76,6 +70,15 @@ export default function Home() {
               alt={"me"}
             />
           </div>
+        </div>
+      </section>
+      <section>
+        <div className={styles.thirdSection}>
+          <h2 className="numbered-heading"><span>02.</span>Tech stacks</h2>
+          <TechStackRow label="The frameworks and languages I use to build client side applications" watcherState={watcherState} icons={FRONTEND_STACK_ICONS}/>
+          <TechStackRow label="The tech I use to build backend services" watcherState={watcherState} icons={BACKEND_STACK_ICONS}/>
+          <TechStackRow label="The tools I use to manage DevOps related problems" watcherState={watcherState} icons={CI_CD_ICONS}/>
+          <TechStackRow label="Other tools I use to increase productivity" watcherState={watcherState} icons={OTHER_STACK_ICONS}/>
         </div>
       </section>
     </>
