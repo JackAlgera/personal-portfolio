@@ -92,6 +92,7 @@ button {
   border-color: var(--color-2);
   color: var(--color-2);
   transition: all linear 0.2s;
+  border-radius: var(--border-radius);
 }
 button:hover {
   transform: translateX(7%);
