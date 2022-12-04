@@ -27,6 +27,10 @@
     min-width: 100px;
     transition: all 0.3s;
 
+    span:before {
+      content: unset;
+    }
+
     &:hover {
       transform: scale(1.15);
 
