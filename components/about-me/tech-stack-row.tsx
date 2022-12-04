@@ -2,6 +2,7 @@ import styles from "./tech-stack.module.scss";
 import Image from "next/image";
 import {TechStack} from "../_models/about_me.model";
 import {WatcherState} from "../_models/watcher.model";
+import {StatefulLink} from "../_utils/stateful-link";
 
 interface TechStackProps {
   label: string;
@@ -15,14 +16,11 @@ export const TechStackRow = (props: TechStackProps) => {
       <p>{props.label}</p>
       <div className={styles.techStackContainer}>
         {props.icons.map((icon, index) => (
-          <a key={'tech-stack-' + index} href={icon.url}
-             onMouseEnter={() => props.watcherState.setWatcherActivated(true)}
-             onMouseLeave={() => props.watcherState.setWatcherActivated(false)}
-             target="_blank"
-             rel="noreferrer"
-          >
-            <Image key="react" alt="react" src={icon.icon.src} layout="fill"/>
-          </a>
+          <StatefulLink
+            key={'tech-stack-' + index}
+            href={icon.url}
+            content={<Image key="react" alt="react" src={icon.icon.src} layout="fill"/>}
+            watcherState={props.watcherState} />
         ))}
       </div>
     </div>

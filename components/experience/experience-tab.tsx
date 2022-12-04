@@ -62,9 +62,10 @@ export const ExperienceTab = (props: ExperienceTabProps) => {
         <p>
           <span className={styles.color1}>{"<Job "}</span>
           <span className={styles.color2}>{"company=\""}</span>
-          <StatefulLink href={props.tab.url} content={
-            <CodeText typeDelay={MAIN_TYPEWRITER_LETTER_DELAY} stopTyping={true} color={styles.color1} text={props.tab.company} />
-          } watcherState={props.watcherState} />
+          <StatefulLink
+            href={props.tab.url}
+            content={<CodeText typeDelay={MAIN_TYPEWRITER_LETTER_DELAY} stopTyping={true} color={styles.color1} text={props.tab.company} />}
+            watcherState={props.watcherState} />
           <span className={styles.color2}>{"\""}</span>
         </p>
         <p>
