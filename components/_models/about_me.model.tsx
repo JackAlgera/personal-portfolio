@@ -23,13 +23,13 @@ import npmIcon from "../../public/icons/npm.svg";
 import scrumIcon from "../../public/icons/scrum.svg";
 
 export const THINGS_I_LIKE_TO_DO = [
-  'conjure Kubernetes magic.',
-  'create web applications.',
-  'design complex systems.',
-  'compete in CodinGame.',
   'write code.',
-  'relax and play video-games.',
+  'design complex systems.',
   'build Arduino robots.',
+  'create web applications.',
+  'conjure Kubernetes magic.',
+  'compete in CodinGame.',
+  'relax and play video-games.',
   'go boldering.',
   'drink coffee and procrastinate.',
   'learn new frameworks and techs.',
