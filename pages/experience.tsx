@@ -25,7 +25,7 @@ export default function Experience(watcherState: WatcherState) {
 
   return (
     <section>
-      <h2 className="numbered-heading"><span>02.</span>Experience</h2>
+      <h2 className="numbered-heading"><span>03.</span>Experience</h2>
       <div className="inner experience">
         <div className="horizontal-tab-list">
           { Array.from(EXPERIENCE_TABS.keys())

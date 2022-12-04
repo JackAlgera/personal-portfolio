@@ -37,7 +37,7 @@ export default function Projects(watcherState: WatcherState) {
 
   return (
     <section>
-      <h2 className="numbered-heading"><span>03.</span>Personal Projects</h2>
+      <h2 className="numbered-heading"><span>04.</span>Personal Projects</h2>
       <div className="inner experience">
         <section style={{
           display: "flex",
