@@ -6,12 +6,6 @@
   padding-top: 46px;
 }
 
-p a {
-  text-decoration: underline;
-}
-p a:hover {
-  color: var(--color-1-lighter);
-}
 .tech-title-container {
   display: flex;
   flex-direction: row;

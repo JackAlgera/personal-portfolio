@@ -1,29 +1,19 @@
-import Link from "next/link";
 import {Watcher} from "./watcher";
 import {WatcherState} from "../_models/watcher.model";
 import styles from "./navbar.module.scss";
+import {StatefulLink} from "../_utils/stateful-link";
 
 export const Navbar = (watcherState: WatcherState) => {
-  const generateNavLink = (title: string, href: string) => {
-    return (
-      <Link href={href}>
-        <a onMouseEnter={() => watcherState.setWatcherActivated(true)}
-           onMouseLeave={() => watcherState.setWatcherActivated(false)}
-        >{title}</a>
-      </Link>
-    );
-  }
-
   return (
     <div className={styles.nav}>
       <div className={styles.navPos}>
-        {generateNavLink("About Me", "/")}
-        {generateNavLink("Experience", "/experience")}
+        <StatefulLink content="About me" href={"/"} watcherState={watcherState} />
+        <StatefulLink content="Experience" href={"/experience"} watcherState={watcherState} />
       </div>
       <Watcher watcherState={ watcherState } />
       <div className={styles.navPos}>
-        {generateNavLink("Projects", "/projects")}
-        {generateNavLink("Contact", "/contact")}
+        <StatefulLink content="Projects" href={"/projects"} watcherState={watcherState} />
+        <StatefulLink content="Contact" href={"/contact"} watcherState={watcherState} />
       </div>
     </div>
   );

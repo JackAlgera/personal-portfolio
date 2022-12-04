@@ -1,14 +1,16 @@
 import {WatcherState} from "../_models/watcher.model";
 import styles from "./stateful-link.module.scss";
+import Link from "next/link";
 
 interface StatefulLinkProps {
-  href: string;
+  href?: string;
   content;
   watcherState: WatcherState;
+  externalLink?: boolean;
 }
 
 export const StatefulLink = (props: StatefulLinkProps) => {
-  return (
+  return props.externalLink ?
     <a className={styles.link}
        onMouseEnter={() => props.watcherState.setWatcherActivated(true)}
        onMouseLeave={() => props.watcherState.setWatcherActivated(false)}
@@ -16,5 +18,11 @@ export const StatefulLink = (props: StatefulLinkProps) => {
        target="_blank"
        rel="noreferrer"
     >{props.content}</a>
-  );
+    :
+    <Link href={props.href}>
+      <a className={styles.link}
+         onMouseEnter={() => props.watcherState.setWatcherActivated(true)}
+         onMouseLeave={() => props.watcherState.setWatcherActivated(false)}
+      ><span>{props.content}</span></a>
+    </Link>;
 }

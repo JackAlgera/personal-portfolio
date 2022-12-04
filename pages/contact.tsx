@@ -11,8 +11,8 @@ export default function Contact(watcherState: WatcherState) {
       <div className={styles.container}>
         <p>Feel free to get in touch with me on these platforms</p>
         <div className={styles.iconsContainer}>
-          <StatefulLink content={<HiOutlineMail/>} href="mailto:jack.algera@live.com" watcherState={watcherState} />
-          <StatefulLink href={"https://github.com/JackAlgera"} content={<FaGithub />} watcherState={watcherState} />
+          <StatefulLink content={<HiOutlineMail/>} href="mailto:jack.algera@live.com" watcherState={watcherState} externalLink={true} />
+          <StatefulLink content={<FaGithub />} href="https://github.com/JackAlgera" watcherState={watcherState} externalLink={true} />
         </div>
         {/*<p>If you’ve made it this far, you might as well stay a little bit longer and enjoy the little game:</p>*/}
       </div>

@@ -19,6 +19,7 @@ export const TechStackRow = (props: TechStackProps) => {
           <StatefulLink
             key={'tech-stack-' + index}
             href={icon.url}
+            externalLink={true}
             content={<Image key="react" alt="react" src={icon.icon.src} layout="fill"/>}
             watcherState={props.watcherState} />
         ))}

@@ -11,17 +11,6 @@ $hoverDistance: 4px;
   padding: 10px;
   border-bottom: 2px solid var(--color-1);
   background-color: var(--background-color);
-
-  a {
-    color: var(--color-2);
-    transition: all ease 0.2s;
-
-    &:hover {
-      color: var(--color-1);
-      animation: pulse 0.3s linear ;
-      transform: scale(110%);
-    }
-  }
 }
 
 .navPos {
@@ -34,16 +23,5 @@ $hoverDistance: 4px;
   }
   &:nth-child(3) {
     justify-content: left;
-  }
-}
-
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 var(--color-2-transparent);
-    background-color: var(--color-2-transparent);
-  }
-  100% {
-    box-shadow: 0 0 0 10px transparent;
-    background-color: unset;
   }
 }
