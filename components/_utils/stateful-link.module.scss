@@ -1,8 +1,15 @@
 $svgSize: 2rem;
 
 .link {
+  color: var(--color-1);
+  transition-duration: 0.2s;
   border: unset;
   padding: 0;
+
+  &:hover,
+  &:hover > span {
+    color: var(--color-2);
+  }
 
   & > svg {
     width: $svgSize;
@@ -28,6 +35,10 @@ $svgSize: 2rem;
   }
   & > p:hover {
     transform: scale(115%);
+  }
+
+  & > * {
+    transition-duration: 0.2s;
   }
 }
 

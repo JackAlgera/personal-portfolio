@@ -11,20 +11,10 @@ import {
   THINGS_I_LIKE_TO_DO
 } from "../components/_models/about_me.model";
 import {WatcherState} from "../components/_models/watcher.model";
+import {StatefulLink} from "../components/_utils/stateful-link";
 
 export default function Home(watcherState: WatcherState) {
   const [likeToDoText, setLikeToDoText] = useState('write code.');
-
-  const generateLink = (href: string, text: string) => {
-    return (
-      <a
-        onMouseEnter={() => watcherState.setWatcherActivated(true)}
-        onMouseLeave={() => watcherState.setWatcherActivated(false)}
-        href={href}
-        target="_blank"
-        rel="noreferrer">{text}</a>
-    )
-  }
 
   const getRandomLikeToDoText = () => {
     return THINGS_I_LIKE_TO_DO[Math.floor(Math.random() * THINGS_I_LIKE_TO_DO.length)];
@@ -42,7 +32,7 @@ export default function Home(watcherState: WatcherState) {
     <>
       <section>
         <div className={styles.introTextContainer}>
-          <p>Hey! I&apos;m {generateLink("https://www.linkedin.com/in/jacobus-algera/", "Jack")}!</p>
+          <p>Hey! I&apos;m <StatefulLink href={"https://www.linkedin.com/in/jacobus-algera/"} content={"Jack"} watcherState={watcherState} />!</p>
           <p>And I like to <span style={{color: "var(--color-1)"}}><CodeText
             text={likeToDoText}
             color={"var(--color-1)"}
@@ -63,10 +53,10 @@ export default function Home(watcherState: WatcherState) {
               Semi-fresh graduate, I’m currently a Backend Software Engineer deploying and maintaining micro-services at BlaBlaCar, with a strong focus on CI/CD and Kubernetes-related topics.
             </p>
             <p>
-              Frontend you say ? Hell yes, I like to create silly projects using React, {generateLink("https://jackalgera.me/projects/", "check them out")}!
+              Frontend you say ? Hell yes, I like to create silly projects using React, <StatefulLink href={"https://jackalgera.me/projects/"} content={"check them out"} watcherState={watcherState} />!
             </p>
             <p>
-              Otherwise I also like spending my time participating in online coding contests (like {generateLink("https://www.codingame.com/home", "CodinGame")}), and have finished various coding challenges ({generateLink("https://github.com/JackAlgera/CodingChallenges/tree/main/AdventOfCode", "AdventOfCode 2021 and 2022")}, {generateLink("https://github.com/JackAlgera/CodingChallenges/tree/main/FoobarGoogleInterview", "FooBar Google challenge")}).
+              Otherwise I also like spending my time participating in online coding contests (like <StatefulLink href={"https://www.codingame.com/home"} content={"CodinGame"} watcherState={watcherState} />), and have finished various coding challenges (<StatefulLink href={"https://github.com/JackAlgera/CodingChallenges/tree/main/AdventOfCode"} content={"AdventOfCode 2021 and 2022"} watcherState={watcherState} />, <StatefulLink href={"https://github.com/JackAlgera/CodingChallenges/tree/main/FoobarGoogleInterview"} content={"FooBar Google challenge"} watcherState={watcherState} />).
             </p>
             <p>
               When I’m not sitting in front of my computer, I can be found boldering or doing Arduino/Electronic projects.

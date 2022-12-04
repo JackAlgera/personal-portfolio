@@ -41,20 +41,3 @@ p a:hover {
   /*margin-left: 20px;*/
   /*background-color: var(--color-1);*/
 }
-
-.inner {
-  display: flex;
-}
-.experience {
-  gap: 16px;
-}
-
-.horizontal-tab-list {
-  display: flex;
-  flex-direction: column;
-}
-.experience-tab {
-  border-left: solid 1px var(--color-1);
-  padding-left: 10px;
-  width: 850px;
-}

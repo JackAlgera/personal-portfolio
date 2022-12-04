@@ -1,15 +1,7 @@
-.companyLink {
-  color: var(--color-1);
-  transition-duration: 0.2s;
-
-  & > * {
-    transition-duration: 0.2s;
-  }
-
-  &:hover,
-  &:hover > span {
-    color: var(--color-3);
-  }
+.experienceTab {
+  border-left: solid 1px var(--color-1);
+  padding-left: 10px;
+  width: 850px;
 }
 
 .color1 {

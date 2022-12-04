@@ -3,6 +3,7 @@ import {useState} from "react";
 import {EXPERIENCE_TABS, ExperienceTabEntity} from "../components/_models/tabs.model";
 import {WatcherState} from "../components/_models/watcher.model";
 import {StatefulButton} from "../components/_utils/stateful-button";
+import styles from "./experience.module.scss";
 
 export default function Experience(watcherState: WatcherState) {
   const [tab, setTab] = useState<ExperienceTabEntity>(EXPERIENCE_TABS.get('blablacar'));
@@ -16,8 +17,8 @@ export default function Experience(watcherState: WatcherState) {
   return (
     <section>
       <h2 className="numbered-heading"><span>03.</span>Experience</h2>
-      <div className="inner experience">
-        <div className="horizontal-tab-list">
+      <div className={styles.container}>
+        <div className={styles.horizontalTabList}>
           { Array.from(EXPERIENCE_TABS.keys())
             .map(company => <StatefulButton
               key={company}
@@ -27,10 +28,7 @@ export default function Experience(watcherState: WatcherState) {
               watcherState={watcherState} />)
           }
         </div>
-        <ExperienceTab watcherActivated={watcherState.watcherActivated}
-                       setWatcherActivated={watcherState.setWatcherActivated}
-                       tab={tab}
-                       key={key} />
+        <ExperienceTab watcherState={watcherState} tab={tab} key={key} />
       </div>
     </section>
   );

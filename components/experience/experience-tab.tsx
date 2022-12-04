@@ -3,15 +3,17 @@ import {useEffect, useState} from "react";
 import {WatcherState} from "../_models/watcher.model";
 import {CodeText} from "../_utils/code-text";
 import styles from "./experience-tab.module.scss";
+import {StatefulLink} from "../_utils/stateful-link";
 
 const PARAGRAPH_TYPEWRITER_LETTER_DELAY = 35;
 const MAIN_TYPEWRITER_LETTER_DELAY = 100;
 
 interface ExperienceTabProps {
   tab: ExperienceTabEntity;
+  watcherState: WatcherState;
 }
 
-export const ExperienceTab = (props: ExperienceTabProps & WatcherState) => {
+export const ExperienceTab = (props: ExperienceTabProps) => {
   const [lines, setLines] = useState([]);
 
   const extractLines = (description: string, maxLetters: number) : string[] => {
@@ -43,7 +45,7 @@ export const ExperienceTab = (props: ExperienceTabProps & WatcherState) => {
   }, [props.tab.description]);
 
   return (
-    <div className="experience-tab">
+    <div className={styles.experienceTab}>
       <pre id={styles.experienceTabTextArea}>
         <p>
           <span className={styles.color2}>import </span>
@@ -60,13 +62,9 @@ export const ExperienceTab = (props: ExperienceTabProps & WatcherState) => {
         <p>
           <span className={styles.color1}>{"<Job "}</span>
           <span className={styles.color2}>{"company=\""}</span>
-          <a onMouseEnter={() => props.setWatcherActivated(true)}
-             onMouseLeave={() => props.setWatcherActivated(false)}
-             className={styles.companyLink}
-             href={props.tab.url}
-             target="_blank"
-             rel="noreferrer"
-          ><CodeText typeDelay={MAIN_TYPEWRITER_LETTER_DELAY} stopTyping={true} color={styles.color1} text={props.tab.company} /></a>
+          <StatefulLink href={props.tab.url} content={
+            <CodeText typeDelay={MAIN_TYPEWRITER_LETTER_DELAY} stopTyping={true} color={styles.color1} text={props.tab.company} />
+          } watcherState={props.watcherState} />
           <span className={styles.color2}>{"\""}</span>
         </p>
         <p>
