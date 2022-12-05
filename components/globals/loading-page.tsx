@@ -9,14 +9,13 @@ interface LoadingPageProps {
 export const LoadingPage = (props: LoadingPageProps) => {
   useEffect(() => {
     let timeout = setTimeout(() => {
-      console.log("DONE")
       props.onFinish();
-    }, 3000);
+    }, 2500);
 
     return () => {
       clearTimeout(timeout);
     };
-  }, []);
+  }, [props]);
 
   return (
     <div className={styles.container}>

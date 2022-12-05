@@ -10,7 +10,7 @@ import {LoadingPage} from "../components/globals/loading-page";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   const [watcherActivated, setWatcherActivated] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   return (
     <>
@@ -27,9 +27,9 @@ export default function MyApp({ Component, pageProps }: AppProps) {
               <Component {...pageProps} watcherActivated={watcherActivated} setWatcherActivated={setWatcherActivated} />
             </div>
           </div>
+          <SocialBar watcherActivated={watcherActivated} setWatcherActivated={setWatcherActivated} />
         </>
       }
-      <SocialBar watcherActivated={watcherActivated} setWatcherActivated={setWatcherActivated} />
     </>
   );
 }
