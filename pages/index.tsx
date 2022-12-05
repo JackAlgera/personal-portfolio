@@ -25,7 +25,7 @@ export default function Home(watcherState: WatcherState) {
     <>
       <section>
         <div className={styles.introTextContainer}>
-          <p>Hey! I&apos;m <StatefulLink href={"https://www.linkedin.com/in/jacobus-algera/"} content={<span>Jack</span>} watcherState={watcherState} externalLink={true} />!</p>
+          <p>Hey! I&apos;m <StatefulLink href={"https://www.linkedin.com/in/jacobus-algera/"} content={<span>Jack</span>} watcherState={watcherState} />!</p>
           <p>And I like to <span style={{color: "var(--color-1)"}}><CodeText
             text={likeToDoText}
             color={"var(--color-1)"}
@@ -46,13 +46,13 @@ export default function Home(watcherState: WatcherState) {
               Semi-fresh graduate, I’m currently a Backend Software Engineer deploying and maintaining micro-services at BlaBlaCar, with a strong focus on CI/CD and Kubernetes-related topics.
             </p>
             <p>
-              Frontend you say ? Hell yes, I like to create silly projects using React, <StatefulLink href="https://jackalgera.me/projects/" content={<span>check them out</span>} watcherState={watcherState} externalLink={true} />!
+              Frontend you say ? Hell yes, I like to create silly projects using React, <StatefulLink href="/experience" content={<span>check them out</span>} watcherState={watcherState} externalLink={false} />!
             </p>
             <p>
-              Otherwise I also like spending my time participating in online coding contests (like <StatefulLink href="https://www.codingame.com/home" content={<span>CodinGame</span>} watcherState={watcherState} externalLink={true} />), and have finished various coding challenges:
+              Otherwise I also like spending my time participating in online coding contests (like <StatefulLink href="https://www.codingame.com/home" content={<span>CodinGame</span>} watcherState={watcherState} />), and have finished various coding challenges:
             </p>
             <p>
-              <StatefulLink href="https://github.com/JackAlgera/CodingChallenges/tree/main/AdventOfCode" content={<span>AdventOfCode 2021 and 2022</span>} watcherState={watcherState} externalLink={true} />, <StatefulLink href="https://github.com/JackAlgera/CodingChallenges/tree/main/FoobarGoogleInterview" content={<span>FooBar Google challenge</span>} watcherState={watcherState} />
+              <StatefulLink href="https://github.com/JackAlgera/CodingChallenges/tree/main/AdventOfCode" content={<span>AdventOfCode 2021 and 2022</span>} watcherState={watcherState} />, <StatefulLink href="https://github.com/JackAlgera/CodingChallenges/tree/main/FoobarGoogleInterview" content={<span>FooBar Google challenge</span>} watcherState={watcherState} />
             </p>
             <p>
               When I’m not sitting in front of my computer, I can be found boldering or doing Arduino/Electronic projects.

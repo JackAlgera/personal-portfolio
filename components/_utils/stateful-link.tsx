@@ -10,7 +10,7 @@ interface StatefulLinkProps {
 }
 
 export const StatefulLink = (props: StatefulLinkProps) => {
-  return props.externalLink ?
+  return props.externalLink === null || props.externalLink === undefined || props.externalLink === true ?
     <a className={styles.link}
        onMouseEnter={() => props.watcherState.setWatcherActivated(true)}
        onMouseLeave={() => props.watcherState.setWatcherActivated(false)}
