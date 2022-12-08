@@ -1,5 +1,4 @@
-$barCircleSize: 6px;
-$barHeight: 60px;
+$barCircleSize: 5px;
 $linkAnimationDelay: 1.1;
 
 .verticalBar {
@@ -7,9 +6,10 @@ $linkAnimationDelay: 1.1;
   flex-direction: column;
   position: fixed;
   bottom: 35px;
-  gap: 42px;
+  gap: 35px;
   background-color: unset;
   z-index: 10;
+  height: 400px;
 
   &:nth-child(3) {
     left: 20px;
@@ -37,7 +37,7 @@ $linkAnimationDelay: 1.1;
 .bar {
   content: "";
   width: 1px;
-  height: $barHeight;
+  height: 100%;
   margin: 0 auto;
   background-color: var(--color-1);
   position: relative;
