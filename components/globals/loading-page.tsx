@@ -19,7 +19,6 @@ export const LoadingPage = (props: LoadingPageProps) => {
 
   return (
     <div className={styles.container}>
-      {/*<Watcher watcherState={{ watcherActivated: true, setWatcherActivated: () => {} }}/>*/}
       <LoadingSvg />
     </div>
   );

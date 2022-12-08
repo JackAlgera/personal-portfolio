@@ -48,6 +48,7 @@ export const Watcher = (props: WatcherProps) => {
       <div className={styles.spinner}/>
       <div className={styles.spinner}/>
       <div className={styles.spinner}/>
+      <div className={styles.spinner}/>
       <div style={{transform: `rotate(${theta}deg)`}} className={styles.watcher}/>
     </div>
   );
