@@ -1,6 +1,6 @@
 import styles from "./loading-page.module.scss";
 import {useEffect} from "react";
-import {Watcher} from "./watcher";
+import LoadingSvg from "../../public/loading-animation.svg";
 
 interface LoadingPageProps {
   onFinish: () => void;
@@ -10,7 +10,7 @@ export const LoadingPage = (props: LoadingPageProps) => {
   useEffect(() => {
     let timeout = setTimeout(() => {
       props.onFinish();
-    }, 2500);
+    }, 6000);
 
     return () => {
       clearTimeout(timeout);
@@ -19,7 +19,8 @@ export const LoadingPage = (props: LoadingPageProps) => {
 
   return (
     <div className={styles.container}>
-      <Watcher watcherState={{ watcherActivated: true, setWatcherActivated: () => {} }}/>
+      {/*<Watcher watcherState={{ watcherActivated: true, setWatcherActivated: () => {} }}/>*/}
+      <LoadingSvg />
     </div>
   );
 }

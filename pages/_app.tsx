@@ -1,5 +1,6 @@
 import '../styles/globals.css';
 import '../styles/pages.css';
+import '../styles/animations.scss';
 import {AppProps} from "next/app";
 import {Navbar} from "../components/globals/navbar";
 import {useState} from "react";
