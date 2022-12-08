@@ -37,41 +37,42 @@ export const THINGS_I_LIKE_TO_DO = [
 ];
 
 export interface TechStack {
-  icon,
+  icon;
+  name: string;
   url: string;
 }
 
 export const FRONTEND_STACK_ICONS: Array<TechStack> = [
-  { icon: reactIcon, url: 'https://reactjs.org/' },
-  { icon: jsIcon, url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
-  { icon: typescriptIcon, url: 'https://www.typescriptlang.org/' },
-  { icon: nextJsIcon, url: 'https://nextjs.org/' },
-  { icon: htmlIcon, url: 'https://developer.mozilla.org/en-US/docs/Web/HTML' },
-  { icon: cssIcon, url: 'https://developer.mozilla.org/en-US/docs/Web/CSS' },
-  { icon: sassIcon, url: 'https://sass-lang.com/' }
+  { icon: reactIcon, name: 'react' ,url: 'https://reactjs.org/' },
+  { icon: jsIcon, name: 'javascript' ,url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
+  { icon: typescriptIcon, name: 'typescript' ,url: 'https://www.typescriptlang.org/' },
+  { icon: nextJsIcon, name: 'nextjs' ,url: 'https://nextjs.org/' },
+  { icon: htmlIcon, name: 'html' ,url: 'https://developer.mozilla.org/en-US/docs/Web/HTML' },
+  { icon: cssIcon, name: 'css' ,url: 'https://developer.mozilla.org/en-US/docs/Web/CSS' },
+  { icon: sassIcon, name: 'sass' ,url: 'https://sass-lang.com/' }
 ];
 
 export const BACKEND_STACK_ICONS: Array<TechStack> = [
-  { icon: springIcon, url: 'https://spring.io/' },
-  { icon: symfonyIcon, url: 'https://symfony.com/' },
-  { icon: postgresqlIcon, url: 'https://www.postgresql.org/' },
-  { icon: mariadbIcon, url: 'https://mariadb.org/' },
-  { icon: bigtableIcon, url: 'https://cloud.google.com/bigtable' },
-  { icon: rabbitMqIcon, url: 'https://www.rabbitmq.com/' },
-  { icon: kafkaIcon, url: 'https://kafka.apache.org/' }
+  { icon: springIcon, name: 'spring' ,url: 'https://spring.io/' },
+  { icon: symfonyIcon, name: 'symfony' ,url: 'https://symfony.com/' },
+  { icon: postgresqlIcon, name: 'postgresql' ,url: 'https://www.postgresql.org/' },
+  { icon: mariadbIcon, name: 'mariadb' ,url: 'https://mariadb.org/' },
+  { icon: bigtableIcon, name: 'bigtable' ,url: 'https://cloud.google.com/bigtable' },
+  { icon: rabbitMqIcon, name: 'rabbitmq' ,url: 'https://www.rabbitmq.com/' },
+  { icon: kafkaIcon, name: 'kafka' ,url: 'https://kafka.apache.org/' }
 ];
 
 export const CI_CD_ICONS: Array<TechStack> = [
-  { icon: kubernetesIcon, url: 'https://kubernetes.io/' },
-  { icon: istioIcon, url: 'https://istio.io/' },
-  { icon: helmIcon, url: 'https://helm.sh/' },
-  { icon: jenkinsIcon, url: 'https://www.jenkins.io/' },
-  { icon: githubIcon, url: 'https://github.com/' },
-  { icon: dockerIcon, url: 'https://www.docker.com/' }
+  { icon: kubernetesIcon, name: 'kubernetes' ,url: 'https://kubernetes.io/' },
+  { icon: istioIcon, name: 'istio' ,url: 'https://istio.io/' },
+  { icon: helmIcon, name: 'helm' ,url: 'https://helm.sh/' },
+  { icon: jenkinsIcon, name: 'jenkins' ,url: 'https://www.jenkins.io/' },
+  { icon: githubIcon, name: 'github' ,url: 'https://github.com/' },
+  { icon: dockerIcon, name: 'docker' ,url: 'https://www.docker.com/' }
 ];
 
 export const OTHER_STACK_ICONS: Array<TechStack> = [
-  { icon: postmanIcon, url: 'https://www.postman.com/' },
-  { icon: npmIcon, url: 'https://www.npmjs.com/' },
-  { icon: scrumIcon, url: 'https://www.scrum.org/resources/what-is-scrum' }
+  { icon: postmanIcon, name: 'postman' ,url: 'https://www.postman.com/' },
+  { icon: npmIcon, name: 'npm' ,url: 'https://www.npmjs.com/' },
+  { icon: scrumIcon, name: 'scrum' ,url: 'https://www.scrum.org/resources/what-is-scrum' }
 ];

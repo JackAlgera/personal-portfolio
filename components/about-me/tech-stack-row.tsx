@@ -15,11 +15,11 @@ export const TechStackRow = (props: TechStackProps) => {
     <div className={styles.container}>
       <p>{props.label}</p>
       <div className={styles.techStackContainer}>
-        {props.icons.map((icon, index) => (
+        {props.icons.map((techStack, index) => (
           <StatefulLink
-            key={'tech-stack-' + index}
-            href={icon.url}
-            content={<Image key="react" alt="react" src={icon.icon.src} layout="fill"/>}
+            key={techStack.name + '-' + index}
+            href={techStack.url}
+            content={<Image alt={techStack.name} src={techStack.icon} layout="fill" />}
             watcherState={props.watcherState} />
         ))}
       </div>
