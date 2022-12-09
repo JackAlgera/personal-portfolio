@@ -54,8 +54,6 @@ export default function Home(props: HomeProps) {
     <>
       <section>
         <div className={styles.introTextContainer}>
-          {/*<p>Hey! I&apos;m <StatefulLink href={"https://www.linkedin.com/in/jacobus-algera/"} content={<span>Jack</span>} watcherState={watcherState} />!</p>*/}
-          {}
           <p>
             {showFirstIntro &&
                 <CodeText
