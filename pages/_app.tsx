@@ -3,7 +3,7 @@ import '../styles/pages.css';
 import '../styles/animations.scss';
 import {AppProps} from "next/app";
 import {Navbar} from "../components/globals/navbar";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {SocialBar} from "../components/globals/social-bar";
 import Head from "next/head";
 import {AnimatedBackground} from "../components/globals/animated-background";
@@ -13,6 +13,17 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   const [watcherActivated, setWatcherActivated] = useState(false);
   const [loading, setLoading] = useState(true);
   const [initLoad, setInitLoad] = useState(true);
+
+  useEffect(() => {
+    let timeout = setTimeout(() => {
+      setInitLoad(false);
+    }, 8000);
+
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, []);
+
 
   return (
     <>
@@ -26,7 +37,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           <div className="context">
             <AnimatedBackground />
             <div className="context-container">
-              <Component {...pageProps} watcherActivated={watcherActivated} setWatcherActivated={setWatcherActivated} initLoad={initLoad} onInitLoad={() => setInitLoad(false)} />
+              <Component {...pageProps} watcherActivated={watcherActivated} setWatcherActivated={setWatcherActivated} initLoad={initLoad} />
             </div>
           </div>
           <SocialBar watcherActivated={watcherActivated} setWatcherActivated={setWatcherActivated} />

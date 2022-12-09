@@ -16,7 +16,6 @@ interface HomeProps {
   watcherActivated: boolean;
   setWatcherActivated: (activate: boolean) => void;
   initLoad: boolean;
-  onInitLoad: () => void;
 }
 
 export default function Home(props: HomeProps) {
@@ -30,8 +29,6 @@ export default function Home(props: HomeProps) {
 
     if (!props.initLoad) {
       initDelay = 0;
-    } else {
-      props.onInitLoad();
     }
 
     let timeoutShowFirstText = setTimeout(() => setShowFirstIntro(true), initDelay);

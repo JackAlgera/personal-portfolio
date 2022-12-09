@@ -1,5 +1,6 @@
 :root {
   --background-color: #023047;
+  --background-color-blur: rgba(2, 48, 71, 0.88);
   --background-color-lighter: #035177;
   --color-1: #FFB703;
   --color-1-lighter: #FFD15C;
@@ -66,7 +67,7 @@ p {
 h2 {
   font-size: 1.5rem;
   color: var(--color-2);
-  margin: 2.5rem 0 2rem 0;
+  margin: 2rem 0 2rem 0;
 }
 h1 {
   font-size: 2.25rem;
@@ -82,7 +83,7 @@ section {
 }
 
 button {
-  background: none;
+  background: var(--background-color);
   border: solid 2px;
   font: inherit;
   line-height: 1;

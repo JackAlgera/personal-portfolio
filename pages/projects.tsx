@@ -2,6 +2,7 @@ import {Project, PROJECTS, ProjectStyleType} from "../components/_models/project
 import {ProjectCard} from "../components/projects/project-card";
 import {useState} from "react";
 import {WatcherState} from "../components/_models/watcher.model";
+import styles from "./projects.module.scss";
 
 export default function Projects(watcherState: WatcherState) {
   const [projectCards, setProjectCards] = useState<Project[]>(Array.from(PROJECTS.values()));
@@ -39,11 +40,7 @@ export default function Projects(watcherState: WatcherState) {
     <section>
       <h2 className="numbered-heading"><span>04.</span>Personal Projects</h2>
       <div className="inner experience">
-        <section style={{
-          display: "flex",
-          gap: "20px",
-          marginTop: "50px",
-        }}>
+        <section className={styles.container}>
           {projectCards.map((project, index) => (
             <ProjectCard key={project.title}
                          project={project}
