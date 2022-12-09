@@ -11,7 +11,7 @@ import {LoadingPage} from "../components/globals/loading-page";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   const [watcherActivated, setWatcherActivated] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [initLoad, setInitLoad] = useState(true);
 
   return (
