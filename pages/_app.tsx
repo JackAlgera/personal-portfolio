@@ -11,7 +11,8 @@ import {LoadingPage} from "../components/globals/loading-page";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   const [watcherActivated, setWatcherActivated] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
+  const [initLoad, setInitLoad] = useState(true);
 
   return (
     <>
@@ -25,7 +26,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           <div className="context">
             <AnimatedBackground />
             <div className="context-container">
-              <Component {...pageProps} watcherActivated={watcherActivated} setWatcherActivated={setWatcherActivated} />
+              <Component {...pageProps} watcherActivated={watcherActivated} setWatcherActivated={setWatcherActivated} initLoad={initLoad} onInitLoad={() => setInitLoad(false)} />
             </div>
           </div>
           <SocialBar watcherActivated={watcherActivated} setWatcherActivated={setWatcherActivated} />
