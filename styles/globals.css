@@ -119,7 +119,7 @@ img {
   animation: initGlobal ease-in-out 0.5s forwards 2s;
   z-index: 3;
   max-width: min(1000px, 70vw);
-  min-width: min(800px);
+  min-width: max(800px, 65vw);
 }
 
 @keyframes initGlobal {
