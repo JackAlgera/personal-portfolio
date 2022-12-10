@@ -92,14 +92,14 @@ export default function Home(props: HomeProps) {
               Semi-fresh graduate, I’m currently a Backend Software Engineer deploying and maintaining micro-services at BlaBlaCar, with a strong focus on CI/CD and Kubernetes-related topics.
             </p>
             <p>
-              Frontend you say ? Hell yes, I like to create silly projects using React, <StatefulLink href="/experience" content={<span>check them out</span>} watcherState={{ watcherActivated: props.watcherActivated, setWatcherActivated: props.setWatcherActivated }} externalLink={false} />!
+              Frontend you say ? Hell yes, I like to create silly projects using React, <StatefulLink href="/projects" content={<span>check them out</span>} watcherState={{ watcherActivated: props.watcherActivated, setWatcherActivated: props.setWatcherActivated }} externalLink={false} />!
             </p>
             <p>
-              Otherwise I also like spending my time participating in online coding contests (like <StatefulLink href="https://www.codingame.com/home" content={<span>CodinGame</span>} watcherState={{ watcherActivated: props.watcherActivated, setWatcherActivated: props.setWatcherActivated }} />), and have finished various coding challenges:
+              Otherwise I also like spending my time participating in online coding contests, and have finished various coding challenges:
             </p>
-            <p>
-              <StatefulLink href="https://github.com/JackAlgera/CodingChallenges/tree/main/AdventOfCode" content={<span>AdventOfCode 2021 and 2022</span>} watcherState={{ watcherActivated: props.watcherActivated, setWatcherActivated: props.setWatcherActivated }} />, <StatefulLink href="https://github.com/JackAlgera/CodingChallenges/tree/main/FoobarGoogleInterview" content={<span>FooBar Google challenge</span>} watcherState={{ watcherActivated: props.watcherActivated, setWatcherActivated: props.setWatcherActivated }} />
-            </p>
+            <p>- <StatefulLink href="https://github.com/JackAlgera/CodingChallenges/tree/main/AdventOfCode" content={<span>AdventOfCode 2021 and 2022</span>} watcherState={{ watcherActivated: props.watcherActivated, setWatcherActivated: props.setWatcherActivated }} /></p>
+            <p>- <StatefulLink href="https://github.com/JackAlgera/CodingChallenges/tree/main/FoobarGoogleInterview" content={<span>FooBar Google challenge</span>} watcherState={{ watcherActivated: props.watcherActivated, setWatcherActivated: props.setWatcherActivated }} /></p>
+            <p>- <StatefulLink href="https://www.codingame.com/profile/d46b2b9844dbd087e3f67033c06dd47a9043511" content={<span>Various CodinGame contests</span>} watcherState={{ watcherActivated: props.watcherActivated, setWatcherActivated: props.setWatcherActivated }} /></p>
             <p>
               When I’m not sitting in front of my computer, I can be found boldering or doing Arduino/Electronic projects.
             </p>

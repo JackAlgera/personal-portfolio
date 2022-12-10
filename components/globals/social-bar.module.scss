@@ -5,11 +5,11 @@ $linkAnimationDelay: 1.1;
   display: flex;
   flex-direction: column;
   position: fixed;
-  bottom: 35px;
-  gap: 35px;
+  bottom: 0;
+  gap: 30px;
   background-color: unset;
   z-index: 10;
-  height: 400px;
+  height: 350px;
 
   &:nth-child(3) {
     left: 20px;
@@ -45,12 +45,6 @@ $linkAnimationDelay: 1.1;
   &:nth-child(1):before {
     @include circle;
     transform: translate(-50%, -100%);
-  }
-  &:nth-child(3):after,
-  &:nth-child(5):after{
-    @include circle;
-    transform: translate(-50%, 100%);
-    bottom: 0;
   }
 }
 
