@@ -25,15 +25,14 @@ import scrumIcon from "../../public/icons/scrum.svg";
 export const THINGS_I_LIKE_TO_DO = [
   'write code.',
   'design complex systems.',
-  'build Arduino robots.',
   'create web applications.',
   'conjure Kubernetes magic.',
   'compete in CodinGame.',
+  '[Insert random fun fact].',
+  'build Arduino robots.',
   'relax and play video-games.',
-  'go boldering.',
   'drink coffee and procrastinate.',
-  'learn new frameworks and techs.',
-  '[Insert random fun fact].'
+  'learn new frameworks and techs.'
 ];
 
 export interface TechStack {
