@@ -29,6 +29,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>Jack&apos;s portfolio</title>
+        <link rel="shortcut icon" href="/favicon.svg" />
       </Head>
       { loading ?
         <LoadingPage onFinish={() => setLoading(false)} /> :
