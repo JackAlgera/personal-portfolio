@@ -1,20 +1,15 @@
 .container {
-  display: grid;
   text-align: center;
   margin-bottom: 60px;
   gap: 20px;
+
+  h2 {
+    color: var(--color-2);
+  }
 }
 
 .imagesContainer {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
-
-  > div {
-    transition: all ease 0.5s;
-    background-color: transparent;
-
-    &:hover {
-      transform: scale(1.07);
-    }
-  }
 }

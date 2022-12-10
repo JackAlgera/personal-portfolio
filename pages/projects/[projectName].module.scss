@@ -1,19 +1,9 @@
-$border-radius: 20px;
-
 .sectionContainer {
   display: flex;
   flex-direction: row;
   width: 800px;
   justify-content: center;
   margin-bottom: 80px;
-
-  p {
-    color: var(--color-3);
-  }
-
-  h2 {
-    color: var(--color-1);
-  }
 }
 
 @mixin container {
@@ -32,26 +22,30 @@ $border-radius: 20px;
 
 .container {
   @include container;
+  background-color: var(--background-color-blur);
+  border-radius: var(--text-border-radius)/2;
   gap: 40px;
 }
 
 .tldrContainer {
   @include container;
   flex-direction: column;
-  gap: 0;
+
+  h2 {
+    color: var(--color-1);
+  }
 }
 
 .galleryContainer {
+  margin: 0 30px 0 30px;
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 100%;
-  gap: 10px;
+  gap: 30px;
 
-  .imageContainer {
-    position: relative;
+  > .imageContainer {
     width: unset;
-    height: 400px;
+    background-color: var(--background-color-darker-blur);
   }
 }
 
@@ -60,19 +54,32 @@ $border-radius: 20px;
   width: 40%;
   min-width: 40%;
   height: 250px;
-  border-radius: $border-radius;
+  border-radius: var(--text-border-radius);
   overflow: hidden;
-  transition: all ease 0.3s;
-  box-shadow: 0 0 1px var(--color-1);
+  transition: all ease 0.5s;
+
+  span {
+    transition: all ease 0.5s;
+  }
 
   &:hover {
     transform: scale(1.05);
+
+    span {
+      transform: scale(1.05);
+    }
   }
 }
 
 .video {
-  border-radius: $border-radius;
+  border-radius: var(--text-border-radius);
   overflow: hidden;
+
+  > iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+  }
 }
 
 .title {

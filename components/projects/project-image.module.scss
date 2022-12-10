@@ -1,19 +1,17 @@
 .container {
   display: grid;
   position: relative;
-  width: 450px;
-  height: 250px;
+  aspect-ratio: 16/9;
   border-radius: 20px;
   overflow: hidden;
   transition: all ease 0.5s;
-  box-shadow: 0 0 1px var(--color-1);
 
   * {
     transition: all ease 0.5s;
   }
 
   &:hover {
-    box-shadow: unset;
+    transform: scale(1.05);
 
     span {
       filter: blur(8px) brightness(0.4);
@@ -43,6 +41,5 @@
     z-index: 9;
     color: transparent;
     align-self: center;
-    font-size: 14px;
   }
 }

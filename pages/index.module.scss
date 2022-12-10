@@ -9,7 +9,6 @@
     height: 100px;
     white-space: pre-line;
     margin-bottom: 15px;
-    color: var(--color-3);
     font-size: 2rem;
   }
 }
@@ -25,7 +24,6 @@
     text-align: justify;
 
     p {
-      color: var(--color-3);
       margin-bottom: 20px;
     }
   }
@@ -34,10 +32,10 @@
     width: 300px;
     height: 450px;
     position: relative;
-    border-radius: var(--border-radius);
+    border-radius: var(--square-border-radius);
 
     > span {
-      border-radius: var(--border-radius);
+      border-radius: var(--square-border-radius);
     }
 
     &:after {
@@ -48,7 +46,7 @@
       height: 100%;
       top: 20px;
       left: 20px;
-      border-radius: var(--border-radius);
+      border-radius: var(--square-border-radius);
       border: solid 2px var(--color-1);
       z-index: -1;
     }

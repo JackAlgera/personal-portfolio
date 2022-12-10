@@ -1,22 +1,26 @@
 $margins: 1rem/2;
+$textSize: 40%;
 
 .container {
-  display: flex;
-  width: 800px;
+  display: grid;
+  grid-auto-columns: $textSize 1fr;
+  grid-template-areas:
+          'text image';
+  gap: 20px;
   place-items: center;
   text-align: center;
+
   * {
     transition: all ease 0.5s;
   }
 
   h2 {
-    margin: 20px;
-    flex-grow: 1;
-    width: 20%;
-    font-size: 1.4rem;
-    z-index: 5;
+    grid-area: text;
+    border-radius: var(--text-border-radius);
+    background-color: var(--background-color-blur);
 
-    > span:nth-child(2) {
+    > span:nth-child(2),
+      span:nth-child(3) {
       font-size: 0.9rem;
       color: var(--color-1);
     }
@@ -30,33 +34,33 @@ $margins: 1rem/2;
       background-color: var(--color-3);
       display: inline-grid;
     }
-    > span:nth-child(3) {
-      font-size: 0.9rem;
-      color: var(--color-1);
+
+    &.rotate {
+      transform: rotate(-90deg);
     }
   }
   &.rowReverse h2.rotate {
     transform: rotate(90deg);
   }
-  h2.rotate {
-    transform: rotate(-90deg);
-  }
 
   &.rowReverse {
-    flex-direction: row-reverse;
+    grid-auto-columns: 1fr $textSize;
+    grid-template-areas:
+          'image text';
   }
 
   > div {
-    background-color: transparent;
+    grid-area: image;
+    width: 100%;
 
     &[data-animation="up-animation"] {
-      transform: translateY(-20%);
+      transform: translateY(-15%);
     }
     &[data-animation="down-animation"] {
-      transform: translateY(20%);
+      transform: translateY(15%);
     }
     &[data-animation="select-animation"] {
-      transform: scale(1.4);
+      transform: scale(1.25);
     }
   }
 }

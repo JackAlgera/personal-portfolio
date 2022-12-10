@@ -40,32 +40,16 @@ const ProjectPage = (watcherState: WatcherState) => {
     let htlmSection = (<></>);
 
     switch (section.sectionType) {
-      case SectionType.TEXT_WITH_IMAGE:
-        htlmSection = (
-          <div className={`${styles.container} ${section.rowReverse ? styles.rowReverse : ''}`}>
-            <p>{section.text}</p>
-            <div className={styles.imageContainer}>
-              <Image
-                src={section.image.src}
-                layout="fill"
-                objectFit="cover"
-                loading="lazy"
-                alt="image"
-              />
-            </div>
-          </div>
-        );
-        break;
       case SectionType.TEXT_WITHOUT_IMAGE:
         htlmSection = (
-          <div className={styles.container}>
+          <section className={styles.container}>
             <p>{section.text}</p>
-          </div>
+          </section>
         );
         break;
       case SectionType.TLDR:
         htlmSection = (
-          <div className={styles.tldrContainer}>
+          <section className={styles.tldrContainer}>
             <h2>TL;DR</h2>
             <div className={`${styles.container} ${section.rowReverse ? styles.rowReverse : ''}`}>
               <p>{section.text}</p>
@@ -79,29 +63,22 @@ const ProjectPage = (watcherState: WatcherState) => {
                 />
               </div>
             </div>
-          </div>
+          </section>
         );
         break;
       case SectionType.VIDEO:
         htlmSection = (
-          <YouTube
-            className={styles.video}
-            videoId={section.youtubeVideoId}
-            opts={{
-              height: '441',
-              width: '784'
-            }}
-          />
+          <section>
+            <YouTube className={styles.video} videoId={section.youtubeVideoId} />
+          </section>
         );
         break;
       case SectionType.IMAGE_GALLERY:
         htlmSection = (
-          <div className={styles.galleryContainer}>
+          <section className={styles.galleryContainer}>
             {
               section.imageGalleryList && section.imageGalleryList.map((image, index) => (
-                <div key={"gallery-" + index}
-                     style={{boxShadow: "unset"}}
-                     className={styles.imageContainer}>
+                <div key={"gallery-" + index} className={styles.imageContainer}>
                   <Image
                     src={image.src}
                     layout="fill"
@@ -111,16 +88,12 @@ const ProjectPage = (watcherState: WatcherState) => {
                   />
                 </div>
             ))}
-          </div>
+          </section>
         );
         break;
     }
 
-    return (
-      <section key={index} className={styles.sectionContainer}>
-        {htlmSection}
-      </section>
-    );
+    return htlmSection;
   }
 
   return (
