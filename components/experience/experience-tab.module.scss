@@ -17,19 +17,33 @@
 
 #experienceTabTextArea {
   counter-reset: line 0;
+
+  p {
+    counter-increment: line;
+  }
 }
-#experienceTabTextArea p {
-  counter-increment: line;
-}
-#experienceTabTextArea p::before {
-  color: var(--color-3);
-  font-size: 0.75rem;
-  position: relative;
-  bottom: 2.5px;
-}
-#experienceTabTextArea p:nth-child(-n+9)::before {
-  content: counter(line) '     ';
-}
-#experienceTabTextArea p:nth-child(n+10)::before {
-  content: counter(line) '    ';
+
+.experienceTabLine {
+  display: flex;
+  width: 800px;
+
+  &:before {
+    content: counter(line) '     ';
+    color: var(--color-3);
+    font-size: 0.75rem;
+    position: relative;
+    top: 3px;
+  }
+
+  &:nth-child(n+11)::before {
+    content: counter(line) '    ';
+  }
+
+  > p {
+    width: 100%;
+
+    &.justified {
+      //text-align-last: justify;
+    }
+  }
 }

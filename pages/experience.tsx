@@ -15,21 +15,23 @@ export default function Experience(watcherState: WatcherState) {
   }
 
   return (
-    <section>
+    <>
       <h2 className="numbered-heading"><span>03.</span>Experience</h2>
-      <div className={styles.container}>
-        <div className={styles.horizontalTabList}>
-          { Array.from(EXPERIENCE_TABS.keys())
-            .map(company => <StatefulButton
-              key={company}
-              content={EXPERIENCE_TABS.get(company).company}
-              activated={tab.company.toLowerCase() === company}
-              onClick={() => changeTab(company)}
-              watcherState={watcherState} />)
-          }
+      <section>
+        <div className={styles.container}>
+          <div className={styles.horizontalTabList}>
+            { Array.from(EXPERIENCE_TABS.keys())
+              .map(company => <StatefulButton
+                key={company}
+                content={EXPERIENCE_TABS.get(company).company}
+                activated={tab.company.toLowerCase() === company}
+                onClick={() => changeTab(company)}
+                watcherState={watcherState} />)
+            }
+          </div>
+          <ExperienceTab watcherState={watcherState} tab={tab} key={key} />
         </div>
-        <ExperienceTab watcherState={watcherState} tab={tab} key={key} />
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

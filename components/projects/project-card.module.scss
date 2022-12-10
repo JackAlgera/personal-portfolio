@@ -50,6 +50,7 @@ $textSize: 40%;
   }
 
   > div {
+    background-color: var(--background-color);
     grid-area: image;
     width: 100%;
 

@@ -47,59 +47,87 @@ export const ExperienceTab = (props: ExperienceTabProps) => {
   return (
     <div className={styles.experienceTab}>
       <pre id={styles.experienceTabTextArea}>
-        <p>
-          <span className={styles.color2}>import </span>
-          <span className={styles.color1}>* </span>
-          <span className={styles.color2}>as </span>
-          <span className={styles.color3}>experience</span>
-          <span className={styles.color2}> from </span>
-          <span className={styles.color2}>{"\""}</span>
-          <span className={styles.color3}>jack/experience</span>
-          <span className={styles.color2}>{"\""}</span>
-          <span className={styles.color2}>;</span>
-        </p>
-        <p/>
-        <p>
-          <span className={styles.color1}>{"<Job "}</span>
-          <span className={styles.color2}>{"company=\""}</span>
-          <StatefulLink
-            href={props.tab.url}
-            content={<CodeText typeDelay={MAIN_TYPEWRITER_LETTER_DELAY} stopTyping={true} color={styles.color1} text={props.tab.company} />}
-            watcherState={props.watcherState} />
-          <span className={styles.color2}>{"\""}</span>
-        </p>
-        <p>
-          <span className={styles.color2}>{"     position=\""}</span>
-          <CodeText typeDelay={MAIN_TYPEWRITER_LETTER_DELAY} stopTyping={true} color={styles.color1} text={props.tab.position} />
-          <span className={styles.color2}>{"\""}</span>
-        </p>
-        <p>
-          <span className={styles.color2}>{"     location=\""}</span>
-          <CodeText typeDelay={MAIN_TYPEWRITER_LETTER_DELAY} stopTyping={true} color={styles.color1} text={props.tab.location} />
-          <span className={styles.color2}>{"\""}</span>
-        </p>
-        <p>
-          <span className={styles.color2}>{"     from=\""}</span>
-          <CodeText typeDelay={MAIN_TYPEWRITER_LETTER_DELAY} stopTyping={true} color={styles.color1} text={props.tab.from} />
-          <span className={styles.color2}>{"\""}</span>
-
-          <span className={styles.color2}>{" to=\""}</span>
-          <CodeText typeDelay={MAIN_TYPEWRITER_LETTER_DELAY} stopTyping={true} color={styles.color1} text={props.tab.to} />
-          <span className={styles.color2}>{"\""}</span>
-          <span className={styles.color1}>{">"}</span>
-        </p>
-        <p/>
-        {lines && lines.map((line, index) => (
-          <p className={styles.color3} key={'tab-' + index}>
-            <CodeText
-              typeDelay={PARAGRAPH_TYPEWRITER_LETTER_DELAY}
-              stopTyping={index !== lines.length - 1}
-              color={styles.color3}
-              text={line.trim()} />
+        {/* import * as experience from "jack/experience"; */}
+        <div className={styles.experienceTabLine}>
+          <p>
+            <span className={styles.color2}>import </span>
+            <span className={styles.color1}>* </span>
+            <span className={styles.color2}>as </span>
+            <span className={styles.color3}>experience</span>
+            <span className={styles.color2}> from </span>
+            <span className={styles.color2}>{"\""}</span>
+            <span className={styles.color3}>jack/experience</span>
+            <span className={styles.color2}>{"\""}</span>
+            <span className={styles.color2}>;</span>
           </p>
+        </div>
+        <div className={styles.experienceTabLine}><p>{"\n"}</p></div>
+
+        {/* <Job company= */}
+        <div className={styles.experienceTabLine}>
+          <p>
+            <span className={styles.color1}>{"<Job "}</span>
+            <span className={styles.color2}>{"company=\""}</span>
+            <StatefulLink
+              href={props.tab.url}
+              content={<CodeText typeDelay={MAIN_TYPEWRITER_LETTER_DELAY} stopTyping={true} color={styles.color1} text={props.tab.company} />}
+              watcherState={props.watcherState} />
+            <span className={styles.color2}>{"\""}</span>
+          </p>
+        </div>
+
+        {/* position="" */}
+        <div className={styles.experienceTabLine}>
+          <p>
+            <span className={styles.color2}>{"     position=\""}</span>
+            <CodeText typeDelay={MAIN_TYPEWRITER_LETTER_DELAY} stopTyping={true} color={styles.color1} text={props.tab.position} />
+            <span className={styles.color2}>{"\""}</span>
+          </p>
+        </div>
+
+        {/* location="" */}
+        <div className={styles.experienceTabLine}>
+          <p>
+            <span className={styles.color2}>{"     location=\""}</span>
+            <CodeText typeDelay={MAIN_TYPEWRITER_LETTER_DELAY} stopTyping={true} color={styles.color1} text={props.tab.location} />
+            <span className={styles.color2}>{"\""}</span>
+          </p>
+        </div>
+
+        {/* from="" to""> */}
+        <div className={styles.experienceTabLine}>
+          <p>
+            <span className={styles.color2}>{"     from=\""}</span>
+            <CodeText typeDelay={MAIN_TYPEWRITER_LETTER_DELAY} stopTyping={true} color={styles.color1} text={props.tab.from} />
+            <span className={styles.color2}>{"\""}</span>
+
+            <span className={styles.color2}>{" to=\""}</span>
+            <CodeText typeDelay={MAIN_TYPEWRITER_LETTER_DELAY} stopTyping={true} color={styles.color1} text={props.tab.to} />
+            <span className={styles.color2}>{"\""}</span>
+            <span className={styles.color1}>{">"}</span>
+          </p>
+        </div>
+        <div className={styles.experienceTabLine}><p>{"\n"}</p></div>
+
+        {/* Description */}
+        {lines && lines.map((line, index) => (
+          <div className={styles.experienceTabLine} key={'tab-' + index}>
+            <p className={`${styles.color3} ${styles.justified}`}>
+              <CodeText
+                typeDelay={PARAGRAPH_TYPEWRITER_LETTER_DELAY}
+                stopTyping={index !== lines.length - 1}
+                color={styles.color3}
+                text={line.trim()} />
+            </p>
+          </div>
         ))}
-        <p/>
-        <p><span className={styles.color1}>{"</Job>"}</span></p>
+        <div className={styles.experienceTabLine}><p>{"\n"}</p></div>
+
+        {/* </Job> */}
+        <div className={styles.experienceTabLine}>
+          <p><span className={styles.color1}>{"</Job>"}</span></p>
+        </div>
+        <div className={styles.experienceTabLine}><p>{"\n"}</p></div>
       </pre>
     </div>
   );

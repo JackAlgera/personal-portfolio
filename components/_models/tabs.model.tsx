@@ -29,9 +29,9 @@ export const EXPERIENCE_TABS: Map<string, ExperienceTabEntity> = new Map<string,
       company: "Zalando",
       location: "Dortmund, Germany",
       position: "Junior Backend Software Engineer",
-      description: `Helped implementing new backend microservices (Spring MVC and Kotlin/Java) and handling the team's infrastructure and DevOps (Docker, Kubernetes, AWS, Nakadi,Kafka, PostgreSQL, ElasticSearch).\n
-        Also participating in Scrum practices to deliver continuous improvements for our stakeholders.\n
-        Unfortunately, due to personal reasons I had to move back to France, interrupting my time at Zalando early`,
+      description: `Helped implementing new backend microservices (Spring MVC and Kotlin/Java) and handling the team's infrastructure and DevOps (Docker, Kubernetes, AWS, Kafka, PostgreSQL).\n
+        I also participated in Scrum practices to deliver continuous improvements for our stakeholders.\n
+        Unfortunately, due to personal reasons I had to move back to France, interrupting my time at Zalando early.`,
       from: "Jan. 2021",
       to: "Aug. 2021",
       url: "https://www.zalando.fr/"
@@ -56,7 +56,7 @@ export const EXPERIENCE_TABS: Map<string, ExperienceTabEntity> = new Map<string,
       company: "Amazon",
       location: "Cape Town, South Africa",
       position: "Backend Software Engineer Intern",
-      description: `Implemented a new AWS internal microservice, that's used by the AWS support engineers to contact my engineering team, which led to improved response times and less interruptions for AWS engineers.\n 
+      description: `Implemented a new AWS internal microservice, that's used by the AWS support engineers to contact my engineering team, which led to improved response times.\n 
         I also plugged in a chat about (AWS Lex) around the API Gateway.`,
       from: "Jun. 2019",
       to: "Oct. 2019",
