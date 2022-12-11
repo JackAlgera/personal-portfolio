@@ -1,14 +1,30 @@
-.introTextContainer {
-  display: flex;
-  flex-direction: column;
-  height: 75vh;
-  justify-content: center;
+.firstSection {
+  display: grid;
+  margin: unset;
 
-  p {
-    height: 100px;
-    white-space: pre-line;
-    margin-bottom: 15px;
-    font-size: 2rem;
+  > * {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+  }
+
+  .arrowAnimationContainer {
+    justify-self: center;
+    align-self: end;
+    margin-bottom: 10vw;
+  }
+
+  .introTextContainer {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - var(--navbar-height));
+    justify-content: center;
+
+    p {
+      height: 100px;
+      white-space: pre-line;
+      margin-bottom: 15px;
+      font-size: 2rem;
+    }
   }
 }
 

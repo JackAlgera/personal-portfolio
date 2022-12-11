@@ -11,6 +11,7 @@ import {
   THINGS_I_LIKE_TO_DO
 } from "../components/_models/about_me.model";
 import {StatefulLink} from "../components/_utils/stateful-link";
+import {LoadingArrow} from "../components/globals/loading-arrow";
 
 interface HomeProps {
   watcherActivated: boolean;
@@ -49,7 +50,7 @@ export default function Home(props: HomeProps) {
 
   return (
     <>
-      <section>
+      <section className={styles.firstSection}>
         <div className={styles.introTextContainer}>
           <p>
             {showFirstIntro &&
@@ -82,6 +83,9 @@ export default function Home(props: HomeProps) {
                 </span>
             }
           </p>
+        </div>
+        <div className={styles.arrowAnimationContainer}>
+          <LoadingArrow />
         </div>
       </section>
       <section>

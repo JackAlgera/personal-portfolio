@@ -22,6 +22,9 @@
 
   /* Squares */
   --square-border-radius: 5px;
+
+  /* Navbar */
+  --navbar-height: 60px;
 }
 
 /* Add default background color */
