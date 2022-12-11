@@ -84,9 +84,11 @@ export default function Home(props: HomeProps) {
             }
           </p>
         </div>
-        <div className={styles.arrowAnimationContainer}>
-          <LoadingArrow />
-        </div>
+        {showFirstIntro &&
+            <div className={styles.arrowAnimationContainer}>
+                <LoadingArrow />
+            </div>
+        }
       </section>
       <section>
         <h2 className="numbered-heading"><span>01.</span>About Me</h2>
