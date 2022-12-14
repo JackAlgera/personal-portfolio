@@ -13,6 +13,7 @@ import bigtableIcon from "../../public/icons/bigtable.svg";
 import rabbitMqIcon from "../../public/icons/rabbitMq.svg";
 import kafkaIcon from "../../public/icons/kafka.svg";
 import kubernetesIcon from "../../public/icons/kubernetes.svg";
+import terraformIcon from "../../public/icons/terraform.svg";
 import istioIcon from "../../public/icons/istio.svg";
 import helmIcon from "../../public/icons/helm.svg";
 import jenkinsIcon from "../../public/icons/jenkins.svg";
@@ -63,6 +64,7 @@ export const BACKEND_STACK_ICONS: Array<TechStack> = [
 
 export const CI_CD_ICONS: Array<TechStack> = [
   { icon: kubernetesIcon, name: 'kubernetes' ,url: 'https://kubernetes.io/' },
+  { icon: terraformIcon, name: 'terraform' ,url: 'https://www.terraform.io/' },
   { icon: istioIcon, name: 'istio' ,url: 'https://istio.io/' },
   { icon: helmIcon, name: 'helm' ,url: 'https://helm.sh/' },
   { icon: jenkinsIcon, name: 'jenkins' ,url: 'https://www.jenkins.io/' },
