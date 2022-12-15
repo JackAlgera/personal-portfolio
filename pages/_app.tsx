@@ -8,6 +8,7 @@ import {SocialBar} from "../components/globals/social-bar";
 import Head from "next/head";
 import {AnimatedBackground} from "../components/globals/animated-background";
 import {LoadingPage} from "../components/globals/loading-page";
+import {Analytics} from '@vercel/analytics/react';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   const [watcherActivated, setWatcherActivated] = useState(false);
@@ -44,6 +45,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           <SocialBar watcherActivated={watcherActivated} setWatcherActivated={setWatcherActivated} />
         </>
       }
+      <Analytics />
     </>
   );
 }
