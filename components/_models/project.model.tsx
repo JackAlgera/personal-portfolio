@@ -53,6 +53,7 @@ import newtification from "../../public/newtification/newtification.jpg";
 import connected_coffee_machine from "../../public/connect_coffee_machine/connected_coffee_machine.jpg";
 import connected_coffee_machine_1 from "../../public/connect_coffee_machine/connected_coffee_machine_1.jpg";
 import connected_coffee_machine_2 from "../../public/connect_coffee_machine/connected_coffee_machine_2.jpg";
+import slang_up from "../../public/slang_up/slang_up.png";
 
 export interface Project {
   id: string;
@@ -88,6 +89,46 @@ export enum SectionType {
 }
 
 export const PROJECTS: Map<string, Project> = new Map<string, Project>([
+  [
+    "slang_up",
+    {
+      id: "slang_up",
+      title: "Slang-up",
+      shortDescription: "Created a small web application to display silly slang words",
+      techStack: "Typescript/React/NextJs",
+      image: slang_up,
+      date: '2023',
+      style: null,
+      sections: [
+        {
+          text: `Created a small web application to display silly slang words.
+          
+          Everything was done in Typescript/React with the Next.js framework, and deployed on Vercel.
+          
+          https://www.slang-up.com/
+          `,
+          image: slang_up,
+          sectionType: SectionType.TLDR
+        } as Section,
+        {
+          text: `I often find myself taking the train to travel around in France. Which means I tend to have a lot of free time on my hands during my train rides.
+          
+          I decided to see how quick I can create something new from scratch, but have it plugged into some database.
+          
+          I ended up creating a small web application that displays silly slang words. It uses the Urban Dictionary API to get a couple of slang words and stores them in a database that's only updated once a day (on the first call of the day).
+          
+          I used a SQL database hosted on Supabase to store the words, and used Next.js to create the web application. I also used Vercel to host the web application, with a custom domain name from Google Domains.
+          
+          The whole project ended up taking both the ride to and from my destination, so about 6 hours in total, with a couple of small tweaks here and there.
+          
+          The web application is available here:
+          https://www.slang-up.com/
+          `,
+          sectionType: SectionType.TEXT_WITHOUT_IMAGE
+        } as Section,
+      ]
+    }
+  ],
   [
     "personal_portfolio",
     {
