@@ -105,6 +105,7 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
           
           Everything was done in Typescript/React with the Next.js framework, and deployed on Vercel.
           
+          The web application is available here:
           https://www.slang-up.com/
           `,
           image: slang_up,
@@ -145,6 +146,7 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
           
           Everything was done in Typescript/React with the Next.js framework, and deployed on Vercel.
           
+          The web application is available here:
           https://www.jackalgera.me/
           `,
           image: personal_portfolio,
@@ -160,7 +162,10 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
           
           I designed and implemented everything from scratch.
           
-          I managed to learn quite a bit regarding HTML and CSS/SCSS, especially with regards to animations and making things look smooth and nicely polished. 
+          I managed to learn quite a bit regarding HTML and CSS/SCSS, especially with regards to animations and making things look smooth and nicely polished.
+          
+          The web application is available here:
+          https://www.jackalgera.me/ 
           `,
           sectionType: SectionType.TEXT_WITHOUT_IMAGE
         } as Section,
