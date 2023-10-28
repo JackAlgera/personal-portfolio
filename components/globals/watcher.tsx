@@ -43,12 +43,9 @@ export const Watcher = (props: WatcherProps) => {
   return (
     <div ref={(element) => setWatcherContainer(element)}
          className={`${styles.watcherContainer} ${props.watcherState.watcherActivated ? "" : styles.stop}`}>
-      <div className={styles.spinner}/>
-      <div className={styles.spinner}/>
-      <div className={styles.spinner}/>
-      <div className={styles.spinner}/>
-      <div className={styles.spinner}/>
-      <div className={styles.spinner}/>
+      {(new Array(6).fill(0)).map((_, index) =>
+        <div key={index} className={styles.spinner}/>
+      )}
       <div style={{transform: `rotate(${theta}deg)`}} className={styles.watcher}/>
     </div>
   );
