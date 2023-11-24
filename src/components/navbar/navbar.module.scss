@@ -16,6 +16,26 @@ $linkAnimationDelay: 0.5;
   animation: init ease-in-out 1s forwards;
 }
 
+.navLeft {
+  justify-content: right;
+  > a:nth-child(1) {
+    animation-delay: calc($linkAnimationDelay)+s;
+  }
+  > a:nth-child(2) {
+    animation-delay: calc($linkAnimationDelay + 0.2)+s;
+  }
+}
+
+.navRight {
+  justify-content: left;
+  > a:nth-child(1) {
+    animation-delay: calc($linkAnimationDelay + 0.4)+s;
+  }
+  > a:nth-child(2) {
+    animation-delay: calc($linkAnimationDelay + 0.6)+s;
+  }
+}
+
 .navPos {
   display: flex;
   width: 40%;
@@ -25,25 +45,6 @@ $linkAnimationDelay: 0.5;
   > a {
     transform: translateY(-100px);
     animation: init ease-in-out 1s forwards;
-  }
-
-  &:nth-child(1) {
-    justify-content: right;
-    > a:nth-child(1) {
-      animation-delay: calc($linkAnimationDelay)+s;
-    }
-    > a:nth-child(2) {
-      animation-delay: calc($linkAnimationDelay + 0.2)+s;
-    }
-  }
-  &:nth-child(3) {
-    justify-content: left;
-    > a:nth-child(1) {
-      animation-delay: calc($linkAnimationDelay + 0.4)+s;
-    }
-    > a:nth-child(2) {
-      animation-delay: calc($linkAnimationDelay + 0.6)+s;
-    }
   }
 }
 

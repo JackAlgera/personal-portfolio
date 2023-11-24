@@ -1,12 +1,11 @@
+'use client';
+
 import {useEffect, useState} from "react";
-import {WatcherState} from "../_models/watcher.model";
 import styles from "./watcher.module.scss";
+import {useWatcherStore} from '../../store/watcher-store';
 
-interface WatcherProps {
-  watcherState: WatcherState;
-}
-
-export const Watcher = (props: WatcherProps) => {
+export const Watcher = () => {
+  const { watcherActivated } = useWatcherStore();
   const [watcherContainer, setWatcherContainer] = useState<HTMLDivElement|null>(null);
   const [theta, setTheta] = useState(0);
 
@@ -42,7 +41,7 @@ export const Watcher = (props: WatcherProps) => {
 
   return (
     <div ref={(element) => setWatcherContainer(element)}
-         className={`${styles.watcherContainer} ${props.watcherState.watcherActivated ? "" : styles.stop}`}>
+         className={`${styles.watcherContainer} ${watcherActivated ? "" : styles.stop}`}>
       {(new Array(6).fill(0)).map((_, index) =>
         <div key={index} className={styles.spinner}/>
       )}

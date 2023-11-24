@@ -2,29 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  webpack(config) {
-    const fileLoaderRule = config.module.rules.find(
-        (rule) => rule.test && rule.test.test(".svg")
-    );
-    fileLoaderRule.exclude = /\.icon\.svg$/;
+  webpack: (config, options) => {
     config.module.rules.push({
-      test: /\.icon\.svg$/,
-      loader: '@svgr/webpack',
-      options: {
-        svgoConfig: {
-          plugins: [
-            {
-              name: 'preset-default',
-              params: {
-                overrides: {
-                  cleanupIDs: false,
-                  collapseGroups: false
-                }
-              }
-            }
-          ]
-        }
-      }
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
     });
     return config;
   },
