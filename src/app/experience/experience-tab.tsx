@@ -1,27 +1,25 @@
-import {ExperienceTabEntity} from "../_models/tabs.model";
 import {useEffect, useState} from "react";
-import {WatcherState} from "../_models/watcher.model";
-import {CodeText} from "../_utils/code-text";
 import styles from "./experience-tab.module.scss";
-import {StatefulLink} from "../_utils/stateful-link";
+import {ExperienceTabEntity} from '../../../components/_models/tabs.model';
+import {StatefulLink} from '../../components/stateful/stateful-link';
+import {CodeText} from './code-text';
 
 const PARAGRAPH_TYPEWRITER_LETTER_DELAY = 35;
 const MAIN_TYPEWRITER_LETTER_DELAY = 100;
 
 interface ExperienceTabProps {
   tab: ExperienceTabEntity;
-  watcherState: WatcherState;
 }
 
 export const ExperienceTab = (props: ExperienceTabProps) => {
-  const [lines, setLines] = useState([]);
+  const [lines, setLines] = useState<string[]>([]);
 
   const extractLines = (description: string, maxLetters: number) : string[] => {
-    let lines = [];
+    let lines: string[] = [];
     description.split('\n')
       .map((line) => {
         let words = line.trim().split(' ');
-        let paragraphLines = [];
+        let paragraphLines: string[] = [];
         let newLine = '';
 
         words.forEach(word => {
@@ -68,10 +66,9 @@ export const ExperienceTab = (props: ExperienceTabProps) => {
           <p>
             <span className={styles.color1}>{"<Job "}</span>
             <span className={styles.color2}>{"company=\""}</span>
-            <StatefulLink
-              href={props.tab.url}
-              content={<CodeText typeDelay={MAIN_TYPEWRITER_LETTER_DELAY} stopTyping={true} color={styles.color1} text={props.tab.company} />}
-              watcherState={props.watcherState} />
+            <StatefulLink href={props.tab.url} >
+              <CodeText typeDelay={MAIN_TYPEWRITER_LETTER_DELAY} stopTyping={true} color={styles.color1} text={props.tab.company} />
+            </StatefulLink>
             <span className={styles.color2}>{"\""}</span>
           </p>
         </div>

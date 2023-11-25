@@ -1,6 +1,6 @@
 import { FaGithub, FaLinkedin, FaLaptopCode } from "react-icons/fa";
 import styles from "./social-bar.module.scss";
-import {StatefulLink} from '../navigation/stateful-link';
+import {StatefulLink} from '../stateful/stateful-link';
 
 export const SocialBar = () => {
   return (

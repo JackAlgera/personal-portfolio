@@ -16,8 +16,8 @@ export const StatefulLink = (props: StatefulLinkProps & PropsWithChildren) => {
     <Link href={props.href}
           target={props.externalLink ? "_blank" : undefined}
           rel={props.externalLink ? "noreferrer" : undefined}
-          onMouseEnter={() => activateWatcher()}
-          onMouseLeave={() => deactivateWatcher()}>
+          onMouseEnter={activateWatcher}
+          onMouseLeave={deactivateWatcher}>
       {props.children}
     </Link>
   );

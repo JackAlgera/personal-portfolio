@@ -1,6 +1,6 @@
 import {Watcher} from './watcher';
 import styles from "./navbar.module.scss";
-import {StatefulLink} from '../navigation/stateful-link';
+import {StatefulLink} from '../stateful/stateful-link';
 
 export const Navbar = () => {
   return (

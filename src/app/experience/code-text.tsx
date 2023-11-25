@@ -61,7 +61,7 @@ export const CodeText = (props: CodeTextProps) => {
             return;
           }
           setState(TypeWriterState.WRITING);
-          props.reverseTextCallback();
+          props.reverseTextCallback && props.reverseTextCallback();
           break;
 
         case TypeWriterState.WAITING:
