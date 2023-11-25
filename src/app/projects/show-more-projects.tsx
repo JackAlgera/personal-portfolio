@@ -1,4 +1,4 @@
-import {Project} from "../_models/project.model";
+import {Project} from "../../models/project.model";
 import {ProjectImage} from "./project-image";
 import styles from "./show-more-projects.module.scss";
 import {WatcherState} from "../_models/watcher.model";

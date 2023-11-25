@@ -1,13 +1,13 @@
-import {Project, ProjectStyleType} from "../_models/project.model";
+import {Project, ProjectStyleType} from "../../models/project.model";
 import styles from "./project-card.module.scss";
 import {ProjectImage} from "./project-image";
 
 interface ProjectCardProps {
+  project: Project;
   handleMouseEnter: () => void;
   handleMouseLeave: () => void;
-  project: Project;
   inverse: boolean;
-  styleClass: ProjectStyleType;
+  styleClass: ProjectStyleType | null;
 }
 
 export const ProjectCard = (props: ProjectCardProps) => {

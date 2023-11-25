@@ -60,8 +60,8 @@ export interface Project {
   title: string;
   shortDescription: string;
   techStack: string;
-  image: StaticImageData|null;
-  style: ProjectStyleType;
+  image: StaticImageData | null;
+  style: ProjectStyleType | null;
   date: string;
   sections: Section[];
 }

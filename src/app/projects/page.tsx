@@ -1,14 +1,16 @@
-import {Project, PROJECTS, ProjectStyleType} from "../components/_models/project.model";
-import {ProjectCard} from "../components/projects/project-card";
-import {useState} from "react";
-import {WatcherState} from "../components/_models/watcher.model";
-import styles from "./projects.module.scss";
+'use client';
 
-export default function Projects(watcherState: WatcherState) {
+import {Project, PROJECTS, ProjectStyleType} from "../../models/project.model";
+import {ProjectCard} from "./project-card";
+import {useWatcherStore} from '../../store/watcher-store';
+import {useState} from 'react';
+
+export default function Page() {
+  const { activateWatcher, deactivateWatcher } = useWatcherStore();
   const [projectCards, setProjectCards] = useState<Project[]>(Array.from(PROJECTS.values()));
 
   const handleMouseLeave = () => {
-    watcherState.setWatcherActivated(false);
+    deactivateWatcher();
 
     const newProjectCards: Project[] = [];
     projectCards.map(project => {
@@ -18,7 +20,7 @@ export default function Projects(watcherState: WatcherState) {
     setProjectCards(newProjectCards);
   }
   const handleMouseEnter = (index: number) => {
-    watcherState.setWatcherActivated(true);
+    activateWatcher();
 
     const newProjectCards: Project[] = [];
     projectCards.map((project, projectIndex) => {
@@ -39,14 +41,14 @@ export default function Projects(watcherState: WatcherState) {
   return (
     <>
       <h2 className="numbered-heading"><span>04.</span>Personal Projects</h2>
-      <section className={styles.container}>
+      <section className="flex gap-8 mt-4">
         {projectCards.map((project, index) => (
           <ProjectCard key={project.title}
                        project={project}
                        inverse={(index % 2 === 0)}
                        styleClass={project.style}
                        handleMouseEnter={() => handleMouseEnter(index)}
-                       handleMouseLeave={() => handleMouseLeave()}
+                       handleMouseLeave={handleMouseLeave}
           />
         ))}
       </section>

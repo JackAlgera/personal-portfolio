@@ -2,7 +2,7 @@ import styles from "./index.module.scss";
 import Image from "next/image";
 import me from "../public/me.jpg";
 import {useEffect, useState} from "react";
-import {CodeText} from "../components/_utils/code-text";
+import {CodeText} from "../src/app/experience/code-text";
 import {TechStackRow} from "../components/about-me/tech-stack-row";
 import {
   BACKEND_STACK_ICONS,

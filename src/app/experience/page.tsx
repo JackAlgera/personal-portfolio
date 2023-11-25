@@ -1,6 +1,5 @@
 'use client';
 
-import styles from "./experience.module.scss";
 import {useState} from 'react';
 import {EXPERIENCE_TABS, ExperienceTabEntity} from '../../../components/_models/tabs.model';
 import {StatefulButton} from '../../components/stateful/stateful-button';
