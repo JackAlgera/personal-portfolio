@@ -26,7 +26,7 @@ export default function RootLayout({
         <Navbar />
         <AnimatedBackground />
         <div className="context-container">
-          <div>
+          <div className="context">
             {children}
           </div>
         </div>
