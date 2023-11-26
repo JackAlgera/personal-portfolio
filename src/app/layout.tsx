@@ -7,8 +7,8 @@ import {SocialBar} from '../components/background/social-bar';
 import {ReactNode, useEffect, useState} from 'react';
 import {Analytics} from '@vercel/analytics/react';
 import {usePathname} from 'next/navigation';
-import SplashScreen from '../components/splash-screen';
 import {Fira_Code} from 'next/font/google';
+import {SplashScreen} from '../components/splash-screen';
 
 const firaCodeFont = Fira_Code({
   weight: "400",
@@ -27,27 +27,29 @@ export default function RootLayout({
   children: ReactNode
 }) {
   const isHome = usePathname() === '/';
-  // const [isLoading, setIsLoading] = useState(isHome);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoadingSplash, setIsLoadingSplash] = useState(true);
+  const [isLoadingNavbar, setIsLoadingNavbar] = useState(true);
 
   useEffect(() => {
-    if (isLoading) return;
-  }, [isLoading]);
+    if (isLoadingSplash) return;
+  }, [isLoadingSplash]);
 
   return (
     <html lang='en' className={firaCodeFont.className}>
       <body>
-      { isLoading && isHome ? (
-        <SplashScreen finishLoading={() => setIsLoading(false)}/>
+      { isLoadingSplash && isHome ? (
+        <SplashScreen onFinishLoading={() => setIsLoadingSplash(false)}/>
         ) : (
           <>
-            <Navbar/>
+            <Navbar onDoneLoading={() => setIsLoadingNavbar(false)}/>
             <AnimatedBackground/>
-            <div className="context-container">
-              <div className="context">
-                {children}
+            {!isLoadingNavbar && (
+              <div className="context-container">
+                <div className="context">
+                  {children}
+                </div>
               </div>
-            </div>
+            )}
             <SocialBar/>
           </>
       )}

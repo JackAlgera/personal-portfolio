@@ -1,8 +1,18 @@
 import {Watcher} from './watcher';
 import styles from "./navbar.module.scss";
 import {StatefulLink} from '../stateful/stateful-link';
+import {useEffect} from 'react';
 
-export const Navbar = () => {
+export interface NavbarProps {
+  onDoneLoading: () => void;
+}
+
+export const Navbar = (props: NavbarProps) => {
+  useEffect(() => {
+    const timeout = setTimeout(props.onDoneLoading, 2350);
+    return () => clearTimeout(timeout)
+  }, []);
+
   return (
     <div className={styles.nav}>
       <div className={`${styles.navPos} ${styles.navLeft}`}>

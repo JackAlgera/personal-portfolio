@@ -22,8 +22,8 @@ export default function Home() {
   const [showLikeToDoText, setShowLikeToDoText] = useState(false);
 
   useEffect(() => {
-    let timeoutShowSecondText = setTimeout(() => setShowSecondIntro(true), 1200);
-    let timeoutShowLikeToDoText = setTimeout(() => setShowLikeToDoText(true), 1700);
+    let timeoutShowSecondText = setTimeout(() => setShowSecondIntro(true), 800);
+    let timeoutShowLikeToDoText = setTimeout(() => setShowLikeToDoText(true), 1300);
 
     return () => {
       clearTimeout(timeoutShowSecondText);
