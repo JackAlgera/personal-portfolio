@@ -22,6 +22,8 @@ import DockerIcon from "../../public/icons/docker.svg";
 import PostmanIcon from "../../public/icons/postman.svg";
 import NpmIcon from "../../public/icons/npm.svg";
 import ScrumIcon from "../../public/icons/scrum.svg";
+import ElasticSearchIcon from "../../public/icons/elastic-search.svg";
+import RedisIcon from "../../public/icons/redis.svg";
 
 export const THINGS_I_LIKE_TO_DO = [
   'write code.',
@@ -58,6 +60,8 @@ export const BACKEND_STACK_ICONS: Array<TechStack> = [
   { icon: <PostgresqlIcon/>, name: 'postgresql', url: 'https://www.postgresql.org/' },
   { icon: <MariadbIcon/>, name: 'mariadb', url: 'https://mariadb.org/' },
   { icon: <BigtableIcon/>, name: 'bigtable', url: 'https://cloud.google.com/bigtable' },
+  { icon: <ElasticSearchIcon/>, name: 'elasticsearch', url: 'https://www.elastic.co/' },
+  { icon: <RedisIcon/>, name: 'redis', url: 'https://redis.io/' },
   { icon: <RabbitMqIcon/>, name: 'rabbitmq', url: 'https://www.rabbitmq.com/' },
   { icon: <KafkaIcon/>, name: 'kafka', url: 'https://kafka.apache.org/' }
 ];
