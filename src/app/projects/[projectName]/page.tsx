@@ -1,11 +1,12 @@
-import {Project, PROJECTS, Section, SectionType} from "../../components/_models/project.model";
-import styles from "./[projectName].module.scss";
-import Image from "next/image";
-import YouTube from "react-youtube";
-import {ShowMoreProjects} from "../../components/projects/show-more-projects";
-import {WatcherState} from "../../components/_models/watcher.model";
-import {useEffect, useState} from "react";
-import {useRouter} from "next/router";
+'use client';
+
+import styles from './page.module.scss';
+import Image from 'next/image';
+import YouTube from 'react-youtube';
+import {useEffect, useState} from 'react';
+import {Project, PROJECTS, Section, SectionType} from '../../../models/project.model';
+import {ShowMoreProjects} from './show-more-projects';
+import {notFound} from 'next/navigation';
 
 const MORE_PROJECTS_SENTENCES = [
   'Hey you, yes you, check out my other projects !',
@@ -15,50 +16,49 @@ const MORE_PROJECTS_SENTENCES = [
   '[Insert random projects pun here]'
 ];
 
-const ProjectPage = (watcherState: WatcherState) => {
+export default function Page({ params }: { params: { projectName: string } }) {
   const [moreProjectsSentence, setMoreProjectsSentence] = useState('');
   const [moreProjects, setMoreProjects] = useState<Project[]>([]);
-  const [project, setProject] = useState<Project>(null);
-
-  const router = useRouter();
-  const { projectName } = router.query;
+  const [project, setProject] = useState<Project>();
 
   useEffect(() => {
-    const currentProject = { ...PROJECTS.get(projectName as string)};
+    const currentProject: Project = { ...PROJECTS.get(params.projectName)} as Project;
 
-    watcherState.setWatcherActivated(false);
-    setProject(currentProject);
+    if (!currentProject) {
+      notFound();
+    }
+
+    setProject(currentProject!);
     setMoreProjectsSentence(MORE_PROJECTS_SENTENCES[Math.floor(Math.random() * MORE_PROJECTS_SENTENCES.length)]);
     setMoreProjects(Array.from(PROJECTS.values())
       .filter((project) => project.id != currentProject.id)
       .sort(() => 0.5 - Math.random())
       .slice(0, 2))
-  }, [projectName]);
+  }, [params.projectName]);
 
 
   const generateSection = (section: Section, index: number) => {
-    let htlmSection = (<></>);
+    let htmlSection = <></>;
 
     switch (section.sectionType) {
       case SectionType.TEXT_WITHOUT_IMAGE:
-        htlmSection = (
-          <section className={styles.container}>
+        htmlSection = (
+          <section key={`section ${index}`} className={styles.container}>
             <p>{section.text}</p>
           </section>
         );
         break;
       case SectionType.TLDR:
-        htlmSection = (
-          <section className={styles.tldrContainer}>
+        htmlSection = (
+          <section key={`section ${index}`} className={styles.tldrContainer}>
             <h2>TL;DR</h2>
             <div className={`${styles.container} ${section.rowReverse ? styles.rowReverse : ''}`}>
               <p>{section.text}</p>
               <div className={styles.imageContainer}>
                 <Image
-                  src={section.image.src}
-                  layout="fill"
-                  objectFit="cover"
-                  loading="lazy"
+                  src={section.image!.src}
+                  fill
+                  style={{objectFit: "contain"}}
                   alt="image"
                 />
               </div>
@@ -67,23 +67,22 @@ const ProjectPage = (watcherState: WatcherState) => {
         );
         break;
       case SectionType.VIDEO:
-        htlmSection = (
-          <section>
-            <YouTube className={styles.video} videoId={section.youtubeVideoId} />
+        htmlSection = (
+          <section key={`section ${index}`}>
+            <YouTube className={styles.video} videoId={section.youtubeVideoId!} />
           </section>
         );
         break;
       case SectionType.IMAGE_GALLERY:
-        htlmSection = (
-          <section className={styles.galleryContainer}>
+        htmlSection = (
+          <section key={`section ${index}`} className={styles.galleryContainer}>
             {
               section.imageGalleryList && section.imageGalleryList.map((image, index) => (
                 <div key={"gallery-" + index} className={styles.imageContainer}>
                   <Image
                     src={image.src}
-                    layout="fill"
-                    objectFit="contain"
-                    loading="lazy"
+                    fill
+                    style={{objectFit: "contain"}}
                     alt="image"
                   />
                 </div>
@@ -93,7 +92,7 @@ const ProjectPage = (watcherState: WatcherState) => {
         break;
     }
 
-    return htlmSection;
+    return htmlSection;
   }
 
   return (
@@ -105,29 +104,13 @@ const ProjectPage = (watcherState: WatcherState) => {
               <span>{project.date}</span>
               <span>{project.techStack}</span>
           </h1>
-          {project.sections.map((section, index) => generateSection(section, index))}
+          <div className="flex flex-col gap-5">
+            {project.sections.map((section, index) => generateSection(section, index))}
+          </div>
         </>
       }
-      <ShowMoreProjects watcherState={watcherState}
-                        moreProjectsSentence={moreProjectsSentence}
+      <ShowMoreProjects moreProjectsSentence={moreProjectsSentence}
                         moreProjects={moreProjects} />
     </>
   );
 }
-
-// TODO: Use getStaticProps with getStaticPaths instead
-export async function getServerSideProps(context) {
-  const projectName: string = context.params.projectName;
-
-  if (!PROJECTS.has((projectName))) {
-    return {
-      notFound: true,
-    }
-  }
-
-  return {
-    props: {}
-  }
-}
-
-export default ProjectPage;
