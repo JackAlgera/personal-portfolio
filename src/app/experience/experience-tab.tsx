@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import styles from "./experience-tab.module.scss";
-import {ExperienceTabEntity} from '../../../components/_models/tabs.model';
+import {ExperienceTabEntity} from '../../models/tabs.model';
 import {StatefulLink} from '../../components/stateful/stateful-link';
 import {CodeText} from './code-text';
 

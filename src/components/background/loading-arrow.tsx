@@ -1,5 +1,5 @@
 import styles from "./loading-arrow.module.scss";
-import Arrows from "../../public/arrows.icon.svg";
+import Arrows from "../../../public/arrows.icon.svg";
 
 export const LoadingArrow = () => {
   return (

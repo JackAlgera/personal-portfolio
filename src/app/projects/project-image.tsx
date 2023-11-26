@@ -21,9 +21,8 @@ export const ProjectImage = (props: ProjectImageProps) => {
         </div>
         <Image
           src={props.project.image!.src}
-          layout="fill"
-          objectFit="cover"
-          loading="lazy"
+          fill
+          style={{objectFit: "cover"}}
           alt={props.project.title}
         />
     </Link>

@@ -1,6 +1,6 @@
 import styles from "./loading-page.module.scss";
 import {useEffect} from "react";
-import LoadingSvg from "../../public/loading-animation.icon.svg";
+import LoadingSvg from "../../../public/loading-animation.icon.svg";
 
 interface LoadingPageProps {
   onFinish: () => void;

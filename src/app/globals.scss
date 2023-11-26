@@ -42,7 +42,7 @@ html,
 body,
 pre,
 div {
-  font-family: var(--font-mono);
+  //font-family: var(--font-mono);
 }
 
 /* Remove default margins */
@@ -181,7 +181,7 @@ img {
 .numbered-heading > span {
   margin-right: 10px;
   color: var(--color-1);
-  font-family: var(--font-mono);
+  //font-family: var(--font-mono);
   font-size: 1.4rem;
 }
 

@@ -1,7 +1,7 @@
 'use client';
 
 import {useState} from 'react';
-import {EXPERIENCE_TABS, ExperienceTabEntity} from '../../../components/_models/tabs.model';
+import {EXPERIENCE_TABS, ExperienceTabEntity} from '../../models/tabs.model';
 import {StatefulButton} from '../../components/stateful/stateful-button';
 import {ExperienceTab} from './experience-tab';
 
