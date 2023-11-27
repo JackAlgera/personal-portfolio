@@ -9,7 +9,7 @@ export interface NavbarProps {
 
 export const Navbar = (props: NavbarProps) => {
   useEffect(() => {
-    const timeout = setTimeout(props.onDoneLoading, 2350);
+    const timeout = setTimeout(props.onDoneLoading, 2800);
     return () => clearTimeout(timeout)
   }, []);
 

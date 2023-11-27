@@ -26,9 +26,8 @@ export default function RootLayout({
 }: {
   children: ReactNode
 }) {
-  const isHome = usePathname() === '/';
-  const [isLoadingSplash, setIsLoadingSplash] = useState(false);
-  const [isLoadingNavbar, setIsLoadingNavbar] = useState(false);
+  const [isLoadingSplash, setIsLoadingSplash] = useState(true);
+  const [isLoadingNavbar, setIsLoadingNavbar] = useState(true);
 
   useEffect(() => {
     if (isLoadingSplash) return;
@@ -37,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang='en' className={firaCodeFont.className}>
       <body>
-      { isLoadingSplash && isHome ? (
+      { isLoadingSplash ? (
         <SplashScreen onFinishLoading={() => setIsLoadingSplash(false)}/>
         ) : (
           <>

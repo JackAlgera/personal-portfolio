@@ -121,6 +121,7 @@ img {
   justify-content: center;
   z-index: 3;
   background-color: transparent;
+  animation: fadeIn 0.7s ease-in-out forwards;
 }
 
 .context {
@@ -142,7 +143,7 @@ img {
 }
 
 $initDelay: 1.5;
-$secondDelay: 2;
+$secondDelay: 2.5;
 
 #loading-container {
   overflow: visible;
