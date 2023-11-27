@@ -1,8 +1,4 @@
-import {useEffect, useState} from 'react';
-import {Simulate} from 'react-dom/test-utils';
-import animationEnd = Simulate.animationEnd;
-import styles from './background/loading-page.module.scss';
-import LoadingSvg from '../../public/loading-animation.icon.svg';
+import {useEffect} from 'react';
 
 export interface SplashScreenProps {
   onFinishLoading: () => void;
@@ -45,7 +41,6 @@ export const SplashScreen = (props: SplashScreenProps) => {
         </g>
         <circle id="center" cx="50%" cy="50%" r="13.5" fill="#023047" stroke="#FFB703" strokeWidth="3"/>
       </svg>
-
     </div>
   );
 }

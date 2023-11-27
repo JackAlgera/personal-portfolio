@@ -16,13 +16,13 @@ export const Navbar = (props: NavbarProps) => {
   return (
     <div className={styles.nav}>
       <div className={`${styles.navPos} ${styles.navLeft}`}>
-        <StatefulLink href={"/"} ><span>About me</span></StatefulLink>
-        <StatefulLink href={"/experience"} ><span>Experience</span></StatefulLink>
+        <StatefulLink href={"/"} internalLink={true}><span>About me</span></StatefulLink>
+        <StatefulLink href={"/experience"} internalLink={true}><span>Experience</span></StatefulLink>
       </div>
       <Watcher />
       <div className={`${styles.navPos} ${styles.navRight}`}>
-        <StatefulLink href={"/projects"} ><span>Projects</span></StatefulLink>
-        <StatefulLink href={"/contact"} ><span>Contact</span></StatefulLink>
+        <StatefulLink href={"/projects"} internalLink={true}><span>Projects</span></StatefulLink>
+        <StatefulLink href={"/contact"} internalLink={true}><span>Contact</span></StatefulLink>
       </div>
     </div>
   );

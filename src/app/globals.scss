@@ -16,7 +16,7 @@
 
   /* Text */
   --font-mono: 'Fira Code', monospace;
-  --font-size: 18px;
+  --font-size: 16px;
 
   --text-border-radius: 20px;
 
@@ -28,7 +28,7 @@
   --square-border-radius: 5px;
 
   /* Navbar */
-  --navbar-height: 60px;
+  --navbar-height: 64px;
 }
 
 /* Add default background color */
@@ -68,50 +68,6 @@ html {
   font-size: var(--font-size);
 }
 
-a {
-  color: var(--color-2);
-  text-decoration: none;
-  transition: all ease 0.2s;
-
-  > span {
-    &:hover {
-      color: var(--color-1);
-    }
-
-    &::before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      border-radius: 2px;
-      background-color: var(--color-1);
-      bottom: 0;
-      left: 0;
-      transform-origin: right;
-      transform: scaleX(0);
-      transition: transform .3s ease-in-out;
-    }
-
-    &:hover::before {
-      transform-origin: left;
-      transform: scaleX(1);
-    }
-  }
-
-  > svg {
-    width: 2.2rem;
-    height: 2.2rem;
-    color: var(--color-2);
-    transition: all ease-in-out 0.2s;
-
-    &:hover{
-      color: var(--color-1);
-      cursor: pointer;
-      transform: scale(115%);
-      border-radius: 1px;
-    }
-  }
-}
 p {
   color: var(--color-3);
   font-size: 1rem;
@@ -131,7 +87,6 @@ section {
   display: flex;
   flex-direction: column;
   z-index: 5;
-  //margin: 40px 0 40px 0;
 }
 
 button {
@@ -176,10 +131,14 @@ img {
   min-width: 800px;
 }
 
-.numbered-heading > span {
-  margin-right: 10px;
-  color: var(--color-1);
-  font-size: 1.4rem;
+.numbered-heading {
+  z-index: 10;
+
+  & > span {
+    margin-right: 10px;
+    color: var(--color-1);
+    font-size: 1.4rem;
+  }
 }
 
 $initDelay: 1.5;

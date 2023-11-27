@@ -27,8 +27,8 @@ export default function RootLayout({
   children: ReactNode
 }) {
   const isHome = usePathname() === '/';
-  const [isLoadingSplash, setIsLoadingSplash] = useState(true);
-  const [isLoadingNavbar, setIsLoadingNavbar] = useState(true);
+  const [isLoadingSplash, setIsLoadingSplash] = useState(false);
+  const [isLoadingNavbar, setIsLoadingNavbar] = useState(false);
 
   useEffect(() => {
     if (isLoadingSplash) return;

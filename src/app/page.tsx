@@ -22,8 +22,8 @@ export default function Home() {
   const [showLikeToDoText, setShowLikeToDoText] = useState(false);
 
   useEffect(() => {
-    let timeoutShowSecondText = setTimeout(() => setShowSecondIntro(true), 800);
-    let timeoutShowLikeToDoText = setTimeout(() => setShowLikeToDoText(true), 1300);
+    let timeoutShowSecondText = setTimeout(() => setShowSecondIntro(true), 1100);
+    let timeoutShowLikeToDoText = setTimeout(() => setShowLikeToDoText(true), 1600);
 
     return () => {
       clearTimeout(timeoutShowSecondText);
@@ -69,10 +69,10 @@ export default function Home() {
                 </span>
             }
           </p>
+          <div className="absolute place-self-center bottom-[17%]">
+            <LoadingArrow />
+          </div>
         </div>
-        {/*<div className="justify-self-center mb-[10vw]">*/}
-        {/*  <LoadingArrow />*/}
-        {/*</div>*/}
       </section>
       <section>
         <h2 className="numbered-heading"><span>01.</span>About Me</h2>
@@ -88,17 +88,17 @@ export default function Home() {
               Otherwise I also like spending my time participating in online coding contests, and have finished various coding challenges:
             </p>
             <p>-
-              <StatefulLink href="https://github.com/JackAlgera/CodingChallenges/tree/main/AdventOfCode" externalLink={true}>
+              <StatefulLink href="https://github.com/JackAlgera/CodingChallenges/tree/main/AdventOfCode">
                 <span>AdventOfCode 2021 and 2022</span>
               </StatefulLink>
             </p>
             <p>-
-              <StatefulLink href="https://github.com/JackAlgera/CodingChallenges/tree/main/FoobarGoogleInterview" externalLink={true}>
+              <StatefulLink href="https://github.com/JackAlgera/CodingChallenges/tree/main/FoobarGoogleInterview">
                 <span>FooBar Google challenge</span>
               </StatefulLink>
             </p>
             <p>-
-              <StatefulLink href="https://www.codingame.com/profile/d46b2b9844dbd087e3f67033c06dd47a9043511" externalLink={true}>
+              <StatefulLink href="https://www.codingame.com/profile/d46b2b9844dbd087e3f67033c06dd47a9043511">
                 <span>Various CodinGame contests</span>
               </StatefulLink>
             </p>

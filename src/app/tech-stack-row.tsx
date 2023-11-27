@@ -13,7 +13,7 @@ export const TechStackRow = (props: TechStackProps) => {
       <p>{props.label}</p>
       <div className={styles.techStackContainer}>
         {props.icons.map((techStack, index) => (
-          <StatefulLink key={techStack.name + '-' + index} href={techStack.url} externalLink={true}>
+          <StatefulLink key={techStack.name + '-' + index} href={techStack.url}>
             {techStack.icon}
           </StatefulLink>
         ))}

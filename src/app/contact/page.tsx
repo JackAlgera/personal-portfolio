@@ -9,10 +9,10 @@ export default function Page() {
       <section className="flex-col items-center mt-48">
         <p className="text-xl mx-40 text-center">Feel free to get in touch with me on these platforms</p>
         <div className="flex justify-center gap-4 mt-10 mb-10">
-          <StatefulLink href="mailto:jack.algera@live.com" externalLink={true}>
+          <StatefulLink href="mailto:jack.algera@live.com">
             <HiOutlineMail className="w-14 h-14"/>
           </StatefulLink>
-          <StatefulLink href="https://www.linkedin.com/in/jacobus-algera/" externalLink={true}>
+          <StatefulLink href="https://www.linkedin.com/in/jacobus-algera/">
             <FaLinkedin className="w-14 h-14"/>
           </StatefulLink>
         </div>
