@@ -6,7 +6,6 @@ import {AnimatedBackground} from '../components/background/animated-background';
 import {SocialBar} from '../components/background/social-bar';
 import {ReactNode, useEffect, useState} from 'react';
 import {Analytics} from '@vercel/analytics/react';
-import {usePathname} from 'next/navigation';
 import {Fira_Code} from 'next/font/google';
 import {SplashScreen} from '../components/splash-screen';
 
