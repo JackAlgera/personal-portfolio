@@ -112,15 +112,14 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
           sectionType: SectionType.TLDR
         } as Section,
         {
-          text: `I often find myself taking the train to travel around in France. Which means I tend to have a lot of free time on my hands during my train rides.
+          text: `
+          I like taking the train to travel around France, which gives me a bunch of free time on my trips.
           
-          I decided to see how quick I can create something new from scratch, but have it plugged into some database.
+          I thought it'd be cool to see how fast I could make something new from scratch, so I built a little web app that shows funny slang words. It grabs these words from the Urban Dictionary using their API and sticks them in a database that only updates once a day (the first time you use it each day).
           
-          I ended up creating a small web application that displays silly slang words. It uses the Urban Dictionary API to get a couple of slang words and stores them in a database that's only updated once a day (on the first call of the day).
+          I used a SQL database (Supabase) to store the words, and I built the web app with Next.js. I hosted it on Vercel and got a custom domain name from Google Domains.
           
-          I used a SQL database hosted on Supabase to store the words, and used Next.js to create the web application. I also used Vercel to host the web application, with a custom domain name from Google Domains.
-          
-          The whole project ended up taking both the ride to and from my destination, so about 6 hours in total, with a couple of small tweaks here and there.
+          The whole thing took me the whole round trip—about 6 hours—plus a few tweaks here and there.
           
           The web application is available here:
           https://www.slang-up.com/
@@ -153,16 +152,17 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
           sectionType: SectionType.TLDR
         } as Section,
         {
-          text: `A while back, I used to have a personal portfolio hosted on Adobe Portfolio. Of course this was possible with a monthly paid subscription that allowed me to use PhotoShop as well.
-          Since then I don't have the subscription anymore, but I still felt like I needed to have something where I can showcase my work. 
+          text: `A while ago, I had my own portfolio on Adobe Portfolio, thanks to a monthly subscription that also gave me access to Photoshop.
           
-          And of course, instead of using a different free portfolio service online, I told myself, as any typical developer would: "I could easily develop it myself".
+          After canceling the subscription, I still wanted a place where I could showcase my work. 
           
-          I decided to use Typescript/React to code the UI, as I'm really trying to understand Frontend frameworks some more. And to continue with the mainstream frameworks, I decided to use Next Js for this project as well.
+          Instead of using a different online portfolio, I thought, as any typical developer would, "Hey, I could develop it myself".
           
-          I designed and implemented everything from scratch.
+          So, I went with TypeScript/React to code the look of it. I'm trying to get better at frontend frameworks, and for this project, I stuck with the popular Next.js.
           
-          I managed to learn quite a bit regarding HTML and CSS/SCSS, especially with regards to animations and making things look smooth and nicely polished.
+          I did everything myself, designing and implementing it all from scratch.
+          
+          During the process, I picked up some cool tricks about HTML and CSS/SCSS, especially with making things move smoothly and having a nicely polished final product.
           
           The web application is available here:
           https://www.jackalgera.me/ 

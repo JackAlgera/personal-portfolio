@@ -89,7 +89,7 @@ export default function Home() {
             </p>
             <p>-
               <StatefulLink href="https://github.com/JackAlgera/CodingChallenges/tree/main/AdventOfCode">
-                <span>AdventOfCode 2021 and 2022</span>
+                <span>AdventOfCode 2020 through 2023</span>
               </StatefulLink>
             </p>
             <p>-
