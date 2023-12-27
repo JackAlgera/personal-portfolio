@@ -35,6 +35,9 @@ $linkAnimationDelay: 0.5;
   > a:nth-child(2) {
     animation-delay: calc($linkAnimationDelay + 0.6)+s;
   }
+  > a:nth-child(2) {
+    animation-delay: calc($linkAnimationDelay + 0.8)+s;
+  }
 }
 
 .navPos {

@@ -10,7 +10,7 @@ import {
 } from '../models/about_me.model';
 import styles from './page.module.scss';
 import {CodeText} from './experience/code-text';
-import {LoadingArrow} from '../components/background/loading-arrow';
+import {LoadingArrow} from '../components/loading-arrow/loading-arrow';
 import Image from 'next/image';
 import me from '../../public/me.jpg';
 import {StatefulLink} from '../components/stateful/stateful-link';

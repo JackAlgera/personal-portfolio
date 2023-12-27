@@ -2,8 +2,8 @@
 
 import './globals.scss';
 import {Navbar} from '../components/navbar/navbar';
-import {AnimatedBackground} from '../components/background/animated-background';
-import {SocialBar} from '../components/background/social-bar';
+import {SquaresBackground} from '../components/backgrounds/squares/squares-background';
+import {SocialBar} from '../components/social-bar/social-bar';
 import {ReactNode, useEffect, useState} from 'react';
 import {Analytics} from '@vercel/analytics/react';
 import {Fira_Code} from 'next/font/google';
@@ -40,7 +40,7 @@ export default function RootLayout({
         ) : (
           <>
             <Navbar onDoneLoading={() => setIsLoadingNavbar(false)}/>
-            <AnimatedBackground/>
+            <SquaresBackground/>
             {!isLoadingNavbar && (
               <div className="context-container">
                 <div className="context">
