@@ -1,11 +1,13 @@
 'use client';
 
-import {useEffect, useState} from "react";
-import styles from "./watcher.module.scss";
+import {useEffect, useState} from 'react';
+import styles from './watcher.module.scss';
 import {useWatcherStore} from '../../store/watcher-store';
+import {useMouseStore} from '../../store/mouse-store';
 
 export const Watcher = () => {
   const { watcherActivated } = useWatcherStore();
+  const { x, y } = useMouseStore();
   const [watcherContainer, setWatcherContainer] = useState<HTMLDivElement|null>(null);
   const [theta, setTheta] = useState(0);
 
@@ -18,26 +20,17 @@ export const Watcher = () => {
   }
 
   useEffect(() => {
-    const handleWindowMouseMove = event => {
-      if (watcherContainer) {
-        const mouseX = event.x;
-        const mouseY = event.y;
+    if (!watcherContainer) {
+      return;
+    }
 
-        const rekt = watcherContainer.getBoundingClientRect();
-        const watcherX = rekt.x + rekt.width / 2;
-        const watcherY = rekt.top + rekt.height / 2;
+    const rekt = watcherContainer.getBoundingClientRect();
+    const watcherX = rekt.x + rekt.width / 2;
+    const watcherY = rekt.top + rekt.height / 2;
 
-        const angleDeg = getAngle(mouseX, mouseY, watcherX, watcherY);
-        setTheta(angleDeg);
-      }
-    };
-
-    window.addEventListener('mousemove', handleWindowMouseMove);
-
-    return () => {
-      window.removeEventListener('mousemove', handleWindowMouseMove);
-    };
-  }, [watcherContainer]);
+    const angleDeg = getAngle(x, y, watcherX, watcherY);
+    setTheta(angleDeg);
+  }, [watcherContainer, x, y]);
 
   return (
     <div ref={(element) => setWatcherContainer(element)}
