@@ -11,7 +11,7 @@ export const Watcher = () => {
   const [watcherContainer, setWatcherContainer] = useState<HTMLDivElement|null>(null);
   const [theta, setTheta] = useState(0);
 
-  const getAngle = (mx, my, wx, wy) => {
+  const getAngle = (mx: number, my: number, wx: number, wy: number) => {
     const dx = mx - wx;
     const dy = my - wy;
 

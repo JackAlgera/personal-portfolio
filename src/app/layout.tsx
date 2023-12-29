@@ -22,6 +22,8 @@ const firaCodeFont = Fira_Code({
 //   description: 'Jack\'s personal portfolio website, created from scratch using Next.js and React.',
 // }
 
+const BACKGROUND_ID = Math.floor(Math.random() * 2);
+
 export default function RootLayout({
   children
 }: {
@@ -31,10 +33,6 @@ export default function RootLayout({
   const [isLoadingNavbar, setIsLoadingNavbar] = useState(true);
 
   const { updateMouse } = useMouseStore();
-
-  useEffect(() => {
-    if (isLoadingSplash) return;
-  }, [isLoadingSplash]);
 
   useEffect(() => {
     const handleWindowMouseMove = event => {
@@ -58,7 +56,7 @@ export default function RootLayout({
         ) : (
           <>
             <Navbar onDoneLoading={() => setIsLoadingNavbar(false)}/>
-            <SquaresBackground/>
+            { BACKGROUND_ID === 0 ? <SquaresBackground/> : <BoidBackground/> }
             {!isLoadingNavbar && (
               <div className="context-container">
                 <div className="context">

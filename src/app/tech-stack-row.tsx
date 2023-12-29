@@ -10,7 +10,7 @@ interface TechStackProps {
 export const TechStackRow = (props: TechStackProps) => {
   return (
     <div className="flex flex-col gap-4 mb-8">
-      <p>{props.label}</p>
+      <p className="bg-[--background-color-blur]">{props.label}</p>
       <div className={styles.techStackContainer}>
         {props.icons.map((techStack, index) => (
           <StatefulLink key={techStack.name + '-' + index} href={techStack.url}>

@@ -7,7 +7,7 @@ export default function Page() {
     <>
       <h2 className="numbered-heading"><span>05.</span>Contact</h2>
       <section className="flex-col items-center mt-56">
-        <p className="text-xl mx-40 text-center">Feel free to get in touch with me on these platforms</p>
+        <p className="text-xl mx-40 text-center bg-[--background-color-blur]">Feel free to get in touch with me on these platforms</p>
         <div className="flex justify-center gap-4 mt-10 mb-10">
           <StatefulLink href="mailto:jack.algera@live.com">
             <HiOutlineMail className="w-14 h-14"/>
