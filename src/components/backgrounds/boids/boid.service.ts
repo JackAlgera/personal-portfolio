@@ -16,9 +16,9 @@ const AVOID_FACTOR = 0.05;
 const AVOID_MOUSE_RANGE = 60;
 const AVOID_MOUSE_FACTOR = 0.1;
 
-const INIT_SPEED = 4;
-const MAX_SPEED = 6;
+const MAX_SPEED = 4;
 const MIN_SPEED = 3;
+const INIT_SPEED = 3;
 
 export function initBoids(container: HTMLDivElement) {
   const rekt = container.getBoundingClientRect();

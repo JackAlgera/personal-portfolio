@@ -7,9 +7,13 @@ const blockSizes: number[] = Array.from(Array(40)).map(_ => {
   return Math.floor(Math.random()*(MAX_BLOCK_SIZE - MIN_BLOCK_SIZE) + MIN_BLOCK_SIZE)
 });
 
-export const SquaresBackground = () => {
+export interface SquaresBackgroundProps {
+  activated: boolean;
+}
+
+export const SquaresBackground = (props: SquaresBackgroundProps) => {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${props.activated ? 'z-0' : 'z-[-1]'}`}>
       {blockSizes.map((blockSize, index) => (
         <div key={index}
              style={{

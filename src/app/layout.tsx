@@ -2,14 +2,13 @@
 
 import './globals.scss';
 import {Navbar} from '../components/navbar/navbar';
-import {SquaresBackground} from '../components/backgrounds/squares/squares-background';
 import {SocialBar} from '../components/social-bar/social-bar';
 import {ReactNode, useEffect, useState} from 'react';
 import {Analytics} from '@vercel/analytics/react';
 import {Fira_Code} from 'next/font/google';
 import {SplashScreen} from '../components/splash-screen';
-import {BoidBackground} from '../components/backgrounds/boids/boids-background';
 import {useMouseStore} from '../store/mouse-store';
+import {Background} from '../components/backgrounds/main/background';
 
 const firaCodeFont = Fira_Code({
   weight: "400",
@@ -22,8 +21,6 @@ const firaCodeFont = Fira_Code({
 //   description: 'Jack\'s personal portfolio website, created from scratch using Next.js and React.',
 // }
 
-const BACKGROUND_ID = Math.floor(Math.random() * 2);
-
 export default function RootLayout({
   children
 }: {
@@ -31,7 +28,6 @@ export default function RootLayout({
 }) {
   const [isLoadingSplash, setIsLoadingSplash] = useState(true);
   const [isLoadingNavbar, setIsLoadingNavbar] = useState(true);
-
   const { updateMouse } = useMouseStore();
 
   useEffect(() => {
@@ -56,7 +52,7 @@ export default function RootLayout({
         ) : (
           <>
             <Navbar onDoneLoading={() => setIsLoadingNavbar(false)}/>
-            { BACKGROUND_ID === 0 ? <SquaresBackground/> : <BoidBackground/> }
+            <Background />
             {!isLoadingNavbar && (
               <div className="context-container">
                 <div className="context">

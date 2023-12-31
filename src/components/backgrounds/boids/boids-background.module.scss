@@ -1,5 +1,6 @@
 .boid {
-    animation: fadeIn 14s linear forwards;
+    animation: fadeIn 10s linear forwards;
+    animation-delay: 5s;
 }
 
 @keyframes fadeIn {
