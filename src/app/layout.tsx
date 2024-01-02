@@ -44,11 +44,15 @@ export default function RootLayout({
     };
   }, [updateMouse]);
 
+  const onDoneLoadingSplash = () => {
+    setIsLoadingSplash(false);
+  }
+
   return (
     <html lang='en' className={firaCodeFont.className}>
       <body>
       { isLoadingSplash ? (
-        <SplashScreen onFinishLoading={() => setIsLoadingSplash(false)}/>
+        <SplashScreen onDoneLoading={onDoneLoadingSplash}/>
         ) : (
           <>
             <Navbar onDoneLoading={() => setIsLoadingNavbar(false)}/>

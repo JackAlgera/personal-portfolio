@@ -4,31 +4,20 @@ const INIT_DELAY = 500;
 const ON_FINISH_LOADING_DELAY = 7000;
 
 export interface SplashScreenProps {
-  onFinishLoading: () => void;
+  onDoneLoading: () => void;
 }
 
 export const SplashScreen = (props: SplashScreenProps) => {
   const [startLoading, setStartLoading] = useState<boolean>(false)
 
   useEffect(() => {
-    let timeout = setTimeout(() => {
-      setStartLoading(true);
-    }, INIT_DELAY);
-
+    const timeoutStartLoading = setTimeout(() => setStartLoading(true), INIT_DELAY);
+    const timeoutDoneLoading = setTimeout(props.onDoneLoading, ON_FINISH_LOADING_DELAY);
     return () => {
-      clearTimeout(timeout);
-    };
-  }, [props]);
-
-  useEffect(() => {
-    let timeout = setTimeout(() => {
-      props.onFinishLoading();
-    }, ON_FINISH_LOADING_DELAY);
-
-    return () => {
-      clearTimeout(timeout);
-    };
-  }, [props]);
+      clearTimeout(timeoutStartLoading)
+      clearTimeout(timeoutDoneLoading)
+    }
+  }, []);
 
   return (
     <>
