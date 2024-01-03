@@ -13,7 +13,7 @@ export interface SquaresBackgroundProps {
 
 export const SquaresBackground = (props: SquaresBackgroundProps) => {
   return (
-    <div className={`${styles.container} ${props.activated ? 'z-0' : 'z-[-1]'}`}>
+    <div className={`${styles.container} ${props.activated ? 'z-0' : 'opacity-0 z-[-1]'}`}>
       {blockSizes.map((blockSize, index) => (
         <div key={index}
              style={{

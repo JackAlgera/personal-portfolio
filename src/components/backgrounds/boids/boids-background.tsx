@@ -36,7 +36,7 @@ export const BoidBackground = (props: BoidBackgroundProps) => {
   }, [boids]);
 
   return (
-    <div ref={container} className={`fixed left-0 w-full h-full overflow-y-hidden ${props.activated ? 'z-0' : 'z-[-1]'}`}>
+    <div ref={container} className={`fixed left-0 w-full h-full overflow-y-hidden ${props.activated ? 'z-0' : 'opacity-0 z-[-1]'}`}>
       {boids.map((boid, index) => (
         <svg height={BOID_SIZE}
              width={BOID_SIZE}

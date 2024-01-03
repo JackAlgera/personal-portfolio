@@ -1,16 +1,22 @@
 import {Watcher} from './watcher';
 import styles from './navbar.module.scss';
 import {StatefulLink} from '../stateful/stateful-link';
-import {useEffect} from 'react';
+import {useEffect, useState} from 'react';
 import {StatefulButton} from '../stateful/stateful-button';
-import {useBackgroundStore} from '../../store/background-store';
+import {publish} from '../../events/background.event';
 
 export interface NavbarProps {
   onDoneLoading: () => void;
 }
 
 export const Navbar = (props: NavbarProps) => {
-  const { switchBackground } = useBackgroundStore();
+  const [disabled, setDisabled] = useState(false)
+
+  const switchBackgrounds = () => {
+    publish('switch-backgrounds');
+    setDisabled(true);
+    setTimeout(() => setDisabled(false), 1500);
+  }
 
   useEffect(() => {
     const timeout = setTimeout(props.onDoneLoading, 2800);
@@ -27,7 +33,7 @@ export const Navbar = (props: NavbarProps) => {
       <div className={`${styles.navPos} ${styles.navRight}`}>
         <StatefulLink href={"/projects"} internalLink={true}><span>Projects</span></StatefulLink>
         <StatefulLink href={"/contact"} internalLink={true}><span>Contact</span></StatefulLink>
-        <StatefulButton activated={false} onClick={switchBackground}>Press me</StatefulButton>
+        <StatefulButton appearDelay={12500} disabled={disabled} activated={false} onClick={switchBackgrounds}>Press me</StatefulButton>
       </div>
     </div>
   );
