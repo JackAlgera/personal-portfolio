@@ -16,14 +16,16 @@ import me from '../../public/me.jpg';
 import {StatefulLink} from '../components/stateful/stateful-link';
 import {TechStackRow} from './tech-stack-row';
 
+const SHOW_SECOND_INTRO_DELAY = 1100;
+
 export default function Home() {
   const [likeToDoText, setLikeToDoText] = useState('write code.');
   const [showSecondIntro, setShowSecondIntro] = useState(false);
   const [showLikeToDoText, setShowLikeToDoText] = useState(false);
 
   useEffect(() => {
-    let timeoutShowSecondText = setTimeout(() => setShowSecondIntro(true), 1100);
-    let timeoutShowLikeToDoText = setTimeout(() => setShowLikeToDoText(true), 1600);
+    let timeoutShowSecondText = setTimeout(() => setShowSecondIntro(true), SHOW_SECOND_INTRO_DELAY);
+    let timeoutShowLikeToDoText = setTimeout(() => setShowLikeToDoText(true), SHOW_SECOND_INTRO_DELAY + 500);
 
     return () => {
       clearTimeout(timeoutShowSecondText);
