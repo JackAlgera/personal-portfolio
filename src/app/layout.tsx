@@ -9,6 +9,7 @@ import {Background} from '../components/backgrounds/main/background';
 import {StoresUpdater} from './stores-updater';
 import {Metadata} from 'next';
 import {ChildrenContainer} from './children-container';
+import {SpeedInsights} from '@vercel/speed-insights/next';
 
 const Fira_Code_Font = Fira_Code({
   weight: '400',
@@ -38,6 +39,7 @@ export default function RootLayout({
           <SocialBar />
         </SplashScreen>
         <Analytics/>
+        <SpeedInsights/>
         <StoresUpdater/>
       </body>
     </html>
