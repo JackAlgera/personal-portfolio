@@ -1,7 +1,8 @@
 .link {
   p, span {
-      position: relative;
-      color: var(--color-2);
+    position: relative;
+    color: var(--color-2);
+    font-size: 1.2rem;
 
     &:hover {
       cursor: pointer;

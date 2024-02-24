@@ -1,73 +1,44 @@
-'use client';
-
 import './globals.scss';
 import {Navbar} from '../components/navbar/navbar';
 import {SocialBar} from '../components/social-bar/social-bar';
-import {ReactNode, useEffect, useState} from 'react';
+import {ReactNode} from 'react';
 import {Analytics} from '@vercel/analytics/react';
 import {Fira_Code} from 'next/font/google';
 import {SplashScreen} from '../components/splash-screen';
-import {useMouseStore} from '../store/mouse-store';
 import {Background} from '../components/backgrounds/main/background';
+import {StoresUpdater} from './stores-updater';
+import {Metadata} from 'next';
+import {ChildrenContainer} from './children-container';
 
-const firaCodeFont = Fira_Code({
-  weight: "400",
+const Fira_Code_Font = Fira_Code({
+  weight: '400',
   display: 'swap',
   subsets: ['latin'],
 })
 
-// export const metadata: Metadata = {
-//   title: 'Jack\'s portfolio',
-//   description: 'Jack\'s personal portfolio website, created from scratch using Next.js and React.',
-// }
+export const metadata: Metadata = {
+  title: 'Jack\'s portfolio',
+  description: 'Jack\'s personal portfolio website, created from scratch using Next.js and React.',
+}
 
 export default function RootLayout({
   children
 }: {
   children: ReactNode
 }) {
-  const [isLoadingSplash, setIsLoadingSplash] = useState(true);
-  const [isLoadingNavbar, setIsLoadingNavbar] = useState(true);
-  const { updateMouse } = useMouseStore();
-
-  useEffect(() => {
-    const handleWindowMouseMove = event => {
-      const mouseX = event.x;
-      const mouseY = event.y;
-      updateMouse(mouseX, mouseY);
-    };
-
-    window.addEventListener('mousemove', handleWindowMouseMove);
-
-    return () => {
-      window.removeEventListener('mousemove', handleWindowMouseMove);
-    };
-  }, [updateMouse]);
-
-  const onDoneLoadingSplash = () => {
-    setIsLoadingSplash(false);
-  }
-
   return (
-    <html lang='en' className={firaCodeFont.className}>
+    <html lang='en' className={Fira_Code_Font.className}>
       <body>
-      { isLoadingSplash ? (
-        <SplashScreen onDoneLoading={onDoneLoadingSplash}/>
-        ) : (
-          <>
-            <Navbar onDoneLoading={() => setIsLoadingNavbar(false)}/>
-            <Background />
-            {!isLoadingNavbar && (
-              <div className="context-container">
-                <div className="context">
-                  {children}
-                </div>
-              </div>
-            )}
-            <SocialBar/>
-          </>
-      )}
+        <SplashScreen>
+          <Navbar/>
+          <Background />
+          <ChildrenContainer>
+            {children}
+          </ChildrenContainer>
+          <SocialBar />
+        </SplashScreen>
         <Analytics/>
+        <StoresUpdater/>
       </body>
     </html>
   )

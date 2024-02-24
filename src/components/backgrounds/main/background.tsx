@@ -1,3 +1,5 @@
+"use client";
+
 import {BoidBackground} from '../boids/boids-background';
 import {SquaresBackground} from '../squares/squares-background';
 import {useCallback, useEffect, useState} from 'react';

@@ -10,14 +10,14 @@ interface StatefulLinkProps {
   internalLink?: boolean;
 }
 
-export const StatefulLink = (props: StatefulLinkProps & PropsWithChildren) => {
+export const StatefulLink = (props: PropsWithChildren<StatefulLinkProps>) => {
   const { activateWatcher, deactivateWatcher } = useWatcherStore();
 
   return (
     <Link className={styles.link}
-      href={props.href}
+          href={props.href}
           target={props.internalLink ? undefined : "_blank" }
-          rel={props.internalLink ? undefined: "noreferrer" }
+          rel={props.internalLink ? undefined : "noreferrer" }
           onMouseEnter={activateWatcher}
           onMouseLeave={deactivateWatcher}>
       {props.children}

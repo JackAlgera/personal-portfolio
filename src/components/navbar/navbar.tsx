@@ -1,15 +1,13 @@
+"use client";
+
 import {Watcher} from './watcher';
 import styles from './navbar.module.scss';
 import {StatefulLink} from '../stateful/stateful-link';
-import {useEffect, useState} from 'react';
+import {useState} from 'react';
 import {StatefulButton} from '../stateful/stateful-button';
 import {publish} from '../../events/background.event';
 
-export interface NavbarProps {
-  onDoneLoading: () => void;
-}
-
-export const Navbar = (props: NavbarProps) => {
+export const Navbar = () => {
   const [disabled, setDisabled] = useState(false)
 
   const switchBackgrounds = () => {
@@ -17,11 +15,6 @@ export const Navbar = (props: NavbarProps) => {
     setDisabled(true);
     setTimeout(() => setDisabled(false), 1500);
   }
-
-  useEffect(() => {
-    const timeout = setTimeout(props.onDoneLoading, 2800);
-    return () => clearTimeout(timeout)
-  }, []);
 
   return (
     <div className={styles.nav}>
