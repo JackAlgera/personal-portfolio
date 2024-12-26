@@ -2,6 +2,7 @@ import {StaticImageData} from "next/image";
 import arrow_dance from "../../public/arrow_dance/arrow_dance.png";
 import advent_of_code_2024 from "../../public/adventOfCode/advent_of_code_2024.png";
 import advent_of_code_2023 from "../../public/adventOfCode/advent_of_code_2023.png";
+import advent_of_code_2022 from "../../public/adventOfCode/advent_of_code_2022.png";
 import attack_of_the_squarons from "../../public/attack_of_the_squarons/attack_of_the_squarons.png";
 import call_of_muty from "../../public/call_of_muty/call_of_muty.png";
 import circle_izer from "../../public/circle_izer/circle_izer.png";
@@ -114,7 +115,7 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
           
           Now that the challenge is over, I can finally relax and reflect with a sense of pride. Completing Advent of Code for yet another year is not just about the achievement; it’s a celebration of growth, resilience, and the joy of coding. It’s been a tiring but rewarding tradition, and I’m already looking forward to the puzzles of 2025!
           
-          All the solutions are available on my GitHub:
+          All my solutions are available on GitHub:
           
           https://github.com/JackAlgera/CodingChallenges/tree/main/AdventOfCode
           `,
@@ -186,7 +187,7 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
           
           As the challenge came to a close, I felt a deep sense of pride. Finishing Advent of Code 2023 wasn’t just about completing the puzzles—it was about growth, perseverance, and the joy of solving problems. It’s been a rewarding experience, and I’m already anticipating next year’s challenges.
           
-          All the solutions are available on my GitHub:
+          All my solutions are available on GitHub:
           
           https://github.com/JackAlgera/CodingChallenges/tree/main/AdventOfCode
           `,
@@ -228,6 +229,38 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
           
           The web application is available here:
           https://www.jackalgera.me/ 
+          `,
+          sectionType: SectionType.TEXT_WITHOUT_IMAGE
+        } as Section,
+      ]
+    }
+  ],
+  [
+    "advent_of_code_2022",
+    {
+      id: "advent_of_code_2022",
+      title: "AdventOfCode 2022",
+      shortDescription: "Another coding challenge ; AdventOfCode 2022",
+      techStack: "Java",
+      image: advent_of_code_2022,
+      date: '2022',
+      style: null,
+      sections: [
+        {
+          text: `Waking up early each December to tackle the Advent of Code challenge has become a rewarding tradition, combining persistence with the thrill of problem-solving.`,
+          image: advent_of_code_2022,
+          sectionType: SectionType.TLDR
+        } as Section,
+        {
+          text: `In December 2022, I took on the Advent of Code challenge, solving two coding puzzles each day from December 1st to 25th. It’s a blend of persistence, problem-solving, and determination, where the usual holiday relaxation is replaced by early mornings with coffee, tackling puzzles before starting my regular workday.
+
+          Though there were moments when the challenge felt draining—losing precious sleep during the cold, dark mornings to untangle tricky algorithms and edge cases—the sense of accomplishment after each solved puzzle made it all worthwhile. Watching my progress build day by day kept me motivated to push through.
+          
+          Finishing Advent of Code 2022 brought a great sense of pride and reflection. It’s more than just solving puzzles—it’s about growth and perseverance. This rewarding experience is one I’ll cherish, and I’m already looking forward to next year’s challenge.
+          
+          All my solutions are available on GitHub:
+          
+          https://github.com/JackAlgera/CodingChallenges/tree/main/AdventOfCode
           `,
           sectionType: SectionType.TEXT_WITHOUT_IMAGE
         } as Section,

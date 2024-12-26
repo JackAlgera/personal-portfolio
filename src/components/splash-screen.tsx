@@ -7,7 +7,7 @@ const DONE_LOADING_DELAY = 7000;
 
 export const SplashScreen = ({children}: PropsWithChildren) => {
   const [loadingSplash, setLoadingSplash] = useState<boolean>(false)
-  const [showChildren, setShowChildren] = useState<boolean>(true);
+  const [showChildren, setShowChildren] = useState<boolean>(false);
 
   const onDoneLoading = () => {
     setShowChildren(true);
@@ -15,7 +15,7 @@ export const SplashScreen = ({children}: PropsWithChildren) => {
   }
 
   useEffect(() => {
-    const timeoutStartLoading = setTimeout(() => setLoadingSplash(false), START_LOADING_DELAY);
+    const timeoutStartLoading = setTimeout(() => setLoadingSplash(true), START_LOADING_DELAY);
     const timeoutDoneLoading = setTimeout(onDoneLoading, DONE_LOADING_DELAY);
     return () => {
       clearTimeout(timeoutStartLoading)
