@@ -1,5 +1,7 @@
 import {StaticImageData} from "next/image";
 import arrow_dance from "../../public/arrow_dance/arrow_dance.png";
+import advent_of_code_2024 from "../../public/adventOfCode/advent_of_code_2024.png";
+import advent_of_code_2023 from "../../public/adventOfCode/advent_of_code_2023.png";
 import attack_of_the_squarons from "../../public/attack_of_the_squarons/attack_of_the_squarons.png";
 import call_of_muty from "../../public/call_of_muty/call_of_muty.png";
 import circle_izer from "../../public/circle_izer/circle_izer.png";
@@ -90,6 +92,38 @@ export enum SectionType {
 
 export const PROJECTS: Map<string, Project> = new Map<string, Project>([
   [
+    "advent_of_code_2024",
+    {
+      id: "advent_of_code_2024",
+      title: "AdventOfCode 2024",
+      shortDescription: "Another coding challenge ; AdventOfCode 2024",
+      techStack: "Java",
+      image: advent_of_code_2024,
+      date: '2024',
+      style: null,
+      sections: [
+        {
+          text: `Waking up early each December to tackle the Advent of Code challenge has become a rewarding tradition, combining persistence with the thrill of problem-solving.`,
+          image: advent_of_code_2024,
+          sectionType: SectionType.TLDR
+        } as Section,
+        {
+          text: `This December, I once again embarked on the Advent of Code challenge, where participants solve two coding puzzles each day from December 1st to the 25th. It's a test of persistence, problem-solving, and sometimes, sheer determination. While the festive spirit usually calls for cozy mornings, I found myself waking up early each day, coffee in hand, ready to tackle the puzzles before diving into my regular workday.
+
+          There were moments when the task felt tedious—sacrificing those precious hours of sleep during the coldest, darkest month of the year to decipher yet another tricky algorithm or debug a frustrating edge case. But each solved puzzle brought its own rush of satisfaction, and seeing my progress accumulate day by day made the effort worthwhile.
+          
+          Now that the challenge is over, I can finally relax and reflect with a sense of pride. Completing Advent of Code for yet another year is not just about the achievement; it’s a celebration of growth, resilience, and the joy of coding. It’s been a tiring but rewarding tradition, and I’m already looking forward to the puzzles of 2025!
+          
+          All the solutions are available on my GitHub:
+          
+          https://github.com/JackAlgera/CodingChallenges/tree/main/AdventOfCode
+          `,
+          sectionType: SectionType.TEXT_WITHOUT_IMAGE
+        } as Section,
+      ]
+    }
+  ],
+  [
     "slang_up",
     {
       id: "slang_up",
@@ -103,7 +137,7 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
         {
           text: `Created a small web application to display silly slang words.
           
-          Everything was done in Typescript/React with the Next.js framework, and deployed on Vercel.
+          The entire project was built with TypeScript and React, using the Next.js framework, and seamlessly deployed on Vercel.
           
           The web application is available here:
           https://www.slang-up.com/
@@ -130,6 +164,38 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
     }
   ],
   [
+    "advent_of_code_2023",
+    {
+      id: "advent_of_code_2023",
+      title: "AdventOfCode 2023",
+      shortDescription: "Another coding challenge ; AdventOfCode 2023",
+      techStack: "Java",
+      image: advent_of_code_2023,
+      date: '2023',
+      style: null,
+      sections: [
+        {
+          text: `Completing Advent of Code 2023 was a rewarding test of persistence and problem-solving, pushing me to grow with each daily challenge.`,
+          image: advent_of_code_2023,
+          sectionType: SectionType.TLDR
+        } as Section,
+        {
+          text: `In December 2023, I dove into the Advent of Code challenge, solving two coding puzzles every day from December 1st to 25th. It’s always a mix of excitement and exhaustion—early mornings with coffee in hand, pushing through the cold, dark days of winter to crack another problem before my day really began.
+
+          Though the early hours and late-night coding sessions were tough, each completed challenge fueled a sense of accomplishment, and seeing my progress unfold kept me going. It wasn’t always easy, but the satisfaction of overcoming tricky algorithms and edge cases made it all worth it.
+          
+          As the challenge came to a close, I felt a deep sense of pride. Finishing Advent of Code 2023 wasn’t just about completing the puzzles—it was about growth, perseverance, and the joy of solving problems. It’s been a rewarding experience, and I’m already anticipating next year’s challenges.
+          
+          All the solutions are available on my GitHub:
+          
+          https://github.com/JackAlgera/CodingChallenges/tree/main/AdventOfCode
+          `,
+          sectionType: SectionType.TEXT_WITHOUT_IMAGE
+        } as Section,
+      ]
+    }
+  ],
+  [
     "personal_portfolio",
     {
       id: "personal_portfolio",
@@ -143,7 +209,7 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
         {
           text: `Created a personal portfolio where I showcase my personal projects.
           
-          Everything was done in Typescript/React with the Next.js framework, and deployed on Vercel.
+          The entire project was built with TypeScript and React, using the Next.js framework, and seamlessly deployed on Vercel.
           
           The web application is available here:
           https://www.jackalgera.me/
@@ -152,17 +218,13 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
           sectionType: SectionType.TLDR
         } as Section,
         {
-          text: `A while ago, I had my own portfolio on Adobe Portfolio, thanks to a monthly subscription that also gave me access to Photoshop.
+          text: `Previously, I hosted my portfolio on Adobe Portfolio, taking advantage of a subscription that included Photoshop.
+
+          When I canceled the subscription, I still wanted a platform to showcase my work. Instead of opting for another online portfolio tool, I decided to take the developer’s approach and build one myself.
           
-          After canceling the subscription, I still wanted a place where I could showcase my work. 
+          I chose TypeScript and React to bring the design to life, leveraging Next.js to dive deeper into frontend frameworks. The entire project—from design to implementation—was built from scratch by me.
           
-          Instead of using a different online portfolio, I thought, as any typical developer would, "Hey, I could develop it myself".
-          
-          So, I went with TypeScript/React to code the look of it. I'm trying to get better at frontend frameworks, and for this project, I stuck with the popular Next.js.
-          
-          I did everything myself, designing and implementing it all from scratch.
-          
-          During the process, I picked up some cool tricks about HTML and CSS/SCSS, especially with making things move smoothly and having a nicely polished final product.
+          Throughout the process, I honed my skills in HTML, CSS/SCSS, and learned some nifty techniques for creating smooth animations and a polished final product. This project was a great opportunity to grow as a developer while crafting something uniquely my own.
           
           The web application is available here:
           https://www.jackalgera.me/ 
@@ -186,23 +248,20 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
         {
           text: `Created the website that was used for my wedding !
           
-          Everything was done in Typescript/React with the Next.js framework, and deployed on Vercel. 
+          The entire project was built with TypeScript and React, using the Next.js framework, and seamlessly deployed on Vercel.
           It has an API layer that's plugged into a, sorry for this...Google Sheet dAtABasE...
           `,
           image: personal_wedding_site,
           sectionType: SectionType.TLDR
         } as Section,
         {
-          text: `When brainstorming with my fiancée on how we would like our website to look like, I told myself, as any typical developer would: "I could easily develop it myself".
+          text: `When brainstorming with my fiancée about how we wanted our website to look, I had the classic developer thought: 'I can build this myself.'
           
-          I decided to use Typescript/React to code the UI, as I'm really trying to understand Frontend frameworks some more. And to continue with the mainstream frameworks, I decided to use Next Js for this project as well.
-          The NextJs was actually backed up by the fact that it has built in backend capabilities ; I was able to plug in my API layer over a, and again sorry for this...Google Sheet dAtABasE...
+          To bring our vision to life, I chose TypeScript and React for the UI, as I wanted to deepen my understanding of frontend frameworks. Staying with popular choices, I also opted for Next.js, which offered built-in backend capabilities—a perfect fit for this project.
           
-          The Google sheet was used to track guest RSVPs, and of course, to simplify things for everybody involved, a GSheet was the best way to go.  
+          For the backend, I plugged in an API layer over a...yes, a Google Sheets database (it was practical, I promise!). The Google Sheet was used to track guest RSVPs, making it the most convenient option for everyone involved.
           
-          We designed and created mock-ups for the website, and I implemented everything from scratch.
-          
-          This project allowed me to get a really good grip of frontend-related patterns and frameworks.
+          My fiancée and I collaborated on the design and mock-ups, and I implemented everything from scratch. This project gave me hands-on experience with frontend patterns and frameworks, and it was a rewarding way to blend creativity with functionality..
           `,
           sectionType: SectionType.TEXT_WITHOUT_IMAGE
         } as Section,
@@ -221,9 +280,9 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
       style: null,
       sections: [
         {
-          text: `As any normal human being, I'm lazy, and I prefer spending 10h creating a project that allows me to save 20s when making my morning coffee. 
-          
-          Deployed a web server on an Adruino board, that controls my coffee machine.
+          text: `Like any normal person, I value efficiency (or maybe I’m just lazy). So, I happily spent 10 hours creating a project to save 20 seconds each morning making coffee.
+
+          I deployed a web server on an Arduino board, which now controls my coffee machine with ease.
           `,
           image: connected_coffee_machine,
           sectionType: SectionType.TLDR
@@ -233,13 +292,13 @@ export const PROJECTS: Map<string, Project> = new Map<string, Project>([
           sectionType: SectionType.VIDEO
         } as Section,
         {
-          text: `I like, as many people do I guess, a good cup of coffee in the morning. We recently got a coffee machine, which makes some gucci coffee !
+          text: `Like many, I enjoy starting my day with a good cup of coffee. Recently, we got a new coffee machine that makes some seriously gucci coffee!
+
+          However, the process to make coffee involved turning on the machine, waiting 20 seconds, and then pressing another button. To me, this felt like '20 seconds wasted just waiting for my coffee machine to warm up.' Naturally, I did what any developer would do (right?)—I spent 10 hours creating a project that lets me start the coffee machine with a single press of a button... from my bed.
           
-          To make coffee using the machine, you need to turn it on, wait 20s, then press another button. When I read this I see "I'm waisting 20s waiting for my coffee machine to be ready to make me coffee". And like anyone would (right ?) I prefer spending 15h creating a project that allows me to make coffee with a press of a button... from my bed.
+          The setup uses an Arduino connected to the coffee machine through relays, simulating the physical button presses without the need for clunky robot fingers. On top of that, I deployed a web server on the Arduino that exposes endpoints, allowing me to schedule coffee-making times down to the minute.
           
-          The Arduino is hooked up to the coffee machine with various relays, that when activated acts like a press of the physical button. I preferred using this method instead of clunky robot fingers that press the button for me.
-          
-          On the Arduino, I deployed a web server that exposes a couple of endpoints that allows me to set dates at which I would like the machine to create coffee for me, precise to the minute !
+          Now, mornings are smoother, and my coffee is ready just when I need it!
           `,
           sectionType: SectionType.TEXT_WITHOUT_IMAGE
         } as Section,

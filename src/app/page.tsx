@@ -81,17 +81,17 @@ export default function Home() {
         <div className={`inner ${styles.secondSection}`}>
           <div className={styles.bioTextContainer}>
             <p>
-              Semi-fresh graduate, I’m currently a Backend Software Engineer deploying and maintaining micro-services at BlaBlaCar, with a strong focus on CI/CD and Kubernetes-related topics.
+              Backend Software Engineer at BlaBlaCar, specializing in deploying and maintaining microservices. Passionate about CI/CD workflows and Kubernetes-driven solutions
             </p>
             <p>
               Frontend you say ? Hell yes, I like to create silly projects using React, <StatefulLink href="/projects"><span>check them out</span></StatefulLink>!
             </p>
             <p>
-              Otherwise I also like spending my time participating in online coding contests, and have finished various coding challenges:
+              In my free time, I enjoy participating in online coding contests and have successfully completed numerous coding challenges:
             </p>
             <p>-
               <StatefulLink href="https://github.com/JackAlgera/CodingChallenges/tree/main/AdventOfCode">
-                <span>AdventOfCode 2020 through 2023</span>
+                <span>AdventOfCode 2020 through 2024</span>
               </StatefulLink>
             </p>
             <p>-
@@ -105,7 +105,7 @@ export default function Home() {
               </StatefulLink>
             </p>
             <p>
-              When I’m not sitting in front of my computer, I can be found boldering or doing Arduino/Electronic projects.
+              When I’m away from the screen, you’ll often find me bouldering or working on Arduino and electronics projects.
             </p>
           </div>
           <div className={styles.imageContainer}>
@@ -123,7 +123,7 @@ export default function Home() {
           <TechStackRow label="The frameworks and languages I use to build client side applications" icons={FRONTEND_STACK_ICONS}/>
           <TechStackRow label="The tech I use to build backend services" icons={BACKEND_STACK_ICONS}/>
           <TechStackRow label="The tools I use to manage DevOps related problems" icons={DEVOPS_ICONS}/>
-          <TechStackRow label="Other tools I use to increase productivity" icons={OTHER_STACK_ICONS}/>
+          <TechStackRow label="The tools and practices I use to increase productivity" icons={OTHER_STACK_ICONS}/>
         </div>
       </section>
     </>
