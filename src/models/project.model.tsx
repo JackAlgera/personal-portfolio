@@ -7,6 +7,7 @@ import attack_of_the_squarons from "../../public/attack_of_the_squarons/attack_o
 import call_of_muty from "../../public/call_of_muty/call_of_muty.png";
 import circle_izer from "../../public/circle_izer/circle_izer.png";
 import conway_game_of_life from "../../public/conway_game_of_life/conway_game_of_life.png";
+import conway_game_of_life_2 from "../../public/conway_game_of_life/conway_game_of_life_2.png";
 import cook_em_up from "../../public/cook_em_up/cook_em_up.png";
 import newtons_pull from "../../public/newtons_pull/newtons_pull.png";
 import oystou from "../../public/oystou/oystou.png";
@@ -57,6 +58,7 @@ import connected_coffee_machine from "../../public/connect_coffee_machine/connec
 import connected_coffee_machine_1 from "../../public/connect_coffee_machine/connected_coffee_machine_1.jpg";
 import connected_coffee_machine_2 from "../../public/connect_coffee_machine/connected_coffee_machine_2.jpg";
 import slang_up from "../../public/slang_up/slang_up.png";
+import particle_simulation from "../../public/particle_simulation/particle_simulation.png";
 
 export interface Project {
   id: string;
@@ -92,6 +94,81 @@ export enum SectionType {
 }
 
 export const PROJECTS: Map<string, Project> = new Map<string, Project>([
+  [
+    "particle_simulation_2025",
+    {
+      id: "particle_simulation_2025",
+      title: "Particle simulation",
+      shortDescription: "Particle simulation - World of particles",
+      techStack: "Typescript/Svelte",
+      image: particle_simulation,
+      date: '2025',
+      style: null,
+      sections: [
+        {
+          text: `To continue improving on my Svelte skills ; I decided to create a particle simulation.`,
+          image: particle_simulation,
+          sectionType: SectionType.TLDR
+        } as Section,
+        {
+          text: `
+            This simulation is a world of interacting particles, offering a fun way to experiment with physics and observe how different materials behave in a confined space.
+            
+            I’ve built a framework featuring several particle types: liquids, solids, movable solids, and gases - each with its own rules and interactions.
+            
+            For example:
+            - Liquids flow and pool at the bottom.
+            - Gases rise to the top.
+            - Solids stay put, while movable solids can be pushed around.
+            - Lava + water? It cools into obsidian.
+            - Lava + wood? It burns, creating fire and smoke!
+            - And much more!
+            
+            The simulation is built with Typescript and Svelte, and it's a great way to explore the world of particles and physics.
+            
+            Try it out for yourself here: https://cellular-automata-eight.vercel.app/particles
+          `,
+          sectionType: SectionType.TEXT_WITHOUT_IMAGE
+        } as Section,
+      ]
+    }
+  ],
+  [
+    "conway_game_of_life_2_2025",
+    {
+      id: "conway_game_of_life_2_2025",
+      title: "Conway's Game of Life - round 2",
+      shortDescription: "Another take on Conway's Game of Life",
+      techStack: "Typescript/Svelte",
+      image: conway_game_of_life_2,
+      date: '2025',
+      style: null,
+      sections: [
+        {
+          text: `Late to the party, but I finally decided to try out the Svelte framework! And what better way than by building Conway’s Game of Life - round 2! Link https://cellular-automata-eight.vercel.app/game-of-life`,
+          image: conway_game_of_life_2,
+          sectionType: SectionType.TLDR
+        } as Section,
+        {
+          text: `
+          I wanted to try out the Svelte framework, and what better way to do that than with Conway's Game of Life (round 2)! 
+          
+          This classic simulation follows a simple yet fascinating set of rules:
+          
+          1) Any live cell with fewer than two live neighbors dies, as if by underpopulation.
+          2) Any live cell with two or three live neighbors lives on to the next generation.
+          3) Any live cell with more than three live neighbors dies, as if by overpopulation.
+          4) Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.
+          
+          From these basic rules, unexpected and mesmerizing patterns emerge, making it a perfect playground for cellular automata enthusiasts.
+          
+          Link https://cellular-automata-eight.vercel.app/game-of-life
+          `,
+          sectionType: SectionType.TEXT_WITHOUT_IMAGE
+        } as Section,
+      ]
+    }
+  ],
   [
     "advent_of_code_2024",
     {
